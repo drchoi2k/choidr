@@ -6,12 +6,12 @@
 		<title>Test jquery</title>
 		{!!Html::style('css/app.css')!!}
 		{!!Html::script('js/app.js')!!}
-		<style type="text/css">
+		<!-- <style type="text/css">
 			tbody tr:first-child{
 				background: #ddd;
 				font-weight: : bold;
 			}
-		</style>
+		</style> -->
 	</head>
 	<body>
 		<div class="container">
@@ -69,7 +69,6 @@
 					{!!Form::close()!!}
 				</div>
 				<div class="table-responsive">
-					
 				</div>
 			</div>
 		</div>
@@ -147,7 +146,8 @@
 				$.post(url,data,function(data){
 					console.log(data);
 					$('#frm-update').trigger('reset');
-					// $('#popup-update').hide();
+					$('#popup-update').hide('reset');
+					////////////////화면정리방법
 					readByAjax();
 				})
 			})
