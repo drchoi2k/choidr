@@ -100,7 +100,6 @@
 						$('#frm-insert').trigger('reset');
 						console.log(data);
 						readByAjax();
-
 					}
 				})
 			});

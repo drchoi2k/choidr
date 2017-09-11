@@ -28,9 +28,7 @@ class JqueryController extends Controller
     		 	return response($r->all());
     		 	// return response(['msg'=>'inserted successfully']);
     		 }
-    		
     	}
-    	
     }
 
     public function readByAjax()
