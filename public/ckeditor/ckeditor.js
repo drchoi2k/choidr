@@ -10434,7 +10434,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license
      Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
      For licensing, see LICENSE.md or http://ckeditor.com/license
     */
-    CKEDITOR.skin.name = "moono";
+    CKEDITOR.skin.name = "bootstrapck";
     CKEDITOR.skin.ua_editor = "ie,iequirks,ie7,ie8,gecko";
     CKEDITOR.skin.ua_dialog = "ie,iequirks,ie7,ie8";
     CKEDITOR.skin.chameleon = function() {
@@ -24206,7 +24206,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license
         })
     })();
     CKEDITOR.config.plugins = 'dialogui,dialog,a11yhelp,basicstyles,blockquote,panel,floatpanel,menu,contextmenu,elementspath,enterkey,entities,floatingspace,listblock,button,richcombo,format,horizontalrule,htmlwriter,image,indent,indentlist,fakeobjects,link,list,magicline,maximize,toolbar,notification,clipboard,pastefromword,pastetext,removeformat,resize,menubutton,scayt,showborders,sourcearea,specialchar,stylescombo,tab,table,undo,wsc,wysiwygarea,lineutils,widgetselection,widget,codesnippet,panelbutton,colorbutton,colordialog,find,font,justify,autolink,liststyle,pagebreak,showblocks,tabletools,tableresize,tableselection';
-    CKEDITOR.config.skin = 'moono';
+    CKEDITOR.config.skin = 'bootstrapck';
     (function() {
         var setIcons = function(icons, strip) {
             var path = CKEDITOR.getUrl('plugins/' + strip);

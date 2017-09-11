@@ -1,35 +1,49 @@
-BootstrapCK Skin
+"Moono" Skin
 ====================
 
-The BootstrapCK-Skin is a skin for [CKEditor4](http://ckeditor.com/) based on [Twitter Bootstrap3](http://getbootstrap.com/) styles.
-
-[Sass](http://sass-lang.com/) is used to rewrite the editor's styles and [Grunt](http://gruntjs.com/) to be able to watch, convert and minify the sass into css files. These files aren't really needed for the simple use of the skin, but handy if you want to make some adjustments to it.
+This skin has been chosen for the **default skin** of CKEditor 4.x (replaced by "Moono-lisa" skin since CKEditor 4.6.0),
+elected from the CKEditor [skin contest](http://ckeditor.com/blog/new_ckeditor_4_skin) and further shaped by
+the CKEditor team. "Moono" is maintained by the core developers.
 
 For more information about skins, please check the [CKEditor Skin SDK](http://docs.cksource.com/CKEditor_4.x/Skin_SDK)
 documentation.
 
-## Installation
+Features
+-------------------
+"Moono" is a monochromatic skin, which offers a modern look coupled with gradients and transparency.
+It comes with the following features:
 
-**Just skin please**
+- Chameleon feature with brightness,
+- high-contrast compatibility,
+- graphics source provided in SVG.
 
-Add the whole bootstrapck folder to the skin folder.<br />
-In ckeditor.js and config.js change the skin name to "bootstrapck".<br />
-Done!
+Directory Structure
+-------------------
 
-**The whole skin - sass - grunt package**
+CSS parts:
+- **editor.css**: the main CSS file. It's simply loading several other files, for easier maintenance,
+- **mainui.css**: the file contains styles of entire editor outline structures,
+- **toolbar.css**: the file contains styles of the editor toolbar space (top),
+- **richcombo.css**: the file contains styles of the rich combo ui elements on toolbar,
+- **panel.css**: the file contains styles of the rich combo drop-down, it's not loaded
+until the first panel open up,
+- **elementspath.css**: the file contains styles of the editor elements path bar (bottom),
+- **menu.css**: the file contains styles of all editor menus including context menu and button drop-down,
+it's not loaded until the first menu open up,
+- **dialog.css**: the CSS files for the dialog UI, it's not loaded until the first dialog open,
+- **reset.css**: the file defines the basis of style resets among all editor UI spaces,
+- **preset.css**: the file defines the default styles of some UI elements reflecting the skin preference,
+- **editor_XYZ.css** and **dialog_XYZ.css**: browser specific CSS hacks.
 
-All the sass files are included in the bootstrapck folder, so first follow the 'just skin please'-steps<br />
-Now add the Gruntfile.js and the package.json to de ckeditor folder.
+Other parts:
+- **skin.js**: the only JavaScript part of the skin that registers the skin, its browser specific files and its icons and defines the Chameleon feature,
+- **icons/**: contains all skin defined icons,
+- **images/**: contains a fill general used images,
+- **dev/**: contains SVG source of the skin icons.
 
-    npm install
-    grunt build
+License
+-------
 
-You can start tampering now.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 
-## Demo
-
-http://kunstmaan.github.io/BootstrapCK4-Skin/
-
-### Previous version
-
-If you would like to get the Bootstrap2 skin for CKeditor3, [here](https://github.com/Kunstmaan/BootstrapCK-Skin)'s the previous version.
+For licensing, see LICENSE.md or [http://ckeditor.com/license](http://ckeditor.com/license)
