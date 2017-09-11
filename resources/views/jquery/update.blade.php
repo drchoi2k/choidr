@@ -7,6 +7,7 @@
       </div>
       <div class="modal-body">
         <div class="panel-body">
+
           {!!Form::open(['url'=>'updateByAjax', 'method'=>'POST', 'id'=>'frm-update'])!!}
           {!!Form::hidden('id', null,['id'=>'id'])!!}
           <div class="row">
@@ -47,7 +48,7 @@
         
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">닫 기</button>
       </div>
     </div>
     

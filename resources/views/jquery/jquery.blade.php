@@ -32,6 +32,7 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">제 이 쿼 리</div>
 				<div class="panel-body">
+				   
 					{!!Form::open(['url'=>'postJquery', 'method'=>'POST', 'id'=>'frm-insert'])!!}
 					<div class="row">
 						<div class="col-md-3">
@@ -71,6 +72,7 @@
 				<div class="table-responsive">
 				</div>
 			</div>
+			<a type="button" class="btn btn-success" href="{{ url('ckedit')}}">글작성</a>
 		</div>
 
 		
