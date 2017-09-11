@@ -98,6 +98,7 @@
 						$('#frm-insert').trigger('reset');
 						console.log(data);
 						readByAjax();
+
 					}
 				})
 			});
@@ -147,7 +148,7 @@
 					console.log(data);
 					$('#frm-update').trigger('reset');
 					$('#popup-update').hide('reset');
-					////////////////화면정리방법
+					////////////////화면정리방법??
 					readByAjax();
 				})
 			})

@@ -7,7 +7,7 @@ use App\Role;
 USE App\User;
 
 class JqueryController extends Controller
-{
+{   
     public function jquery()
     {
 

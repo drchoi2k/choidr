@@ -12,8 +12,8 @@ class UserController extends Controller
         return view('welcome');
 	}
 
-     public function ckedit() {
-        return view('ckeditor.ckedit');
+        public function ckedit() {
+        return view('jquery.ckedit');
     }
 
 	  public function aws() {

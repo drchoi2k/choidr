@@ -4,7 +4,10 @@
         <meta charset="utf-8">
         <title>A Simple Page with CKEditor</title>
         <!-- Make sure the path to CKEditor is correct. -->
-       <script src="//cdn.ckeditor.com/4.7.2/standard/ckeditor.js"></script>
+       <!-- <script src="//cdn.ckeditor.com/4.7.2/standard/ckeditor.js"></script> -->
+        
+        <script src="/ckeditor/ckeditor.js"></script>
+
     </head>
     <body>
         <form>

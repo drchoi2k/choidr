@@ -38,7 +38,7 @@
 
 //   ------ Jquery
 Route::get('/','UserController@index');
-Route::get('/ckedit','userController@ckedit');
+Route::get('/ckedit','UserController@ckedit');
 
 Route::get('/jquery','JqueryController@jquery');
 Route::post('/postJquery','JqueryController@postJquery');
