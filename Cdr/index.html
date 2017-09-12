@@ -17,6 +17,19 @@ div {
     clear: both;
 }
 
+.top {
+    position: relative;
+    background-color: #ffffff;
+    height: 68px;
+    padding-top: 20px;
+    line-height: 50px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.w3-container, .w3-panel {
+    padding: 0.01em 16px;
+}
 
 element.style {
     width: 100%;
@@ -163,7 +176,10 @@ html {
     box-sizing: inherit;
 }
 
-
+            .w3-right {
+                text-align: right;
+                margin: 0 20px 0 0;
+                }
 
            
 /*
@@ -194,7 +210,7 @@ html {
 
 
 
-            .w3schools-logo {
+            /*.w3schools-logo {
                 font-family: fontawesome;
                 text-decoration: none;
                 line-height: 1;
@@ -206,13 +222,13 @@ html {
                 display: block;
                 position: absolute;
                 top: 17px;
-            }
+            }*/
 
 
 
 
 
-           .topnav {
+           /*.topnav {
                 position: relative;
                 z-index: 2;
                 font-size: 17px;
@@ -222,8 +238,8 @@ html {
                 padding: 0;
                 letter-spacing: 1px;
                 font-family: "Segoe UI",Arial,sans-serif;
-            }
-            .w3-btn, .w3-button {
+            }*/
+            /*.w3-btn, .w3-button {
                 border: none;
                 display: inline-block;
                 outline: 0;
@@ -237,21 +253,21 @@ html {
                 cursor: pointer;
                 white-space: nowrap;
             }
-
+*/
 
            
-            a.topnav-icons {
+           /* a.topnav-icons {
                 width: 52px !important;
                 font-size: 20px !important;
                 padding-top: 11px !important;
                 padding-bottom: 13px !important;
-            }
+            }*/
             
-            .topnav a {
+            /*.topnav a {
                 padding: 10px 15px 9px 15px !important;
-            }
+            }*/
            
-            .fa {
+            /*.fa {
                 display: inline-block;
                 font: normal normal normal 14px/1 FontAwesome;
                 font-size: inherit;
@@ -259,29 +275,27 @@ html {
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
                 transform: translate(0, 0);
-            }
+            }*/
             
-            .w3-left {
-                float: left!important;
-            }
+         
             
-            .w3-btn, .w3-button {
+            /*.w3-btn, .w3-button {
                 -webkit-touch-callout: none;
                 -webkit-user-select: none;
                 -khtml-user-select: none;
                 -moz-user-select: none;
                 -ms-user-select: none;
                 user-select: none;
-            }
-            .w3-bar .w3-bar-item {
+            }*/
+            /*.w3-bar .w3-bar-item {
                 padding: 8px 16px;
                 float: left;
                 width: auto;
                 border: none;
                 outline: none;
                 display: block;
-            }
-            *, *:before, *:after {
+            }*/
+            /**, *:before, *:after {
                 box-sizing: inherit;
             }*/
 
@@ -296,24 +310,24 @@ html {
   <div class="w3-right w3-hide-small w3-wide toptext" style="font-family:'Segoe UI',Arial,sans-serif">THE WORLD'S LARGEST WEB DEVELOPER SITE</div>
   <div class="w3-card-2 topnav" id="topnav" style="position: relative;">
     <div style="overflow:auto;">
-      <div class="w3-bar w3-left" style="width:100%;overflow:hidden;height:38px">
+      <div class="w3-bar w3-left" style="width:100%;overflow:hidden;height:48px">
         <a href="javascript:void(0);" class="topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button" onclick="open_menu()" title="Menu"></a>
         <a href="/default.asp" class="topnav-icons fa fa-home w3-left w3-bar-item w3-button" title="Home"></a>
-        <a class="w3-bar-item w3-button active" href="/html/default.asp" title="HTML Tutorial">HTML</a>
-        <a class="w3-bar-item w3-button" href="/css/default.asp" title="CSS Tutorial">CSS</a>
-        <a class="w3-bar-item w3-button" href="/js/default.asp" title="JavaScript Tutorial">JAVASCRIPT</a>
-        <a class="w3-bar-item w3-button" href="/sql/default.asp" title="SQL Tutorial">SQL</a>
-        <a class="w3-bar-item w3-button" href="/php/default.asp" title="PHP Tutorial">PHP</a>
-        <a class="w3-bar-item w3-button" href="/bootstrap/default.asp" title="Bootstrap Tutorial">BOOTSTRAP</a>
-        <a class="w3-bar-item w3-button" href="/jquery/default.asp" title="jQuery Tutorial">JQUERY</a>
-        <a class="w3-bar-item w3-button" href="/angular/default.asp" title="Angular Tutorial">ANGULAR</a>
-        <a class="w3-bar-item w3-button" href="/w3css/default.asp" title="W3.CSS Tutorial">W3.CSS</a>
-        <a class="w3-bar-item w3-button" href="/xml/default.asp" title="XML Tutorial">XML</a>
+        <a class="w3-bar-item w3-button active" href="http://ds.cathms.kr" title="HTML Tutorial">HTML</a>
+        <a class="w3-bar-item w3-button" href="http://ds.cathms.kr" title="CSS Tutorial">CSS</a>
+        <a class="w3-bar-item w3-button" href="http://ds.cathms.kr" title="JavaScript Tutorial">JAVASCRIPT</a>
+        <a class="w3-bar-item w3-button" href="http://ds.cathms.kr" title="SQL Tutorial">SQL</a>
+        <a class="w3-bar-item w3-button" href="http://ds.cathms.kr" title="PHP Tutorial">PHP</a>
+        <a class="w3-bar-item w3-button" href="http://ds.cathms.kr" title="Bootstrap Tutorial">BOOTSTRAP</a>
+        <a class="w3-bar-item w3-button" href="http://ds.cathms.kr" title="jQuery Tutorial">JQUERY</a>
+        <a class="w3-bar-item w3-button" href="http://ds.cathms.kr" title="Angular Tutorial">ANGULAR</a>
+        <a class="w3-bar-item w3-button" href="http://ds.cathms.kr" title="W3.CSS Tutorial">W3.CSS</a>
+        <a class="w3-bar-item w3-button" href="http://ds.cathms.kr" title="XML Tutorial">XML</a>
         <a class="w3-bar-item w3-button" id="topnavbtn_tutorials" href="javascript:void(0);" onclick="w3_open_nav(&quot;tutorials&quot;)" title="Tutorials">MORE <i class="fa fa-caret-down"></i><i class="fa fa-caret-up" style="display:none"></i></a>
-        <a href="javascript:void(0);" class="topnav-icons fa w3-right w3-bar-item w3-button" onclick="open_search(this)" title="Search W3Schools"></a>
-        <a href="javascript:void(0);" class="topnav-icons fa w3-right w3-bar-item w3-button" onclick="open_translate(this)" title="Translate W3Schools"></a>
-        <a class="w3-bar-item w3-button w3-right" href="/forum/default.asp">FORUM</a>
-        <a class="w3-bar-item w3-button w3-right" id="topnavbtn_examples" href="javascript:void(0);" onclick="w3_open_nav(&quot;examples&quot;)" title="Examples">EXAMPLES <i class="fa fa-caret-down"></i><i class="fa fa-caret-up" style="display:none"></i></a>
+        <a href="javascript:void(0);" class="topnav-icons fa  w3-bar-item w3-button" onclick="open_search(this)" title="Search W3Schools"></a>
+        <a href="javascript:void(0);" class="topnav-icons fa  w3-bar-item w3-button" onclick="open_translate(this)" title="Translate W3Schools"></a>
+        <a class="w3-bar-item w3-button " href="/forum/default.asp">FORUM</a>
+        <a class="w3-bar-item w3-button " id="topnavbtn_examples" href="javascript:void(0);" onclick="w3_open_nav(&quot;examples&quot;)" title="Examples">EXAMPLES <i class="fa fa-caret-down"></i><i class="fa fa-caret-up" style="display:none"></i></a>
        </div>
      
      
