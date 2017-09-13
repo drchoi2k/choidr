@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-	
+	@include('jquery.test')
 	@include('jquery.update')
 	<head>
 		<meta name="csrf-token" content="{{ csrf_token() }}">
