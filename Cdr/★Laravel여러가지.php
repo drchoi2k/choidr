@@ -214,15 +214,15 @@ $ php artisan vendor:public
 $user->save(); internal serve error발생시 mysql에서 null허용을 해준다
 
 ★ migration
-php artisan make:migration create_roles_table --create=roles  //roles : 테이블명
+php artisan make:migration create_roles_table --create=roles  //roles : 테이블명 필실행
 
 ● model 생성
-php artisan make:model Role     //Role : 모델명
+php artisan make:model Role     //Role : 모델명 필실행
 
 ● seeder 생성
-php artisan make:seeder RoleTableSeeder    //Role : 모델명
+php artisan make:seeder RoleTableSeeder    //Role : 모델명 필실행
   DB에 인서트
-php artisan db:seed --class=RolesTableSeeder    //Roles : 테이블명
+php artisan db:seed --class=RolesTableSeeder    //Roles : 테이블명  필실행
 
 ★ git-hub 다운로드
 git clone https://github.com/laravel/laravel.git myfolder

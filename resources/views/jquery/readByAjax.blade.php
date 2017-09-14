@@ -1,5 +1,6 @@
 <table class="table">
 	<thead>
+		<meta charset="utf-8">
 		<tr>
 			<th>ID</th>
 			<th>이 름</th>
