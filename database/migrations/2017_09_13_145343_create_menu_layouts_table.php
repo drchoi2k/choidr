@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMenuLayoutTable extends Migration
+class CreateMenuLayoutsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateMenuLayoutTable extends Migration
      */
     public function up()
     {
-        Schema::create('menu_layout', function (Blueprint $table) {
+        Schema::create('menu_layouts', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('menu_srl', 12);
-            $table->integer('s_no', 10);
+            $table->bigInteger('menu_srl')->default(0);
+            $table->bigInteger('s_no')->default(0);
             $table->string('title', 250);
-            $table->integer('list_order', 11);
+            $table->bigInteger('list_order')->default(0);
             $table->string('regdate', 14);
             
             $table->timestamps();
@@ -32,6 +32,6 @@ class CreateMenuLayoutTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('menu_layout');
+        Schema::dropIfExists('menu_layouts');
     }
 }
