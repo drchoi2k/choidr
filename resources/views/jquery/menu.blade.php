@@ -2,6 +2,7 @@
 <html lang="ko" style="height:100%;">
     <head>
         <meta charset="utf-8">
+       <!--  <link rel="stylesheet" type="text/css" href="/css/app.css"> -->
         <link rel="stylesheet" type="text/css" href="/css/w3.css">
 
 </head>
@@ -20,13 +21,13 @@
       <a href='javascript:void(0);' class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' onclick='open_menu()' title='Menu'></a>
       <a href='/asp/default.asp' class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' title='Home'></a>
 
-        <a class="w3-bar-item w3-button" href="#" title="HTML Tutorial">홈</a>
-        <a class="w3-bar-item w3-button" href="//ds.cathms.kr" title="CSS Tutorial">회사소개</a>
-        <a class="w3-bar-item w3-button" href="/js/default.asp" title="JavaScript Tutorial">성형사업부</a>
-        <a class="w3-bar-item w3-button" href="#" title="SQL Tutorial">금형사업부</a>
-        <a class="w3-bar-item w3-button" href="#" title="PHP Tutorial">조립사업부</a>
-        <a class="w3-bar-item w3-button" href="#" title="Bootstrap Tutorial">품질정책</a>
-        <a class="w3-bar-item w3-button" href="#" title="jQuery Tutorial">고객센터</a>
+        <a class="w3-bar-item w3-button" href="#" title="Home">홈</a>
+        <a class="w3-bar-item w3-button" href="//ds.cathms.kr" title="회사소개">회사소개</a>
+        <a class="w3-bar-item w3-button" href="http://localhost:8000/jquery" title="성형사업부">성형사업부</a>
+        <a class="w3-bar-item w3-button" href="#" title="금형사업부">금형사업부</a>
+        <a class="w3-bar-item w3-button" href="#" title="조립사업부">조립사업부</a>
+        <a class="w3-bar-item w3-button" href="#" title="품질정책">품질정책</a>
+        <a class="w3-bar-item w3-button" href="#" title="고객센터">고객센터</a>
         </div>
      </div>
   </div>
