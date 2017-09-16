@@ -1,0 +1,46 @@
+<!--@if($layout_info->lavaLamp_plugin=='Y')-->
+	<load target="js/jquery.easing.js" />
+	<load target="js/jquery.lavalamp.js" />
+<!--@end-->
+
+
+
+
+
+<!-- 1 차메뉴 -->
+<block cond="$layout_info->header_nav_type=='4'">
+	<div id="mainNav">
+		<!-- <block cond="$layout_info->lavaLamp_plugin=='Y'"> -->
+			<script type="text/javascript"> 
+				(jQuery)(function($) { 
+					$('#dropNav').lavaLamp();
+				}); 
+			</script>
+		<!-- </block> -->
+		<div id="dropNav" class="dropNav">
+			<ul>
+				<!--@foreach($main_menu->list as $key => $val)-->
+					<!--@if($val['link'])--><!--@if($val['selected'])-->{@ $menu_1st = $val }<!--@end-->
+						<li class="active on"|cond="$val['selected']">
+							<a href="{$val['href']}" onfocus="this.blur()" target="_blank"|cond="$val['open_window']=='Y'"><!--@if($val['text'] == $val['link'])--><span>{$val['text']}</span><!--@else-->{$val['link']}<!--@end--></a>
+							<ul cond="$val['list']">
+								<li loop="$val['list']=>$key2,$val2" class="<!--@if($val2['selected'])-->active on<!--@end--><!--@if($val2['list'])--> sub<!--@end-->"><a href="{$val2['href']}" target="_blank"|cond="$val2['open_window']=='Y'"><!--@if($val2['text'] == $val2['link'])--><span>{$val2['text']}</span><!--@else-->{$val2['link']}<!--@end--></a>
+									
+								</li>
+							</ul>
+						</li>
+					<!--@end-->
+				<!--@else-->
+				<!--@end-->
+			</ul>
+		</div>
+	</div>
+</block>
+
+<block cond="$layout_info->header_nav_type=='5'">
+	{$layout_info->header_nav_outer}
+</block>
+
+<block cond="$layout_info->mainNav_r">
+	<div class="mainNav_r">{$layout_info->mainNav_r}</div>
+</block>

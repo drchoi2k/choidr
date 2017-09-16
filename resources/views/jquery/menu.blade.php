@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="ko" style="height:100%;">
+        
     <head>
         <meta charset="utf-8">
        <!--  <link rel="stylesheet" type="text/css" href="/css/app.css"> -->
+        <load target="js/menu.js" />
+        <load target="js/jquery.easing.js" />
         <link rel="stylesheet" type="text/css" href="/css/w3.css">
+        <link rel="stylesheet" type="text/css" href="/css/smart.css">
         
-
 </head>
 <body style="position: relative; min-height: 100%; top: 10px;">
 <div class='w3-container top'>
@@ -16,15 +19,19 @@
   <div class='gcse-search'></div>
 </div> -->
 <!-- <div style='display:none;position:absolute;z-index:3;right:111px;height:44px;background-color:#5f5f5f;text-align:right;padding-top:9px;' id='google_translate_element'></div> -->
+      
 
-
-
-<div class='w3-card-2 topnav' id='topnav'>
-  
+"
+<div id="topNav" class="w3-card-2 topnav">
+  <script type="text/javascript"> 
+        (jQuery)(function($) { 
+          $('#dropNav').lavaLamp();
+        });
+  </script>
   <div style="overflow:auto;">
-    <div class="w3-bar w3-left" style="width:100%;overflow:hidden;height:35px">
+    <div id="dropNav" class="w3-bar w3-left" style="width:100%;overflow:hidden;height:35px">
       <a href='javascript:void(0);' class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' onclick='open_menu()' title='Menu'></a>
-     <!--  <a href='/asp/default.asp' class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' title='Home'></a> -->
+      <a href='/asp/default.asp' class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' title='Home'></a>
         <a class="w3-bar-item w3-button" href="http://localhost:8000/jquery" title="Home">홈</a>
         <a class="w3-bar-item w3-button" href="http://localhost:8000/jquery" title="회사소개">회사소개</a>
         <a class="w3-bar-item w3-button" href="http://localhost:8000/jquery" title="성형사업부">성형사업부</a>
@@ -35,6 +42,5 @@
         </div>
      </div>
    </div>
-  </div>
 </body>
 </html>
