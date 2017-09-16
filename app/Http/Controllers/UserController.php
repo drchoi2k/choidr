@@ -16,6 +16,11 @@ class UserController extends Controller
         return view('jquery.ckedit');
     }
 
+        public function new() {
+        return view('jquery.new');
+    }    
+
+
 	  public function aws() {
 	  	$data = ['대한민국','경상남도','지리산','종아가씨','팔룡산','무학산'];
         return view('aws_area.aws')->with('data',$data);

@@ -4,9 +4,9 @@
         <meta charset="utf-8">
         <style type="text/css">
            html, body{
-                width: 900px;
+                width: 100%;
                 margin: 0 auto;
-                padding: 30px;
+              
             }
             .btn2{
                float: right;
