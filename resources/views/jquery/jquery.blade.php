@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-	@include('jquery.menu')
-	@include('jquery.update')
+
 	<head>
 		<meta charset="utf-8">
 		<meta name="csrf-token" content="{{ csrf_token() }}">
@@ -15,6 +14,7 @@
 			}
 		</style> -->
 	</head>
+		@include('jquery.menu')
 	<body>
 		<div class="container">
 			
@@ -78,7 +78,7 @@
 		</div>
 
 		
-		<!-- @include('jquery.update')  -->
+		@include('jquery.update') 
 		<script type="text/javascript">
 		$(document).ready(function(){
 			$.ajaxSetup({

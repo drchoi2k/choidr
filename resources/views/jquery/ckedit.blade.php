@@ -3,11 +3,11 @@
     <head>
         <meta charset="utf-8">
         <style type="text/css">
-           html, body{
+         /*  html, body{
                 width: 100%;
                 margin: 0 auto;
               
-            }
+            }*/
             .btn2{
                float: right;
                margin: 10px 20px 0 0;
@@ -15,7 +15,7 @@
         </style>
         <title>A Simple Page with CKEditor</title>
         <!-- Make sure the path to CKEditor is correct. -->
-       <!-- <script src="//cdn.ckeditor.com/4.7.2/standard/ckeditor.js"></script> -->
+        <!-- <script src="//cdn.ckeditor.com/4.7.2/standard/ckeditor.js"></script> -->
         <script src="/ckeditor/ckeditor.js"></script>
     </head>
     <body>

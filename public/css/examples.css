@@ -1,0 +1,32 @@
+body {
+    font: 13px/1.4 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    color: #444;
+}
+
+.container {
+    width: 500px;
+    margin: auto;
+}
+
+h1 {
+    border-bottom: 1px solid #d9d9d9;
+}
+
+a {
+    color: #be2221;
+}
+
+#dotsunited-tab {
+    background: transparent url(http://labs.dotsunited.de/static/img/dotsunited-tab.png) 0 0 no-repeat !important;
+    display:block !important;
+    height:127px !important;
+    width:43px !important;
+    margin:0 !important;
+    padding:0 !important;
+    position:fixed !important;
+    text-indent:-9000px;
+    top:40% !important;
+    right: 0;
+
+    z-index:100001 !important;
+}

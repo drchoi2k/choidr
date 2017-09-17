@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
-@include('jquery.menu')
-@include('jquery.ckedit')
+	
+
 <head>
 	<title>NEW FILE</title>
+	
 </head>
-<body>
 
+<body>
+	@include('jquery.menu')
+	 <div class="w3-card-2">
+ 	<br>
+
+	</div>
 </body>
 </html>

@@ -38,6 +38,7 @@
 
 //   ------ Jquery
 Route::get('/','UserController@index');
+Route::get('/test','UserController@test');
 Route::get('/ckedit','UserController@ckedit');
 Route::get('/new','UserController@new');
 
