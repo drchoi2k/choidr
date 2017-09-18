@@ -18,6 +18,7 @@
         <!-- <script src="//cdn.ckeditor.com/4.7.2/standard/ckeditor.js"></script> -->
         <script src="/ckeditor/ckeditor.js"></script>
     </head>
+
     <body>
         <form>
             <textarea name="editor1" id="editor1" rows="10" cols="80">
@@ -31,6 +32,7 @@
          
            {!! Form::submit('저  장', array('class'=>'btn2 btn-save'))!!}
             <!-- <input class="btn btn-success" type="submit" name="전 송"> -->
+
         </form>
     </body>
 </html>
