@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-USE App\Docu;
+USE App\Document;
 
 class DocuController extends Controller
 {
