@@ -42,6 +42,11 @@ Route::get('/test','UserController@test');
 Route::get('/ckedit','UserController@ckedit');
 Route::get('/new','UserController@new');
 
+
+
+Route::post('/postdocu','DocuController@postdocu');
+
+
 Route::get('/jquery','JqueryController@jquery');
 Route::post('/postJquery','JqueryController@postJquery');
 Route::get('/readByAjax','JqueryController@readByAjax');
