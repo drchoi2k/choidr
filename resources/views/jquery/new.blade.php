@@ -9,6 +9,7 @@
 
 <body>
 	@include('jquery.menu')
+	@include('jquery.ckedit')
 	 <div class="w3-card-2">
  	<br>
 
