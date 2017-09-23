@@ -42,10 +42,14 @@ Route::get('/test','UserController@test');
 Route::get('/new','UserController@new');
 Route::get('/ckedit','CkeditorController@ckedit');
 Route::post('insert','CkeditorController@insert');
-Route::get('viewCode','CkeditorController@viewCode');
+Route::get('/viewCode','CkeditorController@viewCode');
 Route::get('readInfo/{id}','CkeditorController@readInfo');
 Route::get('deleteInfo/{id}','CkeditorController@deleteInfo');
- 
+Route::get('editInfo/{id}','CkeditorController@editInfo'); 
+Route::post('updateInfo','CkeditorController@updateInfo');
+
+
+
 
 Route::post('/postdocu','DocuController@postdocu');
 

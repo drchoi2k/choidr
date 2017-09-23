@@ -37,4 +37,20 @@ class CkeditorController extends Controller
     	DB::table('documents')->where('id',$id)->delete();
     	return back();
     }
+
+    public function editInfo($id)
+    {
+        $data=DB::table('documents')->where('id',$id)->first();
+        return view('ckeditor.editInfo', compact('data'));
+    }
+
+     public function updateInfo(Request $request)
+     {
+        DB::table('documents')->where('id',$request['id'])->update([
+            'title'=>$request['title'],
+            'content'=>$request['editor1']
+        ]);
+        return back();
+     }
+
 }

@@ -26,7 +26,7 @@
 							
 								<td>
 									<a href="{{url('readInfo',array($d->id))}}">View /</a>
-									<a href="#">Edit /</a>
+									<a href="{{url('editInfo',array($d->id))}}">Edit /</a>
 									<a href="{{url('deleteInfo',array($d->id))}}">Delete</a>
 								</td>
 							</tr>
