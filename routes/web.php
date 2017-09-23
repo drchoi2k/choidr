@@ -39,10 +39,13 @@
 //   ------ Jquery
 Route::get('/','UserController@index');
 Route::get('/test','UserController@test');
-Route::get('/ckedit','UserController@ckedit');
 Route::get('/new','UserController@new');
-
-
+Route::get('/ckedit','CkeditorController@ckedit');
+Route::post('insert','CkeditorController@insert');
+Route::get('viewCode','CkeditorController@viewCode');
+Route::get('readInfo/{id}','CkeditorController@readInfo');
+Route::get('deleteInfo/{id}','CkeditorController@deleteInfo');
+ 
 
 Route::post('/postdocu','DocuController@postdocu');
 

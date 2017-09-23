@@ -6,19 +6,19 @@ use Illuminate\Http\Request;
 use App\Role;
 use App\User;
 use DB;
+
 class UserController extends Controller
 {
-     public function index() {
+     public function index() 
+    {
         return view('welcome');
 	}
 
-     public function test() {
+    public function test() 
+    {
         return view('test');
     }
-        public function ckedit() {
-        return view('jquery.ckedit');
-    }
-
+    
         public function new() {
         return view('jquery.new');
     }    
