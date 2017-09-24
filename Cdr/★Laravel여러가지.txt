@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 // php artisan make:controller indexcontroller
 // routes촐더 안에 wep.php 와 상기 controller와 연결됨
@@ -71,8 +71,8 @@ class RolesTableSeeder extends Seeder
     public function run()
     {
        Role :: insert([['name'=>'admin','description'=>'This is Admin'],
-       					['name'=>'Virector','description'=>'This is Virector'],
-       					['name'=>'Manager','description'=>'This is Manager'],
+       			['name'=>'Virector','description'=>'This is Virector'],
+       			['name'=>'Manager','description'=>'This is Manager'],
         	            ]);
     }
 }

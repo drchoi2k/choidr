@@ -1,0 +1,4 @@
+$ composer global require "laravel/installer"
+$ laravel new choidr       // .env, key포함 설치
+  or
+$ composer create-project --prefer-dist laravel/laravel blog

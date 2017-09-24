@@ -4435,11 +4435,11 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:focus, a.list-g
 	border-bottom: 1px solid #d3e0e9
 }
 .panel-default {
-	border-color: #d3e0e9
+	border-color: #d3e0e9            /*판넬 테두리*/
 }
 .panel-default>.panel-heading {
 	color: #333;
-	background-color: #fff;
+	background-color: #fff;        /* 헤드판넬 바탕*/
 	border-color: #d3e0e9
 }
 .panel-default>.panel-heading+.panel-collapse>.panel-body {

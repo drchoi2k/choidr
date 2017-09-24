@@ -4,6 +4,16 @@
 		<title>TEST CKEDITOR</title>
 		<meta charset="utf-8">
 		{!!Html::style('css/app.css')!!}
+		<style type="text/css">
+		/*      html, body{
+		width: 100%;
+		margin: 0 auto;
+		
+		}*/
+		.posi{
+		margin: 0 0 0 180px;
+		}
+		</style>
 	</head>
 	<body>
 		<div class="container">
@@ -23,7 +33,6 @@
 							@foreach($data as $key => $d)
 							<tr>
 								<td>{!!$d ->title!!}</td>
-							
 								<td>
 									<a href="{{url('readInfo',array($d->id))}}">View /</a>
 									<a href="{{url('editInfo',array($d->id))}}">Edit /</a>
@@ -32,6 +41,18 @@
 							</tr>
 							@endforeach
 						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="panel-heading">
+						<h4>ETC</h4>
+					</div>
+					<table class="table table-striped">
+						qqqqqqqqqqqqqqqqqq
+						<hr>
+						SSSSSSSSSSsSSSSSSS
 					</table>
 				</div>
 			</div>

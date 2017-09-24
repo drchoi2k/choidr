@@ -12,7 +12,7 @@
 					<h4>Read Editor</h4>
 				</div>
 				<div class="panel-body">
-					<h2>{!!$data->title!!}</h2>
+					<h3>{!!$data->title!!}</h3>
 					<hr>
 					{!!$data->content!!}
 

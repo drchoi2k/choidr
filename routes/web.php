@@ -38,16 +38,15 @@
 
 //   ------ Jquery
 Route::get('/','UserController@index');
-Route::get('/test','UserController@test');
+Route::match(['get','post'], '/menu','UserController@test');
 Route::get('/new','UserController@new');
 Route::get('/ckedit','CkeditorController@ckedit');
 Route::post('insert','CkeditorController@insert');
-Route::get('/viewCode','CkeditorController@viewCode');
+Route::any('/viewCode','CkeditorController@viewCode');
 Route::get('readInfo/{id}','CkeditorController@readInfo');
 Route::get('deleteInfo/{id}','CkeditorController@deleteInfo');
 Route::get('editInfo/{id}','CkeditorController@editInfo'); 
 Route::post('updateInfo','CkeditorController@updateInfo');
-
 
 
 
@@ -81,5 +80,9 @@ Route::post('/updateByAjax','JqueryController@updateByAjax');
 
 // Route::post('/updateByAjax', [
 //     'as' => 'root',
-//     'uses' => 'JqueryController@updateByAjax',
+//     'uses' => 'Jqu eryController@updateByAjax',
 // ]);
+Route::view('/welcome', 'test');
+Route::get('user/{name?}', function ($name = 'John') {
+    return $name;
+});
