@@ -13,6 +13,10 @@
 		.posi{
 		margin: 0 0 0 180px;
 		}
+		.tex{
+			font-size: 18px;
+			/*padding: 0 0 0 130px;*/
+		}
 		</style>
 	</head>
 	<body>
@@ -44,15 +48,18 @@
 					</table>
 				</div>
 			</div>
-			<div class="panel panel-default">
-				<div class="panel-body">
+			<div class="panel panel-default" width="50%">
+				<div class="panel-info">
 					<div class="panel-heading">
 						<h4>ETC</h4>
 					</div>
-					<table class="table table-striped">
-						qqqqqqqqqqqqqqqqqq
-						<hr>
-						SSSSSSSSSSsSSSSSSS
+					<table class="table table-striped tex">
+						<tr>
+							<td>1111111111111111</td>
+						</tr>
+						<tr>
+							<td>2222222222222222</td>
+  						</tr>
 					</table>
 				</div>
 			</div>
