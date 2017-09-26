@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<title>JavaScript Tutorial</title>
+<title>CSS Pagination Examples</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,source code,colors,demos,tips">
@@ -396,7 +396,61 @@ function w3_getStyleValue(elmnt,style) {
 }
 </script>
 
-</head><body>
+<style>
+.pagination,.pagination2,.pagination3 {
+  display: inline-block;
+  padding: 0;
+  margin: 8px 0;
+}
+.pagination li,.pagination2 li,.pagination3 li {display: inline;}
+.pagination li a, .pagination2 li a,.pagination3 li a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+.border li a {
+  transition: background-color .3s;
+  border:1px solid #ddd;
+}
+.size li a {font-size:22px;}
+.btnround li a {border-radius: 5px;}
+.hover li a {transition: background-color .3s;}
+.margin li a {margin:0 4px;}
+.pagination3 li:first-child a {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.pagination3 li:last-child a {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+ul.pagination2 li a.active, ul.pagination3 li a.active {
+  background-color: #4CAF50;
+  color: white;
+  border:1px solid #4CAF50;
+}
+ul.pagination2 li a:hover:not(.active), 
+ul.pagination3 li a:hover:not(.active) {background-color: #ddd;}
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #eee;
+}
+ul.breadcrumb li {display: inline;}
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+.cssHigh {
+  margin-left: 0px;
+}
+</style>
+</head>
+<body>
 <div class='w3-container top'>
   <a class='w3schools-logo' href='//www.w3schools.com'>w3schools<span class='dotcom'>.com</span></a>
   <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">THE WORLD'S LARGEST WEB DEVELOPER SITE</div>
@@ -580,140 +634,101 @@ function w3_getStyleValue(elmnt,style) {
   <div id='leftmenuinner'>
     <div class='w3-light-grey' id='leftmenuinnerinner'>
       <a href='javascript:void(0)' onclick='close_menu()' class='w3-button w3-hide-large w3-large w3-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>
-<h2 class="left"><span class="left_h2">JS</span> Tutorial</h2>
-<a target="_top" href="default.asp">JS HOME</a>
-<a target="_top" href="js_intro.asp">JS Introduction</a>
-<a target="_top" href="js_whereto.asp">JS Where To</a>
-<a target="_top" href="js_output.asp">JS Output</a>
-<a target="_top" href="js_syntax.asp">JS Syntax</a>
-<a target="_top" href="js_statements.asp">JS Statements</a>
-<a target="_top" href="js_comments.asp">JS Comments</a>
-<a target="_top" href="js_variables.asp">JS Variables</a>
-<a target="_top" href="js_operators.asp">JS Operators</a>
-<a target="_top" href="js_arithmetic.asp">JS Arithmetic</a>
-<a target="_top" href="js_assignment.asp">JS Assignment</a>
-<a target="_top" href="js_datatypes.asp">JS Data Types</a>
-<a target="_top" href="js_functions.asp">JS Functions</a>
-<a target="_top" href="js_objects.asp">JS Objects</a>
-<a target="_top" href="js_scope.asp">JS Scope</a>
-<a target="_top" href="js_events.asp">JS Events</a>
-<a target="_top" href="js_strings.asp">JS Strings</a>
-<a target="_top" href="js_string_methods.asp">JS String Methods</a>
-<a target="_top" href="js_numbers.asp">JS Numbers</a>
-<a target="_top" href="js_number_methods.asp">JS Number Methods</a>
-<a target="_top" href="js_math.asp">JS Math</a>
-<a target="_top" href="js_random.asp">JS Random</a>
-<a target="_top" href="js_dates.asp">JS Dates</a>
-<a target="_top" href="js_date_formats.asp">JS Date Formats</a>
-<a target="_top" href="js_date_methods.asp">JS Date Methods</a>
-<a target="_top" href="js_arrays.asp">JS Arrays</a>
-<a target="_top" href="js_array_methods.asp">JS Array Methods</a>
-<a target="_top" href="js_array_sort.asp">JS Array Sort</a>
-<a target="_top" href="js_booleans.asp">JS Booleans</a>
-<a target="_top" href="js_comparisons.asp">JS Comparisons</a>
-<a target="_top" href="js_if_else.asp">JS Conditions</a>
-<a target="_top" href="js_switch.asp">JS Switch</a>
-<a target="_top" href="js_loop_for.asp">JS Loop For</a>
-<a target="_top" href="js_loop_while.asp">JS Loop While</a>
-<a target="_top" href="js_break.asp">JS Break</a>
-<a target="_top" href="js_type_conversion.asp">JS Type Conversion</a>
-<a target="_top" href="js_bitwise.asp">JS Bitwise</a>
-<a target="_top" href="js_regexp.asp">JS RegExp</a>
-<a target="_top" href="js_errors.asp">JS Errors</a>
-<a target="_top" href="js_debugging.asp">JS Debugging</a>
-<a target="_top" href="js_hoisting.asp">JS Hoisting</a>
-<a target="_top" href="js_strict.asp">JS Strict Mode</a>
-<a target="_top" href="js_conventions.asp">JS Style Guide</a>
-<a target="_top" href="js_best_practices.asp">JS Best Practices</a>
-<a target="_top" href="js_mistakes.asp">JS Mistakes</a>
-<a target="_top" href="js_performance.asp">JS Performance</a>
-<a target="_top" href="js_reserved.asp">JS Reserved Words</a>
-<a target="_top" href="js_versions.asp">JS Versions</a>
-<a target="_top" href="js_json.asp">JS JSON</a>
+<h2 class="left"><span class="left_h2">CSS</span> Tutorial</h2>
+<a target="_top" href="default.asp">CSS HOME</a>
+<a target="_top" href="css_intro.asp">CSS Introduction</a>
+<a target="_top" href="css_syntax.asp">CSS Syntax</a>
+<a target="_top" href="css_howto.asp">CSS How To</a>
+<a target="_top" href="css_colors.asp">CSS Colors</a>
+<a target="_top" href="css_background.asp">CSS Backgrounds</a>
+<a target="_top" href="css_border.asp">CSS Borders</a>
+<a target="_top" href="css_margin.asp">CSS Margins</a>
+<a target="_top" href="css_padding.asp">CSS Padding</a>
+<a target="_top" href="css_dimension.asp">CSS Height/Width</a>
+<a target="_top" href="css_boxmodel.asp">CSS Box Model</a>
+<a target="_top" href="css_outline.asp">CSS Outline</a>
+<a target="_top" href="css_text.asp">CSS Text</a>
+<a target="_top" href="css_font.asp">CSS Fonts</a>
+<a target="_top" href="css_icons.asp">CSS Icons</a>
+<a target="_top" href="css_link.asp">CSS Links</a>
+<a target="_top" href="css_list.asp">CSS Lists</a>
+<a target="_top" href="css_table.asp">CSS Tables</a>
+<a target="_top" href="css_display_visibility.asp">CSS Display</a>
+<a target="_top" href="css_max-width.asp">CSS Max-width</a>
+<a target="_top" href="css_positioning.asp">CSS Position</a>
+<a target="_top" href="css_overflow.asp">CSS Overflow</a>
+<a target="_top" href="css_float.asp">CSS Float</a>
+<a target="_top" href="css_inline-block.asp">CSS Inline-block</a>
+<a target="_top" href="css_align.asp">CSS Align</a>
+<a target="_top" href="css_combinators.asp">CSS Combinators</a>
+<a target="_top" href="css_pseudo_classes.asp">CSS Pseudo-class</a>
+<a target="_top" href="css_pseudo_elements.asp">CSS Pseudo-element</a>
+<a target="_top" href="css_image_transparency.asp">CSS Opacity</a>
+<a target="_top" href="css_navbar.asp">CSS Navigation Bar</a>
+<a target="_top" href="css_dropdowns.asp">CSS Dropdowns</a>
+<a target="_top" href="css_tooltip.asp">CSS Tooltips</a>
+<a target="_top" href="css_image_gallery.asp">CSS Image Gallery</a>
+<a target="_top" href="css_image_sprites.asp">CSS Image Sprites</a>
+<a target="_top" href="css_attribute_selectors.asp">CSS Attr Selectors</a>
+<a target="_top" href="css_form.asp">CSS Forms</a>
+<a target="_top" href="css_counters.asp">CSS Counters</a>
+<a target="_top" href="css_website_layout.asp">CSS Website Layout</a>
 <br>
-<h2 class="left"><span class="left_h2">JS</span> Forms</h2>
-<a target="_top" href="js_validation.asp">JS Forms</a>
-<a target="_top" href="js_validation_api.asp">Forms API</a>
+<h2 class="left"><span class="left_h2">CSS3</span></h2>
+<a target="_top" href="css3_intro.asp">CSS3 Introduction</a>
+<a target="_top" href="css3_borders.asp">CSS3 Rounded Corners</a>
+<a target="_top" href="css3_border_images.asp">CSS3 Border Images</a>
+<a target="_top" href="css3_backgrounds.asp">CSS3 Backgrounds</a>
+<a target="_top" href="css3_colors.asp">CSS3 Colors</a>
+<a target="_top" href="css3_gradients.asp">CSS3 Gradients</a>
+<a target="_top" href="css3_shadows.asp">CSS3 Shadows</a>
+<a target="_top" href="css3_text_effects.asp">CSS3 Text</a>
+<a target="_top" href="css3_fonts.asp">CSS3 Fonts</a>
+<a target="_top" href="css3_2dtransforms.asp">CSS3 2D Transforms</a>
+<a target="_top" href="css3_3dtransforms.asp">CSS3 3D Transforms</a>
+<a target="_top" href="css3_transitions.asp">CSS3 Transitions</a>
+<a target="_top" href="css3_animations.asp">CSS3 Animations</a>
+<a target="_top" href="css3_images.asp">CSS3 Images</a>
+<a target="_top" href="css3_object-fit.asp">CSS3 object-fit</a>
+<a target="_top" href="css3_buttons.asp">CSS3 Buttons</a>
+<a target="_top" href="css3_pagination.asp">CSS3 Pagination</a>
+<a target="_top" href="css3_multiple_columns.asp">CSS3 Multiple Columns</a>
+<a target="_top" href="css3_user_interface.asp">CSS3 User Interface</a>
+<a target="_top" href="css3_box-sizing.asp">CSS3 Box Sizing</a>
+<a target="_top" href="css3_flexbox.asp">CSS3 Flexbox</a>
+<a target="_top" href="css3_mediaqueries.asp">CSS3 Media Queries</a>
+<a target="_top" href="css3_mediaqueries_ex.asp">CSS3 MQ Examples</a>
 <br>
-<h2 class="left"><span class="left_h2">JS</span> Objects</h2>
-<a target="_top" href="js_object_definition.asp">Object Definitions</a>
-<a target="_top" href="js_properties.asp">Object Properties</a>
-<a target="_top" href="js_object_methods.asp">Object Methods</a>
-<a target="_top" href="js_object_prototypes.asp">Object Prototypes</a>
+<h2 class="left"><span class="left_h2">CSS</span> Responsive</h2>
+<a target="_top" href="css_rwd_intro.asp">RWD Intro</a>
+<a target="_top" href="css_rwd_viewport.asp">RWD Viewport</a>
+<a target="_top" href="css_rwd_grid.asp">RWD Grid View</a>
+<a target="_top" href="css_rwd_mediaqueries.asp">RWD Media Queries</a>
+<a target="_top" href="css_rwd_images.asp">RWD Images</a>
+<a target="_top" href="css_rwd_videos.asp">RWD Videos</a>
+<a target="_top" href="css_rwd_frameworks.asp">RWD Frameworks</a>
+<a target="_top" href="css_rwd_templates.asp">RWD Templates</a>
 <br>
-<h2 class="left"><span class="left_h2">JS</span> Functions</h2>
-<a target="_top" href="js_function_definition.asp">Function Definitions</a>
-<a target="_top" href="js_function_parameters.asp">Function Parameters</a>
-<a target="_top" href="js_function_invocation.asp">Function Invocation</a>
-<a target="_top" href="js_function_call.asp">Function Call</a>
-<a target="_top" href="js_function_apply.asp">Function Apply</a>
-<a target="_top" href="js_function_closures.asp">Function Closures</a>
+<h2 class="left"><span class="left_h2">CSS</span> Examples</h2>
+<a target="_top" href="css_templates.asp">CSS Templates</a>
+<a target="_top" href="css_examples.asp">CSS Examples</a>
+<a target="_top" href="css_quiz.asp">CSS Quiz</a>
+<a target="_top" href="css_exercises.asp">CSS Exercises</a>
+<a target="_top" href="css_exam.asp">CSS Certificate</a>
 <br>
-<h2 class="left"><span class="left_h2">JS</span> HTML DOM</h2>
-<a target="_top" href="js_htmldom.asp">DOM Intro</a>
-<a target="_top" href="js_htmldom_methods.asp">DOM Methods</a>
-<a target="_top" href="js_htmldom_document.asp">DOM Document</a>
-<a target="_top" href="js_htmldom_elements.asp">DOM Elements</a>
-<a target="_top" href="js_htmldom_html.asp">DOM HTML</a>
-<a target="_top" href="js_htmldom_css.asp">DOM CSS</a>
-<a target="_top" href="js_htmldom_animate.asp">DOM Animations</a>
-<a target="_top" href="js_htmldom_events.asp">DOM Events</a>
-<a target="_top" href="js_htmldom_eventlistener.asp">DOM Event Listener</a>
-<a target="_top" href="js_htmldom_navigation.asp">DOM Navigation</a>
-<a target="_top" href="js_htmldom_nodes.asp">DOM Nodes</a>
-<a target="_top" href="js_htmldom_collections.asp">DOM Collections</a>
-<a target="_top" href="js_htmldom_nodelist.asp">DOM Node Lists</a>
-<br>
-<h2 class="left"><span class="left_h2">JS</span> Browser BOM</h2>
-<a target="_top" href="js_window.asp">JS Window</a>
-<a target="_top" href="js_window_screen.asp">JS Screen</a>
-<a target="_top" href="js_window_location.asp">JS Location</a>
-<a target="_top" href="js_window_history.asp">JS History</a>
-<a target="_top" href="js_window_navigator.asp">JS Navigator</a>
-<a target="_top" href="js_popup.asp">JS Popup Alert</a>
-<a target="_top" href="js_timing.asp">JS Timing</a>
-<a target="_top" href="js_cookies.asp">JS Cookies</a>
-<br>
-<h2 class="left"><span class="left_h2">JS</span> AJAX</h2>
-<a target="_top" href="js_ajax_intro.asp">AJAX Intro</a>
-<a target="_top" href="js_ajax_http.asp">AJAX XMLHttp</a>
-<a target="_top" href="js_ajax_http_send.asp">AJAX Request</a>
-<a target="_top" href="js_ajax_http_response.asp">AJAX Response</a>
-<a target="_top" href="js_ajax_xmlfile.asp">AJAX XML File</a>
-<a target="_top" href="js_ajax_php.asp">AJAX PHP</a>
-<a target="_top" href="js_ajax_asp.asp">AJAX ASP</a>
-<a target="_top" href="js_ajax_database.asp">AJAX Database</a>
-<a target="_top" href="js_ajax_applications.asp">AJAX Applications</a>
-<a target="_top" href="js_ajax_examples.asp">AJAX Examples</a>
-
-<br>
-<h2 class="left"><span class="left_h2">JS</span> JSON</h2>
-<a target="_top" href="js_json_intro.asp">JSON Intro</a>
-<a target="_top" href="js_json_syntax.asp">JSON Syntax</a>
-<a target="_top" href="js_json_xml.asp">JSON vs XML</a>
-<a target="_top" href="js_json_datatypes.asp">JSON Data Types</a>
-<a target="_top" href="js_json_objects.asp">JSON Objects</a>
-<a target="_top" href="js_json_arrays.asp">JSON Arrays</a>
-<a target="_top" href="js_json_parse.asp">JSON Parse</a>
-<a target="_top" href="js_json_stringify.asp">JSON Stringify</a>
-<a target="_top" href="js_json_php.asp">JSON PHP</a>
-<a target="_top" href="js_json_html.asp">JSON HTML</a>
-<a target="_top" href="js_json_jsonp.asp">JSON JSONP</a>
-<br>
-<h2 class="left"><span class="left_h2">JS</span> Examples</h2>
-<a target="_top" href="js_examples.asp">JS Examples</a>
-<a target="_top" href="js_dom_examples.asp">JS HTML DOM</a>
-<a target="_top" href="js_input_examples.asp">JS HTML Input</a>
-<a target="_top" href="js_ex_dom.asp">JS HTML Objects</a>
-<a target="_top" href="js_events_examples.asp">JS HTML Events</a>
-<a target="_top" href="js_ex_browser.asp">JS Browser</a>
-<a target="_top" href="js_quiz.asp">JS Quiz</a>
-<a target="_top" href="js_exam.asp">JS Certificate</a>
-<br>
-<h2 class="left"><span class="left_h2">JS</span> References</h2>
-<a target="_top" href="/jsref/default.asp">JavaScript Objects</a>
-<a target="_top" href="/jsref/default.asp">HTML DOM Objects</a>
-<br>
+<h2 class="left"><span class="left_h2">CSS</span> References</h2>
+<a target="_top" href="/cssref/default.asp">CSS Reference</a>
+<a target="_top" href="/cssref/css_selectors.asp">CSS Selectors</a>
+<a target="_top" href="/cssref/css_functions.asp">CSS Functions</a>
+<a target="_top" href="/cssref/css_ref_aural.asp">CSS Reference Aural</a>
+<a target="_top" href="/cssref/css_websafe_fonts.asp">CSS Web Safe Fonts</a>
+<a target="_top" href="/cssref/css_animatable.asp">CSS Animatable</a>
+<a target="_top" href="/cssref/css_units.asp">CSS Units</a>
+<a target="_top" href="/cssref/css_pxtoemconversion.asp">CSS PX-EM Converter</a>
+<a target="_top" href="/cssref/css_colors.asp">CSS Colors</a>
+<a target="_top" href="/cssref/css_colors_legal.asp">CSS Color Values</a>
+<a target="_top" href="/cssref/css_default_values.asp">CSS Default Values</a>
+<a target="_top" href="/cssref/css3_browsersupport.asp">CSS3 Browser Support</a>
       <br><br>
     </div>
   </div>
@@ -727,69 +742,115 @@ function w3_getStyleValue(elmnt,style) {
           <script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422003450156-2'); });</script>
         </div>
       </div>
-<h1>JavaScript <span class="color_h1">Tutorial</span></h1>
+<h1>CSS <span class="color_h1">Pagination Examples</span></h1>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="/default.asp">&#10094; Home</a>
-<a class="w3-right w3-btn" href="js_intro.asp">Next &#10095;</a>
+<a class="w3-left w3-btn" href="css3_buttons.asp">&#10094; Previous</a>
+<a class="w3-right w3-btn" href="css3_multiple_columns.asp">Next &#10095;</a>
 </div>
-
-<div class="w3-panel w3-info intro">
-<p>JavaScript is the programming language of HTML and the Web.</p>
-<p>JavaScript is easy to learn.</p>
-<p>This tutorial will teach you JavaScript from basic to advanced.</p>
-</div>
-
 <hr>
-<h2>Examples in Each Chapter</h2>
-<p>With our &quot;Try it Yourself&quot; editor, you can change all examples and view 
-the results.</p>
+<p class="intro">Learn how to create a responsive pagination using CSS.</p>
+<hr>
+
+<h2>Simple Pagination</h2>
+<p>If you have a website with lots of pages, you may wish to add some sort of 
+pagination to each page:</p>
+
+<div class="w3-row w3-margin-top">
+
+<div class="w3-twothird">
+<ul class="pagination">
+  <li><a href="javascript:void(0)">&laquo;</a></li>
+  <li><a class="w3-red" href="javascript:void(0)">1</a></li>
+  <li><a href="javascript:void(0)">2</a></li>
+  <li><a href="javascript:void(0)">3</a></li>
+  <li><a href="javascript:void(0)">4</a></li>
+  <li><a href="javascript:void(0)">5</a></li>
+  <li><a href="javascript:void(0)">6</a></li>
+  <li><a href="javascript:void(0)">&raquo;</a></li>
+</ul>
+</div>
+
+<div class="w3-third w3-hide-small">
+<ul class="pagination w3-border xw3-round">
+  <li><a href="javascript:void(0)" class="w3-border-right">&#10094; &nbsp;</a></li>
+  <li><a href="javascript:void(0)">&nbsp; &#10095;</a></li>
+</ul>
+</div>
+</div>
 <div class="w3-example">
 <h3>Example</h3>
-<div class="w3-padding w3-white notranslate">
-<h2>My First JavaScript</h2>
-<button type="button" onclick="document.getElementById('demo').innerHTML=Date()">
-Click me to display Date and Time</button>
-<p id="demo"></p>
+<div class="w3-code notranslate cssHigh">
+  .pagination {<br>&nbsp;&nbsp;&nbsp; display: inline-block;<br>}<br><br>.pagination a {<br>&nbsp;&nbsp;&nbsp; color: 
+black;<br>&nbsp;&nbsp;&nbsp; float: left;<br>&nbsp;&nbsp;&nbsp; padding: 8px 
+16px;<br>&nbsp;&nbsp;&nbsp; text-decoration: none;<br>}</div>
+<a target="_blank" href="tryit.asp?filename=trycss_ex_pagination" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
 </div>
-<p>
-<a target="_blank" class="w3-btn" href="tryit.asp?filename=tryjs_myfirst">Try it Yourself &raquo;</a>
-</p>
-</div>
-
-<div class="w3-panel w3-note">
-<p>We recommend reading this tutorial, in the sequence listed in the left menu.</p>
-</div>
-
 <hr>
-<h2>Learn by Examples</h2>
-<p>Examples are better than 1000 words. Examples are often easier to understand 
-than text explanations.</p>
-<p>This tutorial supplements all explanations with clarifying &quot;Try it Yourself&quot; examples.</p>
-<p><a href="js_examples.asp">JavaScript Examples</a></p>
-<div class="w3-panel w3-note">
-<p>If you try all the examples, you will learn a lot about JavaScript, in a very short time!</p>
+
+<h2>Active and Hoverable Pagination</h2>
+<ul class="pagination2">
+ <li><a href="#">&laquo;</a></li>
+  <li><a href="#">1</a></li>
+  <li><a class="active" href="#" style="border:none !important;">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+  <li><a href="#">6</a></li>
+  <li><a href="#">7</a></li>
+  <li><a href="#">&raquo;</a></li>
+</ul>
+<p>Highlight the current page with an <code class="w3-codespan">.active</code> 
+class, and use the <code class="w3-codespan">:hover</code> 
+selector to change the color of each page link when moving the mouse over them:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+  .pagination a.active {<br>&nbsp;&nbsp;&nbsp; background-color: 
+#4CAF50;<br>&nbsp;&nbsp;&nbsp; color: white;<br>}<br><br>.pagination a:hover:not(.active) {background-color: #ddd;}</div>
+<a target="_blank" href="tryit.asp?filename=trycss_ex_pagination_active" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
 </div>
 
-<hr>
-<h2>Why Study JavaScript?</h2>
-<p>JavaScript is one of the <strong>3 languages</strong> all web developers <strong>
-must</strong> 
-learn:</p>
-<p>&nbsp;&nbsp; 1. <strong>HTML</strong> to define the content of web pages</p>
-<p>&nbsp;&nbsp; 2. <strong>CSS</strong> to specify the layout of web pages</p>
-<p>&nbsp;&nbsp; 3. <strong>JavaScript</strong> to program the behavior of web pages </p>
-<p>This tutorial is about JavaScript, and how JavaScript works with HTML and CSS.</p>
+<h3 style="margin-top:35px;">Rounded Active and Hoverable Buttons</h3>
+<ul class="pagination2 btnround">
+ <li><a href="#">&laquo;</a></li>
+  <li><a href="#">1</a></li>
+  <li><a class="active" href="#" style="border:none !important;border-radius:5px;">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+  <li><a href="#">6</a></li>
+  <li><a href="#">7</a></li>
+  <li><a href="#">&raquo;</a></li>
+</ul>
 
-<div class="w3-panel w3-note">
-<h3>Did You Know?</h3>
-<p>JavaScript and Java are completely different languages, both in concept 
-and design.</p>
-<p>JavaScript was invented by Brendan Eich in 1995, and became an ECMA standard  
-in 1997.<br>ECMA-262 is the official name of the standard. ECMAScript is the official name of the language.
-</p>
-<p>You can read more about the different JavaScript versions in the chapter 
-<a href="js_versions.asp">JS Versions</a>.</p>
+<p>Add the <code class="w3-codespan">border-radius</code> property if you want a rounded "active" and "hover" button:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+  .pagination a {<br>&nbsp;&nbsp;&nbsp; border-radius: 5px;<br>}<br><br>.pagination a.active {<br>&nbsp;&nbsp;&nbsp; 
+border-radius: 5px;<br>}</div>
+<a target="_blank" href="tryit.asp?filename=trycss_ex_pagination_active_round" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
 
+<h3 style="margin-top:35px;">Hoverable Transition Effect</h3>
+<ul class="pagination2 hover">
+  <li><a href="#">&laquo;</a></li>
+  <li><a href="#">1</a></li>
+  <li><a class="active" href="#" style="border:none !important;">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+  <li><a href="#">6</a></li>
+  <li><a href="#">7</a></li>
+  <li><a href="#">&raquo;</a></li>
+</ul>
+
+<p>Add the <code class="w3-codespan">transition</code> property to the page links to create a transition effect on hover:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+  .pagination a {<br>&nbsp;&nbsp;&nbsp; transition: background-color .3s;<br>}</div>
+<a target="_blank" href="tryit.asp?filename=trycss_ex_pagination_transition" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
 </div>
 
 <hr>
@@ -802,44 +863,152 @@ in 1997.<br>ECMA-262 is the official name of the standard. ECMAScript is the off
   </div>  
 </div>
 <hr>
-<h2>Learning Speed</h2>
-<p>In this tutorial, the learning speed is your choice.</p>
-<p>Everything is up to you.</p>
-<p>If you are struggling, take a break, or reread the material.</p>
-<p><strong>Always</strong> make sure you understand <strong>all</strong> the &quot;Try-it-Yourself&quot; 
-examples.</p>
-<hr>
-<h2>JavaScript References</h2>
-<p>W3Schools maintains a complete JavaScript reference, including all HTML and browser objects.</p>
-<p>The reference contains examples for all properties and methods, and 
-is continuously updated according to the latest web standards.</p>
-<p><a href="/jsref/default.asp">Complete JavaScript Reference</a></p>
-<hr>
-<h2>JavaScript Quiz Test</h2>
-<p>Test your JavaScript skills at W3Schools!</p>
-<p><a href="js_quiz.asp">Start JavaScript Quiz!</a></p>
+
+<h2>Bordered Pagination</h2>
+<ul class="pagination2 border">
+  <li><a href="#">&laquo;</a></li>
+  <li><a href="#">1</a></li>
+  <li><a class="active" href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+  <li><a href="#">6</a></li>
+  <li><a href="#">7</a></li>
+  <li><a href="#">&raquo;</a></li>
+</ul>
+<p>Use the <code class="w3-codespan">border</code> property to add borders to the pagination:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+  .pagination a {<br>&nbsp;&nbsp;&nbsp; border: 1px solid #ddd; /* Gray 
+*/<br>}<br></div>
+<a target="_blank" href="tryit.asp?filename=trycss_ex_pagination_border" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
+
+<h3 style="margin-top:35px;">Rounded Borders</h3>
+<p><strong>Tip:</strong> Add rounded borders to your first and last link in the 
+pagination:</p>
+<ul class="pagination3 border">
+  <li><a href="#">&laquo;</a></li>
+  <li><a href="#">1</a></li>
+  <li><a class="active" href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+  <li><a href="#">6</a></li>
+  <li><a href="#">7</a></li>
+  <li><a href="#">&raquo;</a></li>
+</ul>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+.pagination a:first-child {<br>&nbsp;&nbsp;&nbsp; border-top-left-radius: 
+5px;<br>&nbsp;&nbsp;&nbsp; border-bottom-left-radius: 5px;<br>}<br><br>.pagination 
+  a:last-child {<br>&nbsp;&nbsp;&nbsp; 
+border-top-right-radius: 5px;<br>&nbsp;&nbsp;&nbsp; 
+border-bottom-right-radius: 5px;<br>}<br></div>
+<a target="_blank" href="tryit.asp?filename=trycss_ex_pagination_border_round" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
+
+<h3 style="margin-top:35px;">Space Between Links</h3>
+<p><strong>Tip:</strong> Add the <code class="w3-codespan">margin</code> property if you do not want to group the page links:</p>
+<ul class="pagination2 border margin">
+  <li><a href="#">&laquo;</a></li>
+  <li><a href="#">1</a></li>
+  <li><a class="active" href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+  <li><a href="#">6</a></li>
+  <li><a href="#">7</a></li>
+  <li><a href="#">&raquo;</a></li>
+</ul>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+  .pagination a {<br>&nbsp;&nbsp;&nbsp; margin: 0 4px; /* 0 is for top 
+and bottom. Feel free to change it */<br>}<br></div>
+<a target="_blank" href="tryit.asp?filename=trycss_ex_pagination_margin" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
 <hr>
 
-<h2>JavaScript Exam - Get Your Diploma!</h2>
-<div class="w3-row">
-<div class="w3-third w3-container w3-padding-24"><a href="/cert/default.asp"><img src="/images/w3cert.gif" style="width:100%;" alt="W3Schools Certification" /></a> </div>
-<div class="w3-twothird w3-container"><h2>W3Schools' Online Certification</h2>
-<p>The perfect solution for professionals who need to balance work, family, and career building.</p>
-<p>More than 10 000 certificates already issued!</p>
+<h2>Pagination Size</h2>
+<ul class="pagination2 border size">
+  <li><a href="#">&laquo;</a></li>
+  <li><a href="#">1</a></li>
+  <li><a class="active" href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+  <li><a href="#">6</a></li>
+  <li><a href="#">7</a></li>
+  <li><a href="#">&raquo;</a></li>
+</ul>
+<p>Change the size of the pagination with the <code class="w3-codespan">font-size</code> property:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+  .pagination a {<br>&nbsp;&nbsp;&nbsp; font-size: 22px;<br>}<br></div>
+<a target="_blank" href="tryit.asp?filename=trycss_ex_pagination_size" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
 </div>
+<hr>
+
+<h2>Centered Pagination</h2>
+<div style="text-align:center;">
+<ul class="pagination2 border">
+  <li><a href="#">&laquo;</a></li>
+  <li><a href="#">1</a></li>
+  <li><a class="active" href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+  <li><a href="#">6</a></li>
+  <li><a href="#">7</a></li>
+  <li><a href="#">&raquo;</a></li>
+</ul>
 </div>
-<p><a class="w3-btn" href="/cert/default.asp">Get Your Certificate &raquo;</a></p>
-<p style="clear:both;">The <a href="/cert/default.asp">HTML Certificate</a> documents your knowledge of HTML.</p>
-<p>The <a href="/cert/default.asp">CSS Certificate</a> documents your knowledge of advanced CSS.</p>
-<p>The <a href="/cert/default.asp">JavaScript Certificate</a> documents your knowledge of JavaScript and HTML DOM.</p>
-<p>The <a href="/cert/default.asp">jQuery Certificate</a> documents your knowledge of jQuery.</p>
-<p>The <a href="/cert/default.asp">PHP Certificate</a> documents your knowledge of PHP and SQL (MySQL).</p>
-<p>The <a href="/cert/default.asp">XML Certificate</a> documents your knowledge of XML, XML DOM and XSLT.</p>
-<p>The <a href="/cert/default.asp">Bootstrap Certificate</a> documents your knowledge of the Bootstrap framework.</p>
+<p>To center the pagination, wrap a container element (like &lt;div&gt;) around it with <code class="w3-codespan">text-align:center</code></p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+  .center {<br>&nbsp;&nbsp;&nbsp; text-align: center;<br>}<br></div>
+<a target="_blank" href="tryit.asp?filename=trycss_ex_pagination_center" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
+<hr>
+
+<h2>More Examples</h2>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-white w3-padding cssHigh">
+<iframe src="trycss_ex_pagination_nav.htm" style="border:none;width:100%;height:200px;"></iframe>
+</div>
+<a target="_blank" href="tryit.asp?filename=trycss_ex_pagination_nav" class="w3-btn w3-margin-top w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
+<hr>
+
+<h2>Breadcrumbs</h2>
+<ul class="breadcrumb">
+  <li><a href="javascript:void(0)">Home</a></li>
+  <li><a href="javascript:void(0)">Pictures</a></li>
+  <li><a href="javascript:void(0)">Summer 15</a></li>
+  <li style="color:green">Italy</li>
+</ul>
+<p>Another variation of pagination is so-called &quot;breadcrumbs&quot;:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+ul.breadcrumb {<br>&nbsp;&nbsp;&nbsp; padding: 8px 16px;<br>&nbsp;&nbsp;&nbsp; 
+list-style: none;<br>&nbsp;&nbsp;&nbsp; background-color: #eee;<br>}<br><br>
+ul.breadcrumb li {display: inline;}<br><br>ul.breadcrumb li+li:before {<br>&nbsp;&nbsp;&nbsp; 
+padding: 8px;<br>&nbsp;&nbsp;&nbsp; color: black;<br>&nbsp;&nbsp;&nbsp; 
+content: &quot;/\00a0&quot;;<br>}<br></div>
+<a target="_blank" href="tryit.asp?filename=trycss_breadcrumbs" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
+
 <br>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="/default.asp">&#10094; Home</a>
-<a class="w3-right w3-btn" href="js_intro.asp">Next &#10095;</a>
+<a class="w3-left w3-btn" href="css3_buttons.asp">&#10094; Previous</a>
+<a class="w3-right w3-btn" href="css3_multiple_columns.asp">Next &#10095;</a>
 </div>
 </div>
 <div class="w3-col l2 m12" id="right">
