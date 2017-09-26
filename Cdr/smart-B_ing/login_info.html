@@ -1,0 +1,225 @@
+<block cond="$layout_info->login_i=='1'">
+	<block cond="!$is_logged">
+		<load target="filter/login.xml" />
+		{@ $member_config = MemberModel::getMemberConfig(); }
+		<fieldset id="login">
+		<div cond="$XE_VALIDATOR_MESSAGE" class="message {$XE_VALIDATOR_MESSAGE_TYPE}">
+			<p>{$XE_VALIDATOR_MESSAGE}</p>
+		</div>
+		<legend>{$lang->cmd_login}</legend>
+		<form id="fo_login" action="./" method="post" ruleset="@login" class="css3pie">
+			<input type="hidden" name="act" value="procMemberLogin" />
+			<input type="hidden" name="success_return_url" value="{getRequestUriByServerEnviroment()}" />
+			<div class="idpwWrap">
+				<div class="idpw">
+					<input name="user_id" type="text" title="user id" onfocus="this.className='idOn';" onblur="if (!this.value) this.className='idOff'" class="idOff" />
+					<input name="password" type="password" title="password" onfocus="this.className='passOn';" onblur="if (!this.value) this.className='passOff'" class="passOff" />
+				</div>
+				<input type="image" src="images/{$layout_info->colorset}/buttonLogin.gif" alt="login" title="login" class="login" />
+			</div>
+			<p cond="$member_config->enable_ssl=='Y'" class="securitySignIn <!--@if($ssl_mode)-->SSL<!--@else-->noneSSL<!--@end-->">
+				<a href="#" onclick="toggleSecuritySignIn(); return false;">{$lang->security_sign_in}</a>
+			</p>
+			<p class="save">
+				<input type="checkbox" name="keep_signed" id="keep_signed" value="Y" />
+				<label for="keep_signed">{$lang->keep_signed}</label>
+				<block cond="$member_config->enable_openid=='Y'">
+					<input name="use_open_id" id="use_open_id" type="checkbox" value="Y" />
+					<label for="use_open_id">Open ID</label>
+				</block>
+			</p>
+			<ul class="help">
+				<li class="first-child"><a href="<!--@if($layout_info->signup_mid)-->{getUrl('act','dispMemberSignUpForm','mid', $layout_info->signup_mid)}<!--@else-->{getUrl('act','dispMemberSignUpForm')}<!--@end-->">{$lang->cmd_signup}</a></li>
+				<li><a href="{getUrl('act','dispMemberFindAccount')}">{$lang->cmd_find_member_account}</a></li>
+				<block cond="$member_config->enable_confirm=='Y'"><li><a href="{getUrl('act','dispMemberResendAuthMail')}">{$lang->cmd_resend_auth_mail}</a></li></block>
+			</ul>
+		</form> 
+		</fieldset>
+		<!-- OpenID -->
+		<block cond="$member_config->enable_openid=='Y'">
+			<load target="filter/openid_login.xml" />
+			<fieldset id="openid_login" style="display:none;">
+			<legend>{$lang->cmd_login}</legend>
+				<form action="{getUrl('module','member','act','procMemberOpenIDLogin')}" method="post" class="css3pie">
+				<input type="hidden" name="_filter" value="openid_login" />
+					<div class="idpwWrap">
+						<div class="idpw">
+							<p>{$lang->openid}</p>
+							<input type="text" name="openid" title="openid" onfocus="this.className='openidOn';" onblur="if (!this.value) this.className='openidOff'" class="openidOff" />
+						</div>
+						<input type="image" src="images/{$layout_info->colorset}/buttonLogin.gif" alt="login" title="login" class="login" />
+					</div>
+					<p class="save">
+						<input name="use_open_id" id="use_open_id_2" type="checkbox" value="Y" />
+						<label for="use_open_id_2">Open ID</label>
+					</p>
+					<ul class="help">
+						<li class="first-child"><a href="http://openid.net/" onclick="window.open(this.href);return false;">openid</a></li>
+						<li><a href="http://www.myid.net/" onclick="window.open(this.href);return false;">myid</a></li>
+					</ul>
+				</form>
+			</fieldset>
+		</block>
+		<script type="text/javascript">
+			xe.lang.about_keep_signed = '{$lang->about_keep_signed}';
+		</script>
+	</block>
+	<block cond="$is_logged">
+		<load target="filter/logout.xml" />
+		<fieldset id="login">
+		<legend>{$lang->cmd_login}</legend>
+		<form action="" method="post" class="css3pie">
+			<div class="userName">
+				<div class="fleft"><div class=""><strong>{$logged_info->nick_name}</strong><block cond="$logged_info->is_admin=='Y' && !$site_module_info->site_srl">&nbsp;<a href="{getUrl('','module','admin')}" onclick="window.open(this.href);return false;">[{$lang->cmd_management}]</a></block></div></div>
+				<div class="fright"><a href="{getUrl('act','dispMemberLogout')}"><img src="images/{$layout_info->colorset}/buttonLogout.gif" alt="{$lang->cmd_logout}" title="{$lang->cmd_logout}" width="47" height="18" /></a></div>
+			</div>
+			<dl class="point_status">
+				{@ 
+					$oModuleModel = &getModel('module'); 
+					$config = $oModuleModel->getModuleConfig('point'); 
+					$oPointModel = &getModel('point'); 
+					$point = $oPointModel->getPoint($logged_info->member_srl); 
+					$level = $oPointModel->getLevel($point, $config->level_step); 
+					if($level < $config->max_level) $level_count = $level+1; 
+					if($level < $config->max_level) $next_point = $config->level_step[$level_count]; 
+					if($level < $config->max_level) $present_point = $config->level_step[$level]; 
+					if($next_point > 0) $per = (int)(($point - $present_point) / ($next_point - $present_point)*100);
+				}
+				<dt>Level. {$level}</dt>
+				<dd class="graph"><img src="images/linePoint.gif" width="1" height="5" alt="{$widget_info->per}%" style="width:{$per}%" /></dd>
+				<dd class="point">{$point}/{$next_point} {$config->point_name}</dd>
+				<dd class="percentage">{$per}%</dd>
+			</dl>
+			<ul class="userMenu">
+				<li loop="$logged_info->menu_list=>$key,$val"><a href="<!--@if($layout_info->mypage_mid)-->{getUrl('act',$key,'member_srl','','mid',$layout_info->mypage_mid)}<!--@else-->{getUrl('act',$key,'member_srl','','page','')}<!--@end-->">{Context::getLang($val)}</a></li>
+			</ul>
+			<p class="latestLogin">{$lang->last_login}:<span>{zDate($logged_info->last_login, "Y-m-d H:i")}</span></p>
+		</form>
+		</fieldset>
+	</block>
+</block>
+
+<block cond="$layout_info->login_i=='2'">
+	<block cond="!$is_logged">
+		<load target="filter/login.xml" />
+		{@ $member_config = MemberModel::getMemberConfig(); }
+		<fieldset id="login">
+		<div cond="$XE_VALIDATOR_MESSAGE" class="message {$XE_VALIDATOR_MESSAGE_TYPE}">
+			<p>{$XE_VALIDATOR_MESSAGE}</p>
+		</div>
+		<legend>{$lang->cmd_login}</legend>
+		<form id="fo_login" action="./" method="post" ruleset="@login" class="css3pie">
+			<input type="hidden" name="act" value="procMemberLogin" />
+			<input type="hidden" name="success_return_url" value="{getRequestUriByServerEnviroment()}" />
+			<div class="idpwWrap">
+				<div class="idpw">
+					<input name="user_id" type="text" title="user id" onfocus="this.className='idOn';" onblur="if (!this.value) this.className='idOff'" class="idOff" />
+					<input name="password" type="password" title="password" onfocus="this.className='passOn';" onblur="if (!this.value) this.className='passOff'" class="passOff" />
+				</div>
+				<input type="image" src="images/{$layout_info->colorset}/buttonLogin.gif" alt="login" title="login" class="login" />
+			</div>
+			<p cond="$member_config->enable_ssl=='Y'" class="securitySignIn <!--@if($ssl_mode)-->SSL<!--@else-->noneSSL<!--@end-->">
+				<a href="#" onclick="toggleSecuritySignIn(); return false;">{$lang->security_sign_in}</a>
+			</p>
+			<p class="save">
+				<input type="checkbox" name="keep_signed" id="keep_signed" value="Y" />
+				<label for="keep_signed">{$lang->keep_signed}</label>
+				<block cond="$member_config->enable_openid=='Y'">
+					<input name="use_open_id" id="use_open_id" type="checkbox" value="Y" />
+					<label for="use_open_id">Open ID</label>
+				</block>
+			</p>
+			<ul class="help">
+				<li class="first-child"><a href="<!--@if($layout_info->signup_mid)-->{getUrl('act','dispMemberSignUpForm','mid', $layout_info->signup_mid)}<!--@else-->{getUrl('act','dispMemberSignUpForm')}<!--@end-->">{$lang->cmd_signup}</a></li>
+				<li><a href="{getUrl('act','dispMemberFindAccount')}">{$lang->cmd_find_member_account}</a></li>
+				<block cond="$member_config->enable_confirm=='Y'"><li><a href="{getUrl('act','dispMemberResendAuthMail')}">{$lang->cmd_resend_auth_mail}</a></li></block>
+			</ul>
+		</form> 
+		</fieldset>
+		<!-- OpenID -->
+		<block cond="$member_config->enable_openid=='Y'">
+			<load target="filter/openid_login.xml" />
+			<fieldset id="openid_login" style="display:none;">
+			<legend>{$lang->cmd_login}</legend>
+				<form action="{getUrl('module','member','act','procMemberOpenIDLogin')}" method="post" class="css3pie">
+				<input type="hidden" name="_filter" value="openid_login" />
+					<div class="idpwWrap">
+						<div class="idpw">
+							<p>{$lang->openid}</p>
+							<input type="text" name="openid" title="openid" onfocus="this.className='openidOn';" onblur="if (!this.value) this.className='openidOff'" class="openidOff" />
+						</div>
+						<input type="image" src="images/{$layout_info->colorset}/buttonLogin.gif" alt="login" title="login" class="login" />
+					</div>
+					<p class="save">
+						<input name="use_open_id" id="use_open_id_2" type="checkbox" value="Y" />
+						<label for="use_open_id_2">Open ID</label>
+					</p>
+					<ul class="help">
+						<li class="first-child"><a href="http://openid.net/" onclick="window.open(this.href);return false;">openid</a></li>
+						<li><a href="http://www.myid.net/" onclick="window.open(this.href);return false;">myid</a></li>
+					</ul>
+				</form>
+			</fieldset>
+		</block>
+		<script type="text/javascript">
+			xe.lang.about_keep_signed = '{$lang->about_keep_signed}';
+		</script>
+	</block>
+	<block cond="$is_logged">
+		<load target="filter/logout.xml" />
+		<fieldset id="login">
+		<legend>{$lang->cmd_login}</legend>
+		<form action="" method="post" class="css3pie">
+			<div class="userName">
+				<div class="fleft"><div class=""><strong>{$logged_info->nick_name}</strong><block cond="$logged_info->is_admin=='Y' && !$site_module_info->site_srl">&nbsp;<a href="{getUrl('','module','admin')}" onclick="window.open(this.href);return false;">[{$lang->cmd_management}]</a></block></div></div>
+				<div class="fright"><a href="{getUrl('act','dispMemberLogout')}"><img src="images/{$layout_info->colorset}/buttonLogout.gif" alt="{$lang->cmd_logout}" title="{$lang->cmd_logout}" width="47" height="18" /></a></div>
+			</div>
+			<div id="userProfilePicture">
+				<!--@if($logged_info->profile_image->src)-->
+					<!--@if($layout_info->s_layout_type=='3' && !$layout_info->sideL_width)-->
+						<img src="{$logged_info->profile_image->src}" width="50" height="50" alt="" />
+					<!--@elseif($layout_info->s_layout_type=='3' && $layout_info->sideL_width && $layout_info->sideL_width < '200')-->
+						<img src="{$logged_info->profile_image->src}" width="50" height="50" alt="" />
+					<!--@elseif($layout_info->s_layout_type=='2_left' && $layout_info->sideL_width && $layout_info->sideL_width < '200')-->
+						<img src="{$logged_info->profile_image->src}" width="50" height="50" alt="" />
+					<!--@elseif($layout_info->s_layout_type=='2_right' && $layout_info->sideR_width && $layout_info->sideR_width < '200')-->
+						<img src="{$logged_info->profile_image->src}" width="50" height="50" alt="" />
+					<!--@else-->
+						<img src="{$logged_info->profile_image->src}" width="80" height="80" alt="" />
+					<!--@end-->
+				<!--@else-->
+				<img src="images/profile_img_m.gif" alt="" />
+				<!--@end-->
+			</div>
+				{@ 
+					$oModuleModel = &getModel('module'); 
+					$config = $oModuleModel->getModuleConfig('point'); 
+					$oPointModel = &getModel('point'); 
+					$point = $oPointModel->getPoint($logged_info->member_srl); 
+					$level = $oPointModel->getLevel($point, $config->level_step); 
+					if($level < $config->max_level) $level_count = $level+1; 
+					if($level < $config->max_level) $next_point = $config->level_step[$level_count]; 
+					if($level < $config->max_level) $present_point = $config->level_step[$level]; 
+					if($next_point > 0) $per = (int)(($point - $present_point) / ($next_point - $present_point)*100);
+				}
+			<div id="userExperience">
+				<span class="label">Level : {$level}</span> <br/>
+				<span class="label">{$config->point_name} : </span><span class="currentPoint">{$point}</span><br/><br/>
+				<span class="group">
+				<!--@foreach($logged_info->group_list as $key => $val)-->
+				{Context::getLang($val)}
+				<!--@end-->
+				</span>
+			</div>
+			<ul class="userMenu">
+				<li loop="$logged_info->menu_list=>$key,$val"><a href="<!--@if($layout_info->mypage_mid)-->{getUrl('act',$key,'member_srl','','mid',$layout_info->mypage_mid)}<!--@else-->{getUrl('act',$key,'member_srl','','page','')}<!--@end-->">{Context::getLang($val)}</a></li>
+			</ul>
+			<p class="latestLogin">{$lang->last_login}:<span>{zDate($logged_info->last_login, "Y-m-d H:i")}</span></p>
+		</form>
+		</fieldset>
+	</block>
+</block>
+
+<block cond="$layout_info->login_i=='outer'">
+	<div class="clear">{$layout_info->login_i_outer}</div>
+</block>

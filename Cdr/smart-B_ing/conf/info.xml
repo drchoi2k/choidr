@@ -1,0 +1,1511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.2">
+    <title xml:lang="ko">스마트 레이아웃 0.9.9</title>
+    <title xml:lang="en">Smart Layout 0.9.9</title>
+    <description xml:lang="ko">
+        스마트 레이아웃
+        제작 : 스마트XE
+    </description>
+    <description xml:lang="en">
+        Smart Layout
+        Producer : SMARTXE
+    </description>
+    <version>0.9.9</version>
+    <date>2012-06-28</date>
+    <link>http://www.smartxe.com/</link>
+
+    <author email_address="smartxe@live.co.kr" link="http://www.smartxe.com/">
+        <name xml:lang="ko">ⓒcopyright by 스마트XE</name>
+        <name xml:lang="en">ⓒcopyright by SMARTXE</name>
+    </author>
+
+    <extra_vars>
+		<group>
+		<title xml:lang="ko">1. 기본 설정</title>
+		<title xml:lang="en">1. Default Settings</title>
+			<var name="s_layout_style" type="select">
+				<title xml:lang="ko">1-1. 레이아웃 스타일</title>
+				<title xml:lang="en">1-1. Layout Style</title>
+				<options value="portal">
+					<title xml:lang="ko">포털 스타일</title>
+					<title xml:lang="en">Portal Style</title>
+				</options>
+			</var>
+			<var name="s_layout_type" type="select" default="2_left">
+				<title xml:lang="ko">1-2. 레이아웃 형태</title>
+				<title xml:lang="en">1-2. Layout Type</title>
+				<description xml:lang="ko">원하시는 레이아웃 형태를 선택하세요.</description>
+				<description xml:lang="en">Please select the type of layout you want.</description>
+				<options value="1">
+					<title xml:lang="ko">1단 .......[상단+본문+하단]</title>
+					<title xml:lang="en">1단 .......[상단+본문+하단]</title>
+				</options>
+				<options value="2_left">
+					<title xml:lang="ko">2단-좌 ...[상단+(좌측200+본문)+하단]</title>
+					<title xml:lang="en">2단-좌 ...[상단+(좌측200+본문)+하단]</title>
+				</options>
+				<options value="2_right">
+					<title xml:lang="ko">2단-우 ...[상단+(본문+우측200)+하단]</title>
+					<title xml:lang="en">2단-우 ...[상단+(본문+우측200)+하단]</title>
+				</options>
+				<options value="3">
+					<title xml:lang="ko">3단 ......[상단+(좌측120+본문+우측250)+하단]</title>
+					<title xml:lang="en">3단 ......[상단+(좌측120+본문+우측250)+하단]</title>
+				</options>
+			</var>
+			<var name="body_width" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. 전체 너비</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. Total Width</title>
+				<description xml:lang="ko">전체 너비를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">전체 너비를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="sideL_width" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; b. 좌측 사이드바 너비</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; b. Left Sidebar Width</title>
+				<description xml:lang="ko">'2단-좌'와 '3단'의 좌측 사이드바 너비를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">'2단-좌'와 '3단'의 좌측 사이드바 너비를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="sideR_width" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; c. 우측 사이드바 너비</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; c. Right Sidebar Width</title>
+				<description xml:lang="ko">'2단-우'와 '3단'의 우측 사이드바 너비를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">'2단-우'와 '3단'의 우측 사이드바 너비를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="s_layout_array" type="select" default="center">
+				<title xml:lang="ko">1-3. 레이아웃 정렬 위치</title>
+				<title xml:lang="en">1-3. Layout 정렬 위치</title>
+				<description xml:lang="ko">레이아웃 정렬 위치를 선택하세요. 기본값은 '가운데' 입니다.</description>
+				<description xml:lang="en">Layout 정렬 위치를 선택하세요. 기본값은 'Center' 입니다.</description>
+				<options value="center">
+					<title xml:lang="ko">가운데</title>
+					<title xml:lang="en">Center</title>
+				</options>
+				<options value="left">
+					<title xml:lang="ko">왼쪽</title>
+					<title xml:lang="en">Left</title>
+				</options>
+			</var>
+			<var name="s_layout_array_marginL" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. 왼쪽 여백</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. 왼쪽 여백</title>
+				<description xml:lang="ko">'왼쪽' 정렬을 선택한 경우, 레이아웃 왼쪽 여백 설정. 설정하지 않으면 10px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">'Left' 정렬을 선택한 경우, Layout 왼쪽 여백 설정. 설정하지 않으면 10px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="colorset" type="select" default="default">
+				<title xml:lang="ko">1-4. 컬러셋</title>
+				<title xml:lang="en">1-4. Colorset</title>
+				<description xml:lang="ko">원하시는 컬러셋을 선택하세요.</description>
+				<description xml:lang="en">Please select a colorset you want.</description>
+				<options value="default">
+					<title xml:lang="ko">기본색</title>
+					<title xml:lang="en">Default</title>
+				</options>
+				<options value="black">
+					<title xml:lang="ko">검은색</title>
+					<title xml:lang="en">Black</title>
+				</options>
+				<options value="white">
+					<title xml:lang="ko">하얀색</title>
+					<title xml:lang="en">White</title>
+				</options>
+			</var>
+			<var name="header_nav_bgcolor_from" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. 메인 메뉴바 배경색 시작</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. 메인 메뉴바 배경색 시작</title>
+				<description xml:lang="ko">메인 메뉴바 배경색 그라디언트 시작 색을 변경할 경우 원하는 배경색의 rgb 색상코드를 입력하세요. (예. #777)</description>
+				<description xml:lang="en">메인 메뉴바 배경색 그라디언트 시작 색을 변경할 경우 원하는 배경색의 rgb 색상코드를 입력하세요. (예. #777)</description>
+			</var>
+			<var name="header_nav_bgcolor_to" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; b. 메인 메뉴바 배경색 끝</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; b. 메인 메뉴바 배경색 끝</title>
+				<description xml:lang="ko">메인 메뉴바 배경색 그라디언트 끝 색을 변경할 경우 원하는 배경색의 rgb 색상코드를 입력하세요. (예. #555)</description>
+				<description xml:lang="en">메인 메뉴바 배경색 그라디언트 끝 색을 변경할 경우 원하는 배경색의 rgb 색상코드를 입력하세요. (예. #555)</description>
+			</var>
+			<var name="header_nav_bg_image" type="image">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; c. 메인 메뉴바 이미지</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; c. 메인 메뉴바 이미지</title>
+				<description xml:lang="ko">메인 메뉴바에 이미지를 사용할 경우 원하는 이미지를 등록해 주세요. 이미지 크기 : 가로 1px 이상, 세로 36px 또는 70px. 통으로 제작할 경우에는 가로 980px, 세로 36px 또는 70px.</description>
+				<description xml:lang="en">메인 메뉴바에 이미지를 사용할 경우 원하는 이미지를 등록해 주세요. 이미지 크기 : 가로 1px 이상, 세로 36px 또는 70px. 통으로 제작할 경우에는 가로 980px, 세로 36px 또는 70px.</description>
+			</var>
+			<var name="logo_image" type="image">
+				<title xml:lang="ko">1-5. 로고 이미지</title>
+				<title xml:lang="en">1-5. Logo Image</title>
+				<description xml:lang="ko">레이아웃의 상단에 표시될 로고 이미지를 입력하세요. (세로길이가 30px인 투명 이미지가 가장 어울립니다)</description>
+				<description xml:lang="en">Please input a logo image which will be displayed on the top of layout. (Transparent image with height of 30px is recommended.)</description>
+			</var>
+			<var name="index_url" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. 홈페이지 URL</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. Homepage URL</title>
+				<description xml:lang="ko">로고를 클릭시에 이동할 홈페이지 URL을 입력하세요. 예) http://www.smartxe.com</description>
+				<description xml:lang="en">Please input the URL to redirect when user clicks the logo. ex) http://www.smartxe.com</description>
+			</var>
+			<var name="site_name" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; b. 웹사이트 이름</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; b. Website Name</title>
+				<description xml:lang="ko">웹사이트 이름을 입력하세요. 로고 이미지가 등록되지 않으면 웹사이트 이름이 텍스트 로고로 사용됩니다.</description>
+				<description xml:lang="en">Please enter your website name.</description>
+			</var>
+			<var name="logo_image_top" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; c. Top 위치</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; c. Top 위치</title>
+				<description xml:lang="ko">로고 이미지의 Top 위치를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 25px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">로고 이미지의 Top 위치를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 25px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="logo_image_left" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; d. Left 위치</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; d. Left 위치</title>
+				<description xml:lang="ko">로고 이미지의 Left 위치를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 0px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">로고 이미지의 Left 위치를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 0px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="sub_logo_image" type="image">
+				<title xml:lang="ko">1-6. 서브 로고 이미지</title>
+				<title xml:lang="en">1-6. Sub Logo Image</title>
+				<description xml:lang="ko">메인 로고 옆에 표시될 서브 로고 이미지를 입력하세요.</description>
+				<description xml:lang="en">Please input a sublogo image which will be displayed on the top of layout.</description>
+			</var>
+			<var name="sub_index_url" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. 서브 페이지 URL</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. Subpage URL</title>
+				<description xml:lang="ko">서브 로고를 클릭시에 이동할 서브 페이지 URL을 입력하세요. 예) http://www.smartxe.com</description>
+				<description xml:lang="en">Please input the URL to redirect when user clicks the logo. ex) http://www.smartxe.com</description>
+			</var>
+			<var name="page_name" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; b. 페이지 이름</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; b. Page Name</title>
+				<description xml:lang="ko">페이지 이름을 입력하세요. 로고 이미지가 등록되지 않으면 페이지 이름이 텍스트 로고로 사용됩니다.</description>
+				<description xml:lang="en">Please enter your page name.</description>
+			</var>
+			<var name="sub_logo_image_top" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; c. Top 위치</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; c. Top 위치</title>
+				<description xml:lang="ko">서브 로고 이미지의 Top 위치를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 20px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">서브 로고 이미지의 Top 위치를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 20px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="sub_logo_image_left" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; d. Left 위치</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; d. Left 위치</title>
+				<description xml:lang="ko">서브 로고 이미지의 Left 위치를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 160px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">서브 로고 이미지의 Left 위치를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 160px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="fonts" >
+				<title xml:lang="ko">1-7. 글꼴 설정</title>
+				<title xml:lang="en">1-7. Font Settings</title>
+				<description xml:lang="ko">레이아웃에 기본으로 적용될 글꼴에 관한 설정입니다.</description>
+				<description xml:lang="en">레이아웃에 기본으로 적용될 Font에 관한 설정입니다.</description>
+			</var>
+			<var name="font_face" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. 글꼴</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. Font Face</title>
+				<description xml:lang="ko">기본 글꼴을 변경할 경우 원하는 글꼴 이름을 입력하세요. (예. "나눔고딕", NanumGothic)</description>
+				<description xml:lang="en">기본 글꼴을 변경할 경우 원하는 글꼴 이름을 입력하세요. (예. AppleGothic)</description>
+			</var>
+			<var name="font_size" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; b. 글자 크기</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; b. Font Size</title>
+				<description xml:lang="ko">기본 글자 크기를 변경할 경우 원하는 크기를 숫자로 입력하세요. 입력하지 않으면 기본 크기인 12px이 적용됩니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">기본 글자 크기를 변경할 경우 원하는 크기를 숫자로 입력하세요. 입력하지 않으면 기본 크기인 12px이 적용됩니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="font_color" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; c. 글자색 1 (a:link)</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; c. Font Color</title>
+				<description xml:lang="ko">기본 a:link 글자색을 변경할 경우 원하는 글자색의 rgb 색상코드를 입력하세요. (예. #555)</description>
+				<description xml:lang="en">기본 a:link 글자색을 변경할 경우 원하는 글자색의 rgb 색상코드를 입력하세요. (예. #555)</description>
+			</var>
+			<var name="font_color_hover" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; d. 글자색 2 (a:hover)</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; d. Font Color</title>
+				<description xml:lang="ko">기본 a:hover 글자색을 변경할 경우 원하는 글자색의 rgb 색상코드를 입력하세요. (예. #999)</description>
+				<description xml:lang="en">기본 a:hover 글자색을 변경할 경우 원하는 글자색의 rgb 색상코드를 입력하세요. (예. #999)</description>
+			</var>
+			<var name="footer_copyright" type="textarea">
+				<title xml:lang="ko">1-8. Copyright</title>
+				<title xml:lang="en">1-8. Copyright</title>
+				<description xml:lang="ko">예) Copyright © 2011 스마트XE. All Rights Reserved. HTML 태그도 사용할 수 있습니다. 입력하지 않으면 표시되지 않습니다.</description>
+				<description xml:lang="en">예) Copyright © 2011 스마트XE. All Rights Reserved. HTML 태그도 사용할 수 있습니다. 입력하지 않으면 표시되지 않습니다.</description>
+			</var>
+			<var name="footer_address" type="text">
+				<title xml:lang="ko">1-9. E-Mail</title>
+				<title xml:lang="en">1-9. E-Mail</title>
+				<description xml:lang="ko">예) smartxe@live.co.kr 메일주소를 입력하시면 자동으로 해당 메일로 링크가 됩니다. 입력하지 않으면 표시되지 않습니다.</description>
+				<description xml:lang="en">예) smartxe@live.co.kr 메일주소를 입력하시면 자동으로 해당 메일로 링크가 됩니다. 입력하지 않으면 표시되지 않습니다.</description>
+			</var>
+		</group>
+		<group>
+		<title xml:lang="ko">2. 메뉴 설정</title>
+		<title xml:lang="en">2. Menu Settings</title>
+			<var name="top_nav" type="select" default="Y">
+				<title xml:lang="ko">2-1. 상단 메뉴 표시</title>
+				<title xml:lang="en">2-1. Top Menu Display</title>
+				<description xml:lang="ko">상단 메뉴 표시 여부를 선택하세요. 최상단에 표시됩니다. '메뉴만 표시'는 로그인 부분을 제외한 메뉴 부분만을 표시합니다. 기본값은 '표시' 입니다.</description>
+				<description xml:lang="en">상단 메뉴 표시 여부를 선택하세요. 최상단에 표시됩니다. '메뉴만 표시'는 로그인 부분을 제외한 메뉴 부분만을 표시합니다. 기본값은 '표시' 입니다.</description>
+				<options value="Y">
+					<title xml:lang="ko">표시</title>
+					<title xml:lang="en">Display</title>
+				</options>
+				<options value="m">
+					<title xml:lang="ko">메뉴만 표시</title>
+					<title xml:lang="en">메뉴만 표시</title>
+				</options>
+				<options value="N">
+					<title xml:lang="ko">표시하지 않음</title>
+					<title xml:lang="en">Non-display</title>
+				</options>
+			</var>
+			<var name="top_nav_top" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. Top 위치</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. Top 위치</title>
+				<description xml:lang="ko">상단 메뉴의 Top 위치를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 5px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">상단 메뉴의 Top 위치를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 5px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="top_nav_right" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; b. Right 위치</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; b. Right 위치</title>
+				<description xml:lang="ko">상단 메뉴의 Right 위치를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 0px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">상단 메뉴의 Right 위치를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 0px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="header_nav_type" type="select" default="4">
+				<title xml:lang="ko">2-2. 메인 메뉴 방식</title>
+				<title xml:lang="en">2-2. Main Menu Type</title>
+				<description xml:lang="ko">원하시는 메인 메뉴 방식을 선택하세요. '롤오버 메뉴 1'은 2차 메뉴가 왼쪽 정렬되어서 출력되고, '롤오버 메뉴 2'는 2차 메뉴가 1차 메뉴에 따라가면서 출력됩니다.</description>
+				<description xml:lang="en">원하시는 메인 메뉴 방식을 선택하세요. '롤오버 메뉴 1'은 2차 메뉴가 왼쪽 정렬되어서 출력되고, '롤오버 메뉴 2'는 2차 메뉴가 1차 메뉴에 따라가면서 출력됩니다.</description>
+				<options value="1">
+					<title xml:lang="ko">기본 메뉴</title>
+					<title xml:lang="en">기본 메뉴</title>
+				</options>
+				<options value="2">
+					<title xml:lang="ko">롤오버 메뉴 1</title>
+					<title xml:lang="en">롤오버 메뉴 1</title>
+				</options>
+				<options value="3">
+					<title xml:lang="ko">롤오버 메뉴 2</title>
+					<title xml:lang="en">롤오버 메뉴 2</title>
+				</options>
+				<options value="4">
+					<title xml:lang="ko">드롭다운 메뉴</title>
+					<title xml:lang="en">드롭다운 메뉴</title>
+				</options>
+				<options value="5">
+					<title xml:lang="ko">외부 메뉴</title>
+					<title xml:lang="en">외부 메뉴</title>
+				</options>
+				<options value="N">
+					<title xml:lang="ko">사용하지 않음</title>
+					<title xml:lang="en">Deactivate</title>
+				</options>
+			</var>
+			<var name="header_nav_outer" type="textarea">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. 외부 메뉴</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. 외부 메뉴</title>
+				<description xml:lang="ko">'외부 메뉴'를 선택한 경우, 사용할 외부 메뉴의 위젯 코드나 플래시 코드를 입력하세요.</description>
+				<description xml:lang="en">'외부 메뉴'를 선택한 경우, 사용할 외부 메뉴의 위젯 코드나 플래시 코드를 입력하세요.</description>
+			</var>
+			<var name="header_nav_font" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; b. 글꼴</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; b. Font Face</title>
+				<description xml:lang="ko">메인 메뉴의 글꼴을 변경할 경우 원하는 글꼴의 이름을 입력하세요. (예. NanumGothic)</description>
+				<description xml:lang="en">메인 메뉴의 글꼴을 변경할 경우 원하는 글꼴의 이름을 입력하세요. (예. NanumGothic)</description>
+			</var>
+			<var name="header_nav_font_color" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; c. 글자색</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; c. Font Color</title>
+				<description xml:lang="ko">메인 메뉴의 글자색을 변경할 경우 원하는 글자색의 rgb 색상코드를 입력하세요. (예. #555)</description>
+				<description xml:lang="en">메인 메뉴의 글자색을 변경할 경우 원하는 글자색의 rgb 색상코드를 입력하세요. (예. #555)</description>
+			</var>
+			<var name="header_nav_font_size" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; d. 글자 크기</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; d. Font Size</title>
+				<description xml:lang="ko">메인 메뉴의 글자 크기를 변경할 경우 원하는 크기를 숫자로 입력하세요. 입력하지 않으면 13px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">메인 메뉴의 글자 크기를 변경할 경우 원하는 크기를 숫자로 입력하세요. 입력하지 않으면 13px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="header_nav_font_weight" type="select" default="normal">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; e. 글자 굵기</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; e. 글자 굵기</title>
+				<description xml:lang="ko">메인 메뉴의 글자의 굵기를 'bold'와 'normal' 중에서 선택하세요. 기본값은 'normal' 입니다.</description>
+				<description xml:lang="en">메인 메뉴의 글자의 굵기를 'bold'와 'normal' 중에서 선택하세요. 기본값은 'normal' 입니다.</description>
+				<options value="normal">
+					<title xml:lang="ko">normal</title>
+					<title xml:lang="en">normal</title>
+				</options>
+				<options value="bold">
+					<title xml:lang="ko">bold</title>
+					<title xml:lang="en">bold</title>
+				</options>
+			</var>
+			<var name="header_nav_font_paddingT" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; f. 위쪽 여백</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; f. 위쪽 여백</title>
+				<description xml:lang="ko">메인 메뉴의 위쪽 여백을 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 0px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">메인 메뉴의 위쪽 여백을 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 0px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="header_nav_font_paddingLR" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; g. 좌우 여백</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; g. 좌우 여백</title>
+				<description xml:lang="ko">메인 메뉴의 간격을 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 좌우 9px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">메인 메뉴의 간격을 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 좌우 9px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="header_navSub" type="select" default="Y">
+				<title xml:lang="ko">2-3. 메인 2차 메뉴 표시</title>
+				<title xml:lang="en">2-3. Main 2nd Menu Display</title>
+				<description xml:lang="ko">메인 2차 메뉴 표시 여부를 선택하세요. 드롭다운 메뉴는 선택과 상관없이 항상 표시됩니다. 기본값은 '표시'입니다.</description>
+				<description xml:lang="en">메인 2차 메뉴 표시 여부를 선택하세요. 드롭다운 메뉴는 선택과 상관없이 항상 표시됩니다. 기본값은 '표시'입니다.</description>
+				<options value="Y">
+					<title xml:lang="ko">표시</title>
+					<title xml:lang="en">Display</title>
+				</options>
+				<options value="N">
+					<title xml:lang="ko">표시하지 않음</title>
+					<title xml:lang="en">Non-display</title>
+				</options>
+			</var>
+			<var name="header_navSub_font_color" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. 글자색</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. Font Color</title>
+				<description xml:lang="ko">메인 2차 메뉴의 글자색을 변경할 경우 원하는 글자색의 rgb 색상코드를 입력하세요. (예. #555)</description>
+				<description xml:lang="en">메인 2차 메뉴의 글자색을 변경할 경우 원하는 글자색의 rgb 색상코드를 입력하세요. (예. #555)</description>
+			</var>
+			<var name="header_navSub_font_size" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; b. 글자 크기</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; b. Font Size</title>
+				<description xml:lang="ko">메인 2차 메뉴의 글자 크기를 변경할 경우 원하는 크기를 숫자로 입력하세요. 입력하지 않으면 12px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">메인 2차 메뉴의 글자 크기를 변경할 경우 원하는 크기를 숫자로 입력하세요. 입력하지 않으면 12px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="header_navSub_bgcolor" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; c. 메뉴 배경색</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; c. Menu Background Color</title>
+				<description xml:lang="ko">기본 메뉴와 롤오버 메뉴의 2차 메뉴에 직사각형 모양의 배경색을 지정합니다. 원하시는 배경색의 rgb 색상코드를 입력하세요. (예. #636363)</description>
+				<description xml:lang="en">기본 메뉴와 롤오버 메뉴의 2차 메뉴에 직사각형 모양의 배경색을 지정합니다. 원하시는 배경색의 rgb 색상코드를 입력하세요. (예. #636363)</description>
+			</var>
+			<var name="side_nav_type" type="select" default="1">
+				<title xml:lang="ko">2-4. 사이드 메뉴 방식</title>
+				<title xml:lang="en">2-4. Side Menu Type</title>
+				<description xml:lang="ko">원하시는 사이드 메뉴 방식을 선택하세요. '사용하지 않음'을 선택하면 사이드 메뉴가 표시되지 않습니다.</description>
+				<description xml:lang="en">원하시는 사이드 메뉴 방식을 선택하세요. 'Deactivate'을 선택하면 사이드 메뉴가 표시되지 않습니다.</description>
+				<options value="1">
+					<title xml:lang="ko">기본 메뉴</title>
+					<title xml:lang="en">기본 메뉴</title>
+				</options>
+				<options value="2">
+					<title xml:lang="ko">테두리 없는 메뉴</title>
+					<title xml:lang="en">테두리 없는 메뉴</title>
+				</options>
+				<options value="3">
+					<title xml:lang="ko">트리 메뉴</title>
+					<title xml:lang="en">트리 메뉴</title>
+				</options>
+				<options value="4">
+					<title xml:lang="ko">외부 메뉴</title>
+					<title xml:lang="en">외부 메뉴</title>
+				</options>
+				<options value="N">
+					<title xml:lang="ko">사용하지 않음</title>
+					<title xml:lang="en">Deactivate</title>
+				</options>
+			</var>
+			<var name="side_nav_outer" type="textarea">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. 외부 메뉴</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. 외부 메뉴</title>
+				<description xml:lang="ko">'외부메뉴'를 선택한 경우, 사용할 외부 메뉴의 위젯 코드나 플래시 코드를 입력하세요.</description>
+				<description xml:lang="en">'외부메뉴'를 선택한 경우, 사용할 외부 메뉴의 위젯 코드나 플래시 코드를 입력하세요.</description>
+			</var>
+			<var name="side_nav_font" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; b. 글꼴</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; b. Font Face</title>
+				<description xml:lang="ko">사이드 메뉴의 글꼴을 변경할 경우 원하는 글꼴의 이름을 입력하세요. (예. NanumGothic)</description>
+				<description xml:lang="en">사이드 메뉴의 글꼴을 변경할 경우 원하는 글꼴의 이름을 입력하세요. (예. NanumGothic)</description>
+			</var>
+			<var name="side_nav_font_color" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; c. 글자색</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; c. Font Color</title>
+				<description xml:lang="ko">사이드 메뉴 글자색을 변경할 경우 원하는 글자색의 rgb 색상코드를 입력하세요. (예. #555)</description>
+				<description xml:lang="en">사이드 메뉴 글자색을 변경할 경우 원하는 글자색의 rgb 색상코드를 입력하세요. (예. #555)</description>
+			</var>
+			<var name="side_nav2_font_size" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; d. 글자 크기 - 2차</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; d. Font Size</title>
+				<description xml:lang="ko">사이드 2차 메뉴의 글자 크기를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 12px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">사이드 2차 메뉴의 글자 크기를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 12px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="side_nav3_font_size" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; e. 글자 크기 - 3차 이상</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; e. Font Size</title>
+				<description xml:lang="ko">사이드 3차 이상 메뉴의 글자 크기를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 11px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">사이드 3차 이상 메뉴의 글자 크기를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 11px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="slide_bar" type="textarea">
+				<title xml:lang="ko">2_5. 슬라이드 바</title>
+				<title xml:lang="en">2_5. Slide Bar</title>
+				<description xml:lang="ko">슬라이드 바에 표시될 내용을 입력하세요. 오른쪽 사이드 바 바깥쪽에 돌출되게 표시됩니다. 바로가기 메뉴, 이미지, 배너위젯 등 코드를 삽입해서 사용할 수 있습니다. 입력하지 않으면 표시되지 않습니다.</description>
+				<description xml:lang="en">Slide Bar에 표시될 내용을 입력하세요. 오른쪽 사이드 바 바깥쪽에 돌출되게 표시됩니다. 바로가기 메뉴, 이미지, 배너위젯 등 코드를 삽입해서 사용할 수 있습니다. 입력하지 않으면 표시되지 않습니다.</description>
+			</var>
+			<var name="slide_bar_width" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. 가로 길이</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. 가로 길이</title>
+				<description xml:lang="ko">슬라이드 바 가로 길이를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 100px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">Slide Bar 가로 길이를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 100px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="slide_bar_right" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; b. Right 위치</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; b. Right 위치</title>
+				<description xml:lang="ko">슬라이드 바 Right 위치를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 -115px로 적용됩니다. 입력시 - 부호와 숫자만 입력하세요.</description>
+				<description xml:lang="en">Slide Bar Right 위치를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 -115px로 적용됩니다. 입력시 - 부호와 숫자만 입력하세요.</description>
+			</var>
+			<var name="footer_nav">
+				<title xml:lang="ko">2-6. 하단 메뉴</title>
+				<title xml:lang="en">2-6. 하단 메뉴</title>
+			</var>
+			<var name="footer_nav_font" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. 글꼴</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. Font Face</title>
+				<description xml:lang="ko">하단 메뉴의 글꼴을 변경할 경우 원하는 글꼴의 이름을 입력하세요. (예. NanumGothic)</description>
+				<description xml:lang="en">하단 메뉴의 글꼴을 변경할 경우 원하는 글꼴의 이름을 입력하세요. (예. NanumGothic)</description>
+			</var>
+			<var name="footer_nav_font_color" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; b. 글자색</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; b. Font Color</title>
+				<description xml:lang="ko">하단 메뉴 글자색을 변경할 경우 원하는 글자색의 rgb 색상코드를 입력하세요. (예. #555)</description>
+				<description xml:lang="en">하단 메뉴 글자색을 변경할 경우 원하는 글자색의 rgb 색상코드를 입력하세요. (예. #555)</description>
+			</var>
+			<var name="footer_nav_font_size" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; c. 글자 크기</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; c. Font Size</title>
+				<description xml:lang="ko">하단 메뉴의 글자 크기를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 12px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">하단 메뉴의 글자 크기를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 12px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="footer_nav_array" type="select" default="center">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; d. 정렬 위치</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; d. 정렬 위치</title>
+				<description xml:lang="ko">하단 메뉴의 정렬 위치를 선택하세요. 기본값은 '가운데' 입니다.</description>
+				<description xml:lang="en">하단 메뉴의 정렬 위치를 선택하세요. 기본값은 'Center' 입니다.</description>
+				<options value="center">
+					<title xml:lang="ko">가운데</title>
+					<title xml:lang="en">Center</title>
+				</options>
+				<options value="left">
+					<title xml:lang="ko">왼쪽</title>
+					<title xml:lang="en">Left</title>
+				</options>
+				<options value="right">
+					<title xml:lang="ko">오른쪽</title>
+					<title xml:lang="en">Right</title>
+				</options>
+			</var>
+			<var name="footer_nav_array_marginL" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; e. 왼쪽 여백</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; e. Left Margin</title>
+				<description xml:lang="ko">'왼쪽' 정렬을 선택한 경우, 하단 메뉴 왼쪽 여백 설정. 설정하지 않으면 10px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">'Left' 정렬을 선택한 경우, 하단 메뉴 왼쪽 여백 설정. 설정하지 않으면 10px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="footer_nav_array_marginR" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; f. 오른쪽 여백</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; f. Right Margin</title>
+				<description xml:lang="ko">'오른쪽' 정렬을 선택한 경우, 하단 메뉴 오른쪽 여백 설정. 설정하지 않으면 10px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">'Right' 정렬을 선택한 경우, 하단 메뉴 오른쪽 여백 설정. 설정하지 않으면 10px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="lavaLamp_plugin" type="select" default="Y">
+				<title xml:lang="ko">2-7. LavaLamp Menu 플러그인</title>
+				<title xml:lang="en">2-7. LavaLamp Menu Plugin</title>
+				<description xml:lang="ko">jQuery LavaLamp Menu 플러그인 사용 여부를 선택하세요. 기본값은 '사용'입니다.</description>
+				<description xml:lang="en">jQuery LavaLamp Menu Plugin 사용 여부를 선택하세요. 기본값은 'Activate'입니다.</description>
+				<options value="Y">
+					<title xml:lang="ko">사용</title>
+					<title xml:lang="en">Activate</title>
+				</options>
+				<options value="N">
+					<title xml:lang="ko">사용하지 않음</title>
+					<title xml:lang="en">Deactivate</title>
+				</options>
+				<options value="S">
+					<title xml:lang="ko">비슷한 효과</title>
+					<title xml:lang="en">Substitution</title>
+				</options>
+			</var>
+			<var name="lavaLamp_backLava_bgcolor_from" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. 버튼 배경색 시작</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. 버튼 배경색 시작</title>
+				<description xml:lang="ko">LavaLamp Menu 버튼 배경색 그라디언트 시작 색을 변경할 경우 원하는 배경색의 rgb 색상코드를 입력하세요. (예. #72c400)</description>
+				<description xml:lang="en">LavaLamp Menu 버튼 배경색 그라디언트 시작 색을 변경할 경우 원하는 배경색의 rgb 색상코드를 입력하세요. (예. #72c400)</description>
+			</var>
+			<var name="lavaLamp_backLava_bgcolor_to" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; b. 버튼 배경색 끝</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; b. 버튼 배경색 끝</title>
+				<description xml:lang="ko">LavaLamp Menu 버튼 배경색 그라디언트 끝 색을 변경할 경우 원하는 배경색의 rgb 색상코드를 입력하세요. (예. #4a8f00)</description>
+				<description xml:lang="en">LavaLamp Menu 버튼 배경색 그라디언트 끝 색을 변경할 경우 원하는 배경색의 rgb 색상코드를 입력하세요. (예. #4a8f00)</description>
+			</var>
+		</group>
+		<group>
+		<title xml:lang="ko">3. 부가 설정</title>
+		<title xml:lang="en">3. Addition Settings</title>
+			<var name="login_i" type="select" default="2">
+				<title xml:lang="ko">3-1. 로그인 정보 표시</title>
+				<title xml:lang="en">3-1. Login Info. Display</title>
+				<description xml:lang="ko">로그인 정보 표시 여부를 선택하세요. 좌측 또는 우측에 표시됩니다.</description>
+				<description xml:lang="en">Login Info. 표시 여부를 선택하세요. 좌측 또는 우측에 표시됩니다.</description>
+				<options value="2">
+					<title xml:lang="ko">프로필 사진</title>
+					<title xml:lang="en">Profile Picture</title>
+				</options>
+				<options value="1">
+					<title xml:lang="ko">기본형</title>
+					<title xml:lang="en">Default</title>
+				</options>
+				<options value="outer">
+					<title xml:lang="ko">외부 로그인</title>
+					<title xml:lang="en">Outside Login</title>
+				</options>
+				<options value="N">
+					<title xml:lang="ko">표시하지 않음</title>
+					<title xml:lang="en">Non-display</title>
+				</options>
+			</var>
+			<var name="login_i_outer" type="textarea">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. 외부 로그인</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. Outside Login</title>
+				<description xml:lang="ko">'외부 로그인'을 선택한 경우, 해당 로그인의 위젯 스킨을 설치하신 후에 '코드생성'을 해서 입력하세요. 반드시 레이아웃 형태별로 가로 크기를 확인하신 후에 사용하세요. 입력하지 않으면 표시되지 않습니다.</description>
+				<description xml:lang="en">'Outside Login'을 선택한 경우, 해당 로그인의 위젯 스킨을 설치하신 후에 '코드생성'을 해서 입력하세요. 반드시 레이아웃 형태별로 가로 크기를 확인하신 후에 사용하세요. 입력하지 않으면 표시되지 않습니다.</description>
+			</var>
+			<var name="is_r" type="select" default="1">
+				<title xml:lang="ko">3-2. 검색창 표시</title>
+				<title xml:lang="en">3-2. Search Box Display</title>
+				<description xml:lang="ko">검색창 표시 여부를 선택하세요. 헤더 오른쪽에 표시됩니다. 기본값은 'XE 검색' 입니다. ('XE/구글검색'을 사용하기 위해서는 '통합 검색 스마트 스킨'을 먼저 설치하셔야 합니다.)</description>
+				<description xml:lang="en">Search Box 표시 여부를 선택하세요. 헤더 오른쪽에 표시됩니다. 기본값은 'XE 검색' 입니다. ('XE/구글검색'을 사용하기 위해서는 '통합 검색 스마트 스킨'을 먼저 설치하셔야 합니다.)</description>
+				<options value="1">
+					<title xml:lang="ko">XE 검색</title>
+					<title xml:lang="en">XE 검색</title>
+				</options>
+				<options value="2">
+					<title xml:lang="ko">XE/구글 검색</title>
+					<title xml:lang="en">XE/구글 검색</title>
+				</options>
+				<options value="N">
+					<title xml:lang="ko">표시하지 않음</title>
+					<title xml:lang="en">Non-display</title>
+				</options>
+			</var>
+			<var name="is_r_width" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. 가로 길이</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. 가로 길이</title>
+				<description xml:lang="ko">검색창의 가로 길이를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 164px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">검색창의 가로 길이를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 164px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="is_r_top" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; b. Top 위치</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; b. Top 위치</title>
+				<description xml:lang="ko">검색창의 Top 위치를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 52px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">검색창의 Top 위치를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 52px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="is_r_right" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; c. Right 위치</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; c. Right 위치</title>
+				<description xml:lang="ko">검색창의 Right 위치를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">검색창의 Right 위치를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="current_location" type="select" default="Y">
+				<title xml:lang="ko">3-3. 현재 위치 표시</title>
+				<title xml:lang="en">3-3. Display current locate</title>
+				<description xml:lang="ko">서브페이지 오른쪽 상단에 현재 위치를 표시합니다.</description>
+				<description xml:lang="en">Show the current locate upper on subpage of right side.</description>
+					<options value="Y">
+					<title xml:lang="ko">표시</title>
+					<title xml:lang="en">Display</title>
+					<value>yes</value>
+					</options>
+					<options value="N">
+					<title xml:lang="ko">표시하지 않음</title>
+					<title xml:lang="en">Non-display</title>
+					<value>no</value>
+					</options>
+			</var>
+			<var name="select_lang" type="select" default="N">
+				<title xml:lang="ko">3-4. 언어 선택 표시</title>
+				<title xml:lang="en">3-4. Select Language Display</title>
+				<description xml:lang="ko">언어 선택 표시 여부를 선택하세요. 상단 메뉴에 추가된 '고정형'과 헤더 오른쪽에 표시되는 '이동형', '표시하지 않음' 중에서 선택하세요. 기본값은 '표시하지 않음' 입니다. (이동형은 한 개의 언어로만 서비스 하는 경우에는 선택해도 표시되지 않습니다.)</description>
+				<description xml:lang="en">Select Language 표시 여부를 선택하세요. 상단 메뉴에 추가된 '고정형'과 헤더 오른쪽에 표시되는 '이동형', '표시하지 않음' 중에서 선택하세요. 기본값은 '표시하지 않음' 입니다. (이동형은 한 개의 언어로만 서비스 하는 경우에는 선택해도 표시되지 않습니다.)</description>
+				<options value="N">
+					<title xml:lang="ko">표시하지 않음</title>
+					<title xml:lang="en">Non-display</title>
+				</options>
+				<options value="1">
+					<title xml:lang="ko">고정형</title>
+					<title xml:lang="en">고정형</title>
+				</options>
+				<options value="2">
+					<title xml:lang="ko">이동형</title>
+					<title xml:lang="en">이동형</title>
+				</options>
+			</var>
+			<var name="select_lang_top" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. 이동형 Top 위치</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. 이동형 Top 위치</title>
+				<description xml:lang="ko">이동형 언어선택 Top 위치를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 28px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">이동형 언어선택 Top 위치를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 28px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="select_lang_right" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; b. 이동형 Right 위치</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; b. 이동형 Right 위치</title>
+				<description xml:lang="ko">이동형 언어선택 Right 위치를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 19px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">이동형 언어선택 Right 위치를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력하지 않으면 19px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="sitemap" type="select" default="N">
+				<title xml:lang="ko">3-5. 사이트맵 표시</title>
+				<title xml:lang="en">3-5. Sitemap Display</title>
+				<description xml:lang="ko">사이트맵 표시 여부를 선택하세요. Footer 바로 위에 표시됩니다. 기본값은 '표시하지 않음' 입니다.</description>
+				<description xml:lang="en">Sitemap 표시 여부를 선택하세요. Footer 바로 위에 표시됩니다. 기본값은 '표시하지 않음' 입니다.</description>
+				<options value="N">
+					<title xml:lang="ko">표시하지 않음</title>
+					<title xml:lang="en">Non-display</title>
+				</options>
+				<options value="Y">
+					<title xml:lang="ko">표시</title>
+					<title xml:lang="en">Display</title>
+				</options>
+			</var>
+			<var name="sitemap_width" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. 메뉴 가로 길이</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. 메뉴 가로 길이</title>
+				<description xml:lang="ko">사이트맵 메뉴 가로 길이 설정. 메뉴 가로 길이가 조절됩니다. 설정하지 않으면 125px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">사이트맵 메뉴 가로 길이 설정. 메뉴 가로 길이가 조절됩니다. 설정하지 않으면 125px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="sitemap_paddingR" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; b. 오른쪽 여백</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; b. 오른쪽 여백</title>
+				<description xml:lang="ko">사이트맵 메뉴 오른쪽 여백 설정. 메뉴 간격이 조절됩니다. 설정하지 않으면 10px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">사이트맵 메뉴 오른쪽 여백 설정. 메뉴 간격이 조절됩니다. 설정하지 않으면 10px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="family_site" type="select" default="N">
+				<title xml:lang="ko">3-6. 패밀리 사이트 표시</title>
+				<title xml:lang="en">3-6. Family Site Display</title>
+				<description xml:lang="ko">패밀리 사이트 표시 여부를 선택하세요. 오른쪽 하단에 표시됩니다. 기본값은 '표시하지 않음' 입니다.</description>
+				<description xml:lang="en">Family Site 표시 여부를 선택하세요. 오른쪽 하단에 표시됩니다. 기본값은 '표시하지 않음' 입니다.</description>
+				<options value="N">
+					<title xml:lang="ko">표시하지 않음</title>
+					<title xml:lang="en">Non-display</title>
+				</options>
+				<options value="Y">
+					<title xml:lang="ko">표시</title>
+					<title xml:lang="en">Display</title>
+				</options>
+			</var>
+			<var name="signup_mid" type="text">
+				<title xml:lang="ko">3-7. 회원가입 전용 페이지</title>
+				<title xml:lang="en">3-7. 회원가입 전용 페이지</title>
+				<description xml:lang="ko">회원가입 전용 페이지를 하나 만들고 해당 mid값을 입력하세요. 회원가입 페이지가 해당 mid값의 페이지에 출력됩니다. 입력하지 않으면 현재 페이지에 출력됩니다.</description>
+				<description xml:lang="en">회원가입 전용 페이지를 하나 만들고 해당 mid값을 입력하세요. 회원가입 페이지가 해당 mid값의 페이지에 출력됩니다. 입력하지 않으면 현재 페이지에 출력됩니다.</description>
+			</var>
+			<var name="mypage_mid" type="text">
+				<title xml:lang="ko">3-8. 회원정보 전용 페이지</title>
+				<title xml:lang="en">3-8. 회원정보 전용 페이지</title>
+				<description xml:lang="ko">회원정보 전용 페이지를 하나 만들고 해당 mid값을 입력하세요. 회원정보 페이지가 해당 mid값의 페이지에 출력됩니다. 상단메뉴에 '프로필' 대신 '마이페이지'가 표시됩니다. 입력하지 않으면 현재 페이지에 출력됩니다.</description>
+				<description xml:lang="en">회원정보 전용 페이지를 하나 만들고 해당 mid값을 입력하세요. 회원정보 페이지가 해당 mid값의 페이지에 출력됩니다. 상단메뉴에 '프로필' 대신 '마이페이지'가 표시됩니다. 입력하지 않으면 현재 페이지에 출력됩니다.</description>
+			</var>
+			<var name="search_mid" type="text">
+				<title xml:lang="ko">3-9. 검색 전용 페이지</title>
+				<title xml:lang="en">3-9. 검색 전용 페이지</title>
+				<description xml:lang="ko">검색 전용 페이지를 하나 만들고 해당 mid값을 입력하세요. 검색 페이지가 해당 mid값의 페이지에 출력됩니다. 입력하지 않으면 현재 페이지에 출력됩니다.</description>
+				<description xml:lang="en">검색 전용 페이지를 하나 만들고 해당 mid값을 입력하세요. 검색 페이지가 해당 mid값의 페이지에 출력됩니다. 입력하지 않으면 현재 페이지에 출력됩니다.</description>
+			</var>
+			<var name="css3pie" type="select" default="Y">
+				<title xml:lang="ko">3-10. css3 PIE 사용</title>
+				<title xml:lang="en">3-10. css3 PIE Activate</title>
+				<description xml:lang="ko">IE8 이하 버전에서 css3 일부 기능을 사용할 수 있는 css3 PIE 사용 여부를 선택하세요. 기본값은 '사용'입니다.</description>
+				<description xml:lang="en">IE8 이하 버전에서 css3 일부 기능을 사용할 수 있는 css3 PIE 사용 여부를 선택하세요. 기본값은 'Activate'입니다.</description>
+				<options value="Y">
+					<title xml:lang="ko">사용</title>
+					<title xml:lang="en">Activate</title>
+				</options>
+				<options value="N">
+					<title xml:lang="ko">사용하지 않음</title>
+					<title xml:lang="en">Deactivate</title>
+				</options>
+			</var>
+		</group>
+		<group>
+		<title xml:lang="ko">4. 위젯, 배너, 광고 설정</title>
+		<title xml:lang="en">4. 위젯, 배너, 광고 설정</title>
+			<var name="sideNav_top" type="textarea">
+				<title xml:lang="ko">4-1. 사이드 메뉴 상단</title>
+				<title xml:lang="en">4-1. 사이드 메뉴 상단</title>
+				<description xml:lang="ko">사이드 메뉴 상단에 구글 광고나 이미지, 배너, 위젯 등의 코드를 입력할 수 있습니다. 입력하지 않으면 표시되지 않습니다.</description>
+				<description xml:lang="en">사이드 메뉴 상단에 구글 광고나 이미지, 배너, 위젯 등의 코드를 입력할 수 있습니다. 입력하지 않으면 표시되지 않습니다.</description>
+			</var>
+			<var name="sideNav_bottom" type="textarea">
+				<title xml:lang="ko">4-2. 사이드 메뉴 하단</title>
+				<title xml:lang="en">4-2. 사이드 메뉴 하단</title>
+				<description xml:lang="ko">사이드 메뉴 하단에 구글 광고나 이미지, 배너, 위젯 등의 코드를 입력할 수 있습니다. 입력하지 않으면 표시되지 않습니다.</description>
+				<description xml:lang="en">사이드 메뉴 하단에 구글 광고나 이미지, 배너, 위젯 등의 코드를 입력할 수 있습니다. 입력하지 않으면 표시되지 않습니다.</description>
+			</var>
+			<var name="body_top" type="textarea">
+				<title xml:lang="ko">4-3. Body 상단</title>
+				<title xml:lang="en">4-3. Body 상단</title>
+				<description xml:lang="ko">Body 상단에 구글 광고나 이미지, 배너, 위젯 등의 코드를 입력할 수 있습니다. 레이아웃 형태에 상관없이 Body 상단에 1단으로 표시됩니다. 1단과 2,3단과의 혼합형태가 필요할 때 사용하세요. 입력하지 않으면 표시되지 않습니다.</description>
+				<description xml:lang="en">Body 상단에 구글 광고나 이미지, 배너, 위젯 등의 코드를 입력할 수 있습니다. 레이아웃 형태에 상관없이 Body 상단에 1단으로 표시됩니다. 1단과 2,3단과의 혼합형태가 필요할 때 사용하세요. 입력하지 않으면 표시되지 않습니다.</description>
+			</var>
+			<var name="content_top" type="textarea">
+				<title xml:lang="ko">4-4. Content 상단</title>
+				<title xml:lang="en">4-4. Content 상단</title>
+				<description xml:lang="ko">게시판이나 페이지 상단에 구글 광고나 이미지, 배너, 위젯 등의 코드를 입력할 수 있습니다. 입력하지 않으면 표시되지 않습니다.</description>
+				<description xml:lang="en">게시판이나 페이지 상단에 구글 광고나 이미지, 배너, 위젯 등의 코드를 입력할 수 있습니다. 입력하지 않으면 표시되지 않습니다.</description>
+			</var>
+			<var name="body_bottom" type="textarea">
+				<title xml:lang="ko">4-5. Body 하단</title>
+				<title xml:lang="en">4-5. Body 하단</title>
+				<description xml:lang="ko">Body 하단에 구글 광고나 이미지, 배너, 위젯 등의 코드를 입력할 수 있습니다. 레이아웃 형태에 상관없이 Body 하단에 1단으로 표시됩니다. 1단과 2,3단과의 혼합형태가 필요할 때 사용하세요. 입력하지 않으면 표시되지 않습니다.</description>
+				<description xml:lang="en">Body 하단에 구글 광고나 이미지, 배너, 위젯 등의 코드를 입력할 수 있습니다. 레이아웃 형태에 상관없이 Body 하단에 1단으로 표시됩니다. 1단과 2,3단과의 혼합형태가 필요할 때 사용하세요. 입력하지 않으면 표시되지 않습니다.</description>
+			</var>
+			<var name="contentSide" type="textarea">
+				<title xml:lang="ko">4-6. 3단용 오른쪽</title>
+				<title xml:lang="en">4-6. 3단용 오른쪽</title>
+				<description xml:lang="ko">3단용 오른쪽에 구글 광고나 이미지, 배너, 위젯 등의 코드를 입력할 수 있습니다.</description>
+				<description xml:lang="en">3단용 오른쪽에 구글 광고나 이미지, 배너, 위젯 등의 코드를 입력할 수 있습니다.</description>
+			</var>
+			<var name="top_left" type="textarea">
+				<title xml:lang="ko">4-7. 상단 메뉴 왼쪽</title>
+				<title xml:lang="en">4-7. 상단 메뉴 왼쪽</title>
+				<description xml:lang="ko">상단 메뉴 왼쪽에 HTML 태그 또는 위젯코드를 입력할 수 있습니다. 입력하지 않으면 표시되지 않습니다. '2-1. 상단 메뉴 표시'의 선택에 따라갑니다.</description>
+				<description xml:lang="en">상단 메뉴 왼쪽에 HTML 태그 또는 위젯코드를 입력할 수 있습니다. 입력하지 않으면 표시되지 않습니다. '2-1. 상단 메뉴 표시'의 선택에 따라갑니다.</description>
+			</var>
+			<var name="top_left_font_color" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. 글자색</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. Font Color</title>
+				<description xml:lang="ko">상단 메뉴 왼쪽의 글자색을 변경할 경우 원하는 글자색의 rgb 색상코드를 입력하세요. (예. #555)</description>
+				<description xml:lang="en">상단 메뉴 왼쪽의 글자색을 변경할 경우 원하는 글자색의 rgb 색상코드를 입력하세요. (예. #555)</description>
+			</var>
+			<var name="mainNav_r" type="textarea">
+				<title xml:lang="ko">4-8. 메인 메뉴바 오른쪽</title>
+				<title xml:lang="en">4-8. 메인 메뉴바 오른쪽</title>
+				<description xml:lang="ko">메인 메뉴바 오른쪽에 HTML 태그 또는 위젯코드를 입력할 수 있습니다. 입력하지 않으면 표시되지 않습니다.</description>
+				<description xml:lang="en">메인 메뉴바 오른쪽에 HTML 태그 또는 위젯코드를 입력할 수 있습니다. 입력하지 않으면 표시되지 않습니다.</description>
+			</var>
+			<var name="mainNav_r_font_color" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. 글자색</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. Font Color</title>
+				<description xml:lang="ko">메인 메뉴바 오른쪽의 글자색을 변경할 경우 원하는 글자색의 rgb 색상코드를 입력하세요. (예. #555)</description>
+				<description xml:lang="en">메인 메뉴바 오른쪽의 글자색을 변경할 경우 원하는 글자색의 rgb 색상코드를 입력하세요. (예. #555)</description>
+			</var>
+			<var name="mainNav_r_width" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; b. 가로 길이</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; b. 가로 길이</title>
+				<description xml:lang="ko">메인 메뉴바 오른쪽의 가로 길이를 변경할 경우 원하는 크기의 숫자를 입력하세요. 설정하지 않으면 250px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">메인 메뉴바 오른쪽의 가로 길이를 변경할 경우 원하는 크기의 숫자를 입력하세요. 설정하지 않으면 250px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="mainNav_r_top" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; c. Top 위치</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; c. Top 위치</title>
+				<description xml:lang="ko">메인 메뉴바 오른쪽의 Top 위치를 변경할 경우 원하는 크기의 숫자를 입력하세요. 설정하지 않으면 12px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">메인 메뉴바 오른쪽의 Top 위치를 변경할 경우 원하는 크기의 숫자를 입력하세요. 설정하지 않으면 12px로 적용됩니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="login_i_top" type="textarea">
+				<title xml:lang="ko">4-9. 로그인 위젯 상단</title>
+				<title xml:lang="en">4-9. 로그인 위젯 상단</title>
+				<description xml:lang="ko">로그인 위젯 상단에 구글 광고나 이미지, 배너, 위젯 등의 코드를 입력할 수 있습니다. 입력하지 않으면 표시되지 않습니다.</description>
+				<description xml:lang="en">로그인 위젯 상단에 구글 광고나 이미지, 배너, 위젯 등의 코드를 입력할 수 있습니다. 입력하지 않으면 표시되지 않습니다.</description>
+			</var>
+		</group>
+		<group>
+		<title xml:lang="ko">5. 슬라이드 배너 설정</title>
+		<title xml:lang="en">5. 슬라이드 배너 설정</title>
+			<var name="slide_banner" type="select" default="no">
+				<title xml:lang="ko">5-1. 슬라이드 배너 사용하기</title>
+				<title xml:lang="en">5-1. Use Banner</title>
+				<description xml:lang="ko">레이아웃에 배너를 보여주는 방법을 선택합니다.</description>
+				<description xml:lang="en">Decide to display a Banner on the layout or not.</description>
+				<options value="no">
+					<title xml:lang="ko">사용하지 않음</title>
+					<title xml:lang="en">Non-display</title>
+				</options>
+				<options value="demo">
+					<title xml:lang="ko">데모</title>
+					<title xml:lang="en">Demo</title>
+				</options>
+				<options value="custom">
+					<title xml:lang="ko">직접등록</title>
+					<title xml:lang="en">Custom</title>
+				</options>
+			</var>
+			<var name="banner_position" type="select">
+				<title xml:lang="ko">5-2. 배너창 위치</title>
+				<title xml:lang="en">5-2. 배너창 위치</title>
+				<description xml:lang="ko">레이아웃에 배너를 보여주는 위치를 선택합니다.</description>
+				<description xml:lang="en">레이아웃에 배너를 보여주는 위치를 선택합니다.</description>
+				<options value="1">
+					<title xml:lang="ko">Body 상단</title>
+					<title xml:lang="en">Body 상단</title>
+				</options>
+				<options value="2">
+					<title xml:lang="ko">Content 상단</title>
+					<title xml:lang="en">Content 상단</title>
+				</options>
+			</var>
+			<var name="banner_size">
+				<title xml:lang="ko">5-3. 배너창 크기, 여백</title>
+				<title xml:lang="en">5-3. 배너창 크기, 여백</title>
+				<description xml:lang="ko">배너창의 크기와 여백을 변경할 수 있습니다.</description>
+				<description xml:lang="en">배너창의 크기와 여백을 변경할 수 있습니다.</description>
+			</var>
+			<var name="banner_margin_top" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. 상단 여백</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. Top Margin</title>
+				<description xml:lang="ko">배너창 상단 여백 설정. 배너창의 상단에 여백을 주고 싶을 때 설정하세요. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">Banner Margin Setting. 배너창의 상단에 여백을 주고 싶을 때 설정하세요. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="banner_height" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; b. 높이</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; b. 높이</title>
+				<description xml:lang="ko">배너창의 높이를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">배너창의 높이를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="banner_image">
+				<title xml:lang="ko">5-4. 배너 이미지 등록</title>
+				<title xml:lang="en">5-4. 배너 이미지 등록</title>
+				<description xml:lang="ko">배너 이미지를 직접 등록할 수 있습니다.</description>
+				<description xml:lang="en">배너 이미지를 직접 등록할 수 있습니다.</description>
+			</var>
+			<var name="banner_image_1" type="image">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a1. 배너 이미지 #1</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a1. Banner Image #1</title>
+				<description xml:lang="ko">첫번째 배너 이미지를 업로드해 주세요.(978px * 396px 이미지가 가장 어울립니다)</description>
+				<description xml:lang="en">Please upload the banner image #1 (width: 978px, height: 396px).</description>
+			</var>
+			<var name="url_image_1" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a2. 링크 #1</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a2. URL #1</title>
+				<description xml:lang="ko">첫번째 이미지를 클릭시에 이동할 (http://를 포함한) 홈 페이지 URL을 입력해 주세요.</description>
+				<description xml:lang="en">Please input the URL for image #1 (start with http://).</description>
+			</var>
+			<var name="banner_image_2" type="image">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; b1. 배너 이미지 #2</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; b1. Banner Image #2</title>
+				<description xml:lang="ko">두번째 배너 이미지를 업로드해 주세요.(978px * 396px 이미지가 가장 어울립니다)</description>
+				<description xml:lang="en">Please upload the banner image #2 (width: 978px, height: 396px).</description>
+			</var>
+			<var name="url_image_2" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; b2. 링크 #2</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; b2. URL #2</title>
+				<description xml:lang="ko">두번째 이미지를 클릭시에 이동할 (http://를 포함한) 홈 페이지 URL을 입력해 주세요.</description>
+				<description xml:lang="en">Please input the URL for image #2 (start with http://).</description>
+			</var>
+			<var name="banner_image_3" type="image">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; c1. 배너 이미지 #3</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; c1. Banner Image #3</title>
+				<description xml:lang="ko">세번째 배너 이미지를 업로드해 주세요.(978px * 396px 이미지가 가장 어울립니다)</description>
+				<description xml:lang="en">Please upload the banner image #3 (width: 978px, height: 396px).</description>
+			</var>
+			<var name="url_image_3" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; c2. 링크 #3</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; c2. URL #3</title>
+				<description xml:lang="ko">세번째 이미지를 클릭시에 이동할 (http://를 포함한) 홈 페이지 URL을 입력해 주세요.</description>
+				<description xml:lang="en">Please input the URL for image #3 (start with http://).</description>
+			</var>
+			<var name="banner_image_4" type="image">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; d1. 배너 이미지 #4</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; d1. Banner Image #4</title>
+				<description xml:lang="ko">네번째 배너 이미지를 업로드해 주세요.(978px * 396px 이미지가 가장 어울립니다)</description>
+				<description xml:lang="en">Please upload the banner image #4 (width: 978px, height: 396px).</description>
+			</var>
+			<var name="url_image_4" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; d2. 링크 #4</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; d2. URL #4</title>
+				<description xml:lang="ko">네번째 이미지를 클릭시에 이동할 (http://를 포함한) 홈 페이지 URL을 입력해 주세요.</description>
+				<description xml:lang="en">Please input the URL for image #4 (start with http://).</description>
+			</var>
+			<var name="banner_image_5" type="image">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; e1. 배너 이미지 #5</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; e1. Banner Image #5</title>
+				<description xml:lang="ko">다섯번째 배너 이미지를 업로드해 주세요.(978px * 396px 이미지가 가장 어울립니다)</description>
+				<description xml:lang="en">Please upload the banner image #5 (width: 978px, height: 396px).</description>
+			</var>
+			<var name="url_image_5" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; e2. 링크 #5</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; e2. URL #5</title>
+				<description xml:lang="ko">다섯번째 이미지를 클릭시에 이동할 (http://를 포함한) 홈 페이지 URL을 입력해 주세요.</description>
+				<description xml:lang="en">Please input the URL for image #5 (start with http://).</description>
+			</var>
+			<var name="banner_image_6" type="image">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; f1. 배너 이미지 #6</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; f1. Banner Image #6</title>
+				<description xml:lang="ko">여섯번째 배너 이미지를 업로드해 주세요.(978px * 396px 이미지가 가장 어울립니다)</description>
+				<description xml:lang="en">Please upload the banner image #6 (width: 978px, height: 396px).</description>
+			</var>
+			<var name="url_image_6" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; f2. 링크 #6</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; f2. URL #6</title>
+				<description xml:lang="ko">여섯번째 이미지를 클릭시에 이동할 (http://를 포함한) 홈 페이지 URL을 입력해 주세요.</description>
+				<description xml:lang="en">Please input the URL for image #6 (start with http://).</description>
+			</var>
+		</group>
+		<group>
+		<title xml:lang="ko">6. 팝업 공지 설정</title>
+		<title xml:lang="en">6. 팝업 공지 설정</title>
+			<var name="popup_layer" type="select" default="N">
+				<title xml:lang="ko">6-1. 팝업창 표시</title>
+				<title xml:lang="en">6-1. Popup Display</title>
+				<description xml:lang="ko">팝업창 표시 여부를 선택하세요. 기본값은 '표시하지 않음' 입니다.</description>
+				<description xml:lang="en">팝업창 표시 여부를 선택하세요. 기본값은 '표시하지 않음' 입니다.</description>
+				<options value="N">
+					<title xml:lang="ko">표시하지 않음</title>
+					<title xml:lang="en">Non-display</title>
+				</options>
+				<options value="Y">
+					<title xml:lang="ko">표시</title>
+					<title xml:lang="en">Display</title>
+				</options>
+			</var>
+			<var name="popup_notice">
+				<title xml:lang="ko">6-2. 팝업 공지 내용</title>
+				<title xml:lang="en">6-2. 팝업 공지 내용</title>
+				<description xml:lang="ko">팝업 공지 내용을 텍스트 또는 이미지로 입력해 주세요. 입력하지 않으면 출력되지 않습니다.</description>
+				<description xml:lang="en">팝업 공지 내용을 텍스트 또는 이미지로 입력해 주세요. 입력하지 않으면 출력되지 않습니다.</description>
+			</var>
+			<var name="popup_text" type="textarea">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. 텍스트</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. 텍스트</title>
+				<description xml:lang="ko">팝업 공지 내용을 직접 입력해 주세요.</description>
+				<description xml:lang="en">팝업 공지 내용을 직접 입력해 주세요.</description>
+			</var>
+			<var name="popup_img" type="image">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; b. 이미지</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; b. 이미지</title>
+				<description xml:lang="ko">팝업 공지 내용을 기록한 이미지를 등록해 주세요.</description>
+				<description xml:lang="en">팝업 공지 내용을 기록한 이미지를 등록해 주세요.</description>
+			</var>
+			<var name="popup_img_link" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; c. 이미지 링크</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; c. 이미지 링크</title>
+				<description xml:lang="ko">이미지에 링크가 있을 경우 링크주소를 입력해주세요. 예) http://www.smartxe.com</description>
+				<description xml:lang="en">Please enter the notice URL address. ex) http://www.smartxe.com</description>
+			</var>
+			<var name="popup_size">
+				<title xml:lang="ko">6-3. 팝업창 크기, 위치</title>
+				<title xml:lang="en">6-3. 팝업창 크기, 위치</title>
+				<description xml:lang="ko">팝업창의 크기와 위치를 변경할 수 있습니다.</description>
+				<description xml:lang="en">팝업창의 크기와 위치를 변경할 수 있습니다.</description>
+			</var>
+			<var name="popup_width" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. 가로 길이</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. 가로 길이</title>
+				<description xml:lang="ko">팝업창의 가로 길이를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">팝업창의 가로 길이를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="popup_height" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; b. 높이</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; b. 높이</title>
+				<description xml:lang="ko">팝업창의 높이를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">팝업창의 높이를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="popup_top" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; c. Top 위치</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; c. Top 위치</title>
+				<description xml:lang="ko">팝업창의 Top 위치를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">팝업창의 Top 위치를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="popup_left" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; d. Left 위치</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; d. Left 위치</title>
+				<description xml:lang="ko">팝업창의 Left 위치를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">팝업창의 Left 위치를 변경할 경우 원하는 크기의 숫자를 입력하세요. 입력시 숫자만 입력하세요.</description>
+			</var>
+		</group>
+		<group>
+		<title xml:lang="ko">7. 배경 이미지 설정</title>
+		<title xml:lang="en">7. Background Image Settings</title>
+			<var name="background_image" type="image">
+				<title xml:lang="ko">7-1. 전체 배경 이미지</title>
+				<title xml:lang="en">7-1. Background Image</title>
+				<description xml:lang="ko">전체 배경 이미지를 사용하시려면 등록해 주세요.</description>
+				<description xml:lang="en">Please input if you want to use background image.</description>
+			</var>
+			<var name="bg_repeat" type="select" default="repeat">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. 반복형식</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. 반복형식</title>
+				<description xml:lang="ko">전체 배경 이미지의 반복형식을 선택하세요. 기본값은 '반복' 입니다.</description>
+				<description xml:lang="en">전체 배경 이미지의 반복형식을 선택하세요. 기본값은 'Repeat' 입니다.</description>
+				<options value="repeat">
+					<title xml:lang="ko">반복</title>
+					<title xml:lang="en">Repeat</title>
+				</options>
+				<options value="no-repeat">
+					<title xml:lang="ko">반복하지 않음</title>
+					<title xml:lang="en">No Repeat</title>
+				</options>
+				<options value="repeat-x">
+					<title xml:lang="ko">가로반복</title>
+					<title xml:lang="en">Repeat X</title>
+				</options>
+				<options value="repeat-y">
+					<title xml:lang="ko">세로반복</title>
+					<title xml:lang="en">Repeat Y</title>
+				</options>
+			</var>
+			<var name="bg_array" type="select" default="center">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; b. 정렬 위치</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; b. 정렬 위치</title>
+				<description xml:lang="ko">전체 배경 이미지의 정렬 위치를 선택하세요. 기본값은 '가운데' 입니다.</description>
+				<description xml:lang="en">전체 배경 이미지의 정렬 위치를 선택하세요. 기본값은 'Center' 입니다.</description>
+				<options value="center">
+					<title xml:lang="ko">가운데</title>
+					<title xml:lang="en">Center</title>
+				</options>
+				<options value="left">
+					<title xml:lang="ko">왼쪽</title>
+					<title xml:lang="en">Left</title>
+				</options>
+				<options value="right">
+					<title xml:lang="ko">오른쪽</title>
+					<title xml:lang="en">Right</title>
+				</options>
+			</var>
+			<var name="bg_color" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; c. 배경색</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; c. Background Color</title>
+				<description xml:lang="ko">전체 배경색 설정. 전체 배경색의 rgb 색상코드를 입력하세요. 전체 배경 이미지 등록과 상관없이 작동합니다. 등록하지 않으면 흰색이 출력됩니다. (예. #dedede)</description>
+				<description xml:lang="en">Background Color Setting. 전체 배경색의 rgb 색상코드를 입력하세요. 전체 배경 이미지 등록과 상관없이 작동합니다. 등록하지 않으면 흰색이 출력됩니다. (예. #dedede)</description>
+			</var>
+			<var name="header_con_bg_image" type="image">
+				<title xml:lang="ko">7-2. 헤더 컨테이너 배경 이미지</title>
+				<title xml:lang="en">7-2. Header Container Background Image</title>
+				<description xml:lang="ko">헤더 컨테이너 배경 이미지를 사용하시려면 등록해 주세요. 등록하지 않으면 표시되지 않습니다.</description>
+				<description xml:lang="en">Header 컨테이너 배경 이미지를 사용하시려면 등록해 주세요. 등록하지 않으면 표시되지 않습니다.</description>
+			</var>
+			<var name="header_con_bg_repeat" type="select" default="repeat">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. 반복형식</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. 반복형식</title>
+				<description xml:lang="ko">헤더 컨테이너 배경 이미지의 반복형식을 선택하세요. 기본값은 '반복' 입니다.</description>
+				<description xml:lang="en">Header 컨테이너 배경 이미지의 반복형식을 선택하세요. 기본값은 'Repeat' 입니다.</description>
+				<options value="repeat">
+					<title xml:lang="ko">반복</title>
+					<title xml:lang="en">Repeat</title>
+				</options>
+				<options value="no-repeat">
+					<title xml:lang="ko">반복하지 않음</title>
+					<title xml:lang="en">No Repeat</title>
+				</options>
+				<options value="repeat-x">
+					<title xml:lang="ko">가로반복</title>
+					<title xml:lang="en">Repeat X</title>
+				</options>
+				<options value="repeat-y">
+					<title xml:lang="ko">세로반복</title>
+					<title xml:lang="en">Repeat Y</title>
+				</options>
+			</var>
+			<var name="header_con_bg_array" type="select" default="center">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; b. 정렬 위치</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; b. 정렬 위치</title>
+				<description xml:lang="ko">헤더 컨테이너 배경 이미지의 정렬 위치를 선택하세요. 기본값은 '가운데' 입니다.</description>
+				<description xml:lang="en">Header 컨테이너 배경 이미지의 정렬 위치를 선택하세요. 기본값은 'Center' 입니다.</description>
+				<options value="center">
+					<title xml:lang="ko">가운데</title>
+					<title xml:lang="en">Center</title>
+				</options>
+				<options value="left">
+					<title xml:lang="ko">왼쪽</title>
+					<title xml:lang="en">Left</title>
+				</options>
+				<options value="right">
+					<title xml:lang="ko">오른쪽</title>
+					<title xml:lang="en">Right</title>
+				</options>
+			</var>
+			<var name="header_con_bg_color" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; c. 배경색</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; c. Background Color</title>
+				<description xml:lang="ko">헤더 컨테이너 배경색 설정. 헤더 배경색의 rgb 색상코드를 입력하세요. 헤더 배경 이미지 등록과 상관없이 작동합니다. (예. #dedede)</description>
+				<description xml:lang="en">Header Container Background Color Setting. Header 배경색의 rgb 색상코드를 입력하세요. Header 배경 이미지 등록과 상관없이 작동합니다. (예. #dedede)</description>
+			</var>
+			<var name="header_bg_image" type="image">
+				<title xml:lang="ko">7-3. 헤더 배경 이미지</title>
+				<title xml:lang="en">7-3. Header Background Image</title>
+				<description xml:lang="ko">헤더 배경 이미지를 등록해 주세요. 등록하지 않으면 표시되지 않습니다.</description>
+				<description xml:lang="en">Header 배경 이미지를 등록해 주세요. 등록하지 않으면 표시되지 않습니다.</description>
+			</var>
+			<var name="header_bg_repeat" type="select" default="repeat">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. 반복형식</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. 반복형식</title>
+				<description xml:lang="ko">헤더 배경 이미지의 반복형식을 선택하세요. 기본값은 '반복' 입니다.</description>
+				<description xml:lang="en">Header 배경 이미지의 반복형식을 선택하세요. 기본값은 'Repeat' 입니다.</description>
+				<options value="repeat">
+					<title xml:lang="ko">반복</title>
+					<title xml:lang="en">Repeat</title>
+				</options>
+				<options value="no-repeat">
+					<title xml:lang="ko">반복하지 않음</title>
+					<title xml:lang="en">No Repeat</title>
+				</options>
+				<options value="repeat-x">
+					<title xml:lang="ko">가로반복</title>
+					<title xml:lang="en">Repeat X</title>
+				</options>
+				<options value="repeat-y">
+					<title xml:lang="ko">세로반복</title>
+					<title xml:lang="en">Repeat Y</title>
+				</options>
+			</var>
+			<var name="header_bg_array" type="select" default="center">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; b. 정렬 위치</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; b. 정렬 위치</title>
+				<description xml:lang="ko">헤더 배경 이미지의 정렬 위치를 선택하세요. 기본값은 '가운데' 입니다.</description>
+				<description xml:lang="en">Header 배경 이미지의 정렬 위치를 선택하세요. 기본값은 'Center' 입니다.</description>
+				<options value="center">
+					<title xml:lang="ko">가운데</title>
+					<title xml:lang="en">Center</title>
+				</options>
+				<options value="left">
+					<title xml:lang="ko">왼쪽</title>
+					<title xml:lang="en">Left</title>
+				</options>
+				<options value="right">
+					<title xml:lang="ko">오른쪽</title>
+					<title xml:lang="en">Right</title>
+				</options>
+			</var>
+			<var name="header_bg_color" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; c. 배경색</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; c. Background Color</title>
+				<description xml:lang="ko">헤더 배경색 설정. 헤더 배경색의 rgb 색상코드를 입력하세요. 헤더 배경 이미지 등록과 상관없이 작동합니다. (예. #dedede)</description>
+				<description xml:lang="en">Header Background Color Setting. Header 배경색의 rgb 색상코드를 입력하세요. Header 배경 이미지 등록과 상관없이 작동합니다. (예. #dedede)</description>
+			</var>
+			<var name="header_margin_top" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; d. 헤더 상단 여백</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; d. Header Top Margin</title>
+				<description xml:lang="ko">헤더 상단 여백 설정. 헤더 부분의 상단에 여백을 주고 싶을 때 설정하세요. 헤더 배경 이미지 등록과 상관없이 작동합니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">Header Top Margin Setting. Header 부분의 상단에 여백을 주고 싶을 때 설정하세요. Header 배경 이미지 등록과 상관없이 작동합니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="header_margin_lr" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; e. 헤더 좌우 여백</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; e. Header Left-Right Margin</title>
+				<description xml:lang="ko">헤더 좌우 여백 설정. 헤더 부분의 배경이미지 또는 배경색 좌우에 여백을 주고 싶을 때 설정하세요. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">Header Left-Right Margin Setting. Header 부분의 배경이미지 또는 배경색 좌우에 여백을 주고 싶을 때 설정하세요. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="header_margin_bottom" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; f. 헤더 하단 여백</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; f. Header Bottom Margin</title>
+				<description xml:lang="ko">헤더 하단 여백 설정. 헤더 부분의 상단에 여백을 주고 싶을 때 설정하세요. 헤더 배경 이미지 등록과 상관없이 작동합니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">Header Bottom Margin Setting. Header 부분의 하단에 여백을 주고 싶을 때 설정하세요. Header 배경 이미지 등록과 상관없이 작동합니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="header_height" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; g. 헤더 높이</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; g. Header Height</title>
+				<description xml:lang="ko">헤더 높이 설정. 배경 이미지나 배경 플래시의 크기에 맞게 높이를 조절할 필요가 있을 때 설정하세요. 헤더 배경 이미지 등록과 상관없이 작동합니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">Header Height Setting. 배경 이미지나 배경 플래시의 크기에 맞게 높이를 조절할 필요가 있을 때 설정하세요. Header 배경 이미지 등록과 상관없이 작동합니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="header_flash" type="textarea">
+				<title xml:lang="ko">7-4. 헤더 배경 플래시</title>
+				<title xml:lang="en">7-4. Header Background Flash</title>
+				<description xml:lang="ko">헤더 배경에 이미지 대신 플래시를 사용할 경우 플래시를 포함한 코드 일체를 입력하세요. 헤더 높이는 위 항목에서 설정하세요. 입력하지 않으면 표시되지 않습니다.</description>
+				<description xml:lang="en">Header 배경에 이미지 대신 플래시를 사용할 경우 플래시를 포함한 코드 일체를 입력하세요. Header 높이는 위 항목에서 설정하세요. 입력하지 않으면 표시되지 않습니다.</description>
+			</var>
+			<var name="body_con_bg_image" type="image">
+				<title xml:lang="ko">7-5. Body 컨테이너 배경 이미지</title>
+				<title xml:lang="en">7-5. Body Container Background Image</title>
+				<description xml:lang="ko">Body 컨테이너 배경 이미지를 사용하시려면 등록해 주세요. 등록하지 않으면 표시되지 않습니다.</description>
+				<description xml:lang="en">Body 컨테이너 배경 이미지를 사용하시려면 등록해 주세요. 등록하지 않으면 표시되지 않습니다.</description>
+			</var>
+			<var name="body_con_bg_repeat" type="select" default="repeat">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. 반복형식</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. 반복형식</title>
+				<description xml:lang="ko">Body 컨테이너 배경 이미지의 반복형식을 선택하세요. 기본값은 '반복' 입니다.</description>
+				<description xml:lang="en">Body 컨테이너 배경 이미지의 반복형식을 선택하세요. 기본값은 'Repeat' 입니다.</description>
+				<options value="repeat">
+					<title xml:lang="ko">반복</title>
+					<title xml:lang="en">Repeat</title>
+				</options>
+				<options value="no-repeat">
+					<title xml:lang="ko">반복하지 않음</title>
+					<title xml:lang="en">No Repeat</title>
+				</options>
+				<options value="repeat-x">
+					<title xml:lang="ko">가로반복</title>
+					<title xml:lang="en">Repeat X</title>
+				</options>
+				<options value="repeat-y">
+					<title xml:lang="ko">세로반복</title>
+					<title xml:lang="en">Repeat Y</title>
+				</options>
+			</var>
+			<var name="body_con_bg_array" type="select" default="center">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; b. 정렬 위치</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; b. 정렬 위치</title>
+				<description xml:lang="ko">Body 컨테이너 배경 이미지의 정렬 위치를 선택하세요. 기본값은 '가운데' 입니다.</description>
+				<description xml:lang="en">Body 컨테이너 배경 이미지의 정렬 위치를 선택하세요. 기본값은 'Center' 입니다.</description>
+				<options value="center">
+					<title xml:lang="ko">가운데</title>
+					<title xml:lang="en">Center</title>
+				</options>
+				<options value="left">
+					<title xml:lang="ko">왼쪽</title>
+					<title xml:lang="en">Left</title>
+				</options>
+				<options value="right">
+					<title xml:lang="ko">오른쪽</title>
+					<title xml:lang="en">Right</title>
+				</options>
+			</var>
+			<var name="body_con_bg_color" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; c. 배경색</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; c. Background Color</title>
+				<description xml:lang="ko">Body 컨테이너 배경색 설정. Body 컨테이너 배경색의 rgb 색상코드를 입력하세요. Body 컨테이너 배경 이미지 등록과 상관없이 작동합니다. (예. #dedede)</description>
+				<description xml:lang="en">Body Container Background Color Setting. Body 컨테이너 배경색의 rgb 색상코드를 입력하세요. Body 컨테이너 배경 이미지 등록과 상관없이 작동합니다. (예. #dedede)</description>
+			</var>
+			<var name="body_bg_image" type="image">
+				<title xml:lang="ko">7-6. Body 배경 이미지</title>
+				<title xml:lang="en">7-6. Body Background Image</title>
+				<description xml:lang="ko">Body 배경 이미지를 사용하시려면 등록해 주세요. 등록하지 않으면 표시되지 않습니다.</description>
+				<description xml:lang="en">Body 배경 이미지를 사용하시려면 등록해 주세요. 등록하지 않으면 표시되지 않습니다.</description>
+			</var>
+			<var name="body_bg_repeat" type="select" default="repeat">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. 반복형식</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. 반복형식</title>
+				<description xml:lang="ko">Body 배경 이미지의 반복형식을 선택하세요. 기본값은 '반복' 입니다.</description>
+				<description xml:lang="en">Body 배경 이미지의 반복형식을 선택하세요. 기본값은 'Repeat' 입니다.</description>
+				<options value="repeat">
+					<title xml:lang="ko">반복</title>
+					<title xml:lang="en">Repeat</title>
+				</options>
+				<options value="no-repeat">
+					<title xml:lang="ko">반복하지 않음</title>
+					<title xml:lang="en">No Repeat</title>
+				</options>
+				<options value="repeat-x">
+					<title xml:lang="ko">가로반복</title>
+					<title xml:lang="en">Repeat X</title>
+				</options>
+				<options value="repeat-y">
+					<title xml:lang="ko">세로반복</title>
+					<title xml:lang="en">Repeat Y</title>
+				</options>
+			</var>
+			<var name="body_bg_array" type="select" default="center">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; b. 정렬 위치</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; b. 정렬 위치</title>
+				<description xml:lang="ko">Body 배경 이미지의 정렬 위치를 선택하세요. 기본값은 '가운데' 입니다.</description>
+				<description xml:lang="en">Body 배경 이미지의 정렬 위치를 선택하세요. 기본값은 'Center' 입니다.</description>
+				<options value="center">
+					<title xml:lang="ko">가운데</title>
+					<title xml:lang="en">Center</title>
+				</options>
+				<options value="left">
+					<title xml:lang="ko">왼쪽</title>
+					<title xml:lang="en">Left</title>
+				</options>
+				<options value="right">
+					<title xml:lang="ko">오른쪽</title>
+					<title xml:lang="en">Right</title>
+				</options>
+			</var>
+			<var name="body_bg_color" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; c. 배경색</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; c. Background Color</title>
+				<description xml:lang="ko">Body 배경색 설정. Body 배경색의 rgb 색상코드를 입력하세요. Body 배경 이미지 등록과 상관없이 작동합니다. (예. #dedede)</description>
+				<description xml:lang="en">Body Background Color Setting. Body 배경색의 rgb 색상코드를 입력하세요. Body 배경 이미지 등록과 상관없이 작동합니다. (예. #dedede)</description>
+			</var>
+			<var name="body_margin_top" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; e. Body 상단 여백</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; e. Body Top Margin</title>
+				<description xml:lang="ko">Body 상단 여백 설정. Body 부분의 상단에 여백을 주고 싶을 때 설정하세요. Body 배경 이미지 등록과 상관없이 작동합니다. 기본값은 5px입니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">Body Margin Setting. Body 부분의 상단에 여백을 주고 싶을 때 설정하세요. Body 배경 이미지 등록과 상관없이 작동합니다. 기본값은 5px입니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="body_margin_lr" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; f. Body 좌우 여백</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; f. Body Margin</title>
+				<description xml:lang="ko">Body 좌우 여백 설정. Body 부분의 배경이미지 또는 배경색 좌우에 여백을 주고 싶을 때 설정하세요. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">Body Margin Setting. Body 부분의 배경이미지 또는 배경색 좌우에 여백을 주고 싶을 때 설정하세요. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="content_bg_image" type="image">
+				<title xml:lang="ko">7-7. Content 배경 이미지</title>
+				<title xml:lang="en">7-7. Content Background Image</title>
+				<description xml:lang="ko">Content 영역 배경 이미지를 사용하시려면 등록해 주세요. 등록하지 않으면 표시되지 않습니다.</description>
+				<description xml:lang="en">Content 영역 배경 이미지를 사용하시려면 등록해 주세요. 등록하지 않으면 표시되지 않습니다.</description>
+			</var>
+			<var name="content_bg_repeat" type="select" default="repeat">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. 반복형식</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. 반복형식</title>
+				<description xml:lang="ko">Content 영역 배경 이미지의 반복형식을 선택하세요. 기본값은 '반복' 입니다.</description>
+				<description xml:lang="en">Content 영역 배경 이미지의 반복형식을 선택하세요. 기본값은 'Repeat' 입니다.</description>
+				<options value="repeat">
+					<title xml:lang="ko">반복</title>
+					<title xml:lang="en">Repeat</title>
+				</options>
+				<options value="no-repeat">
+					<title xml:lang="ko">반복하지 않음</title>
+					<title xml:lang="en">No Repeat</title>
+				</options>
+				<options value="repeat-x">
+					<title xml:lang="ko">가로반복</title>
+					<title xml:lang="en">Repeat X</title>
+				</options>
+				<options value="repeat-y">
+					<title xml:lang="ko">세로반복</title>
+					<title xml:lang="en">Repeat Y</title>
+				</options>
+			</var>
+			<var name="content_bg_array" type="select" default="center">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; b. 정렬 위치</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; b. 정렬 위치</title>
+				<description xml:lang="ko">Content 영역 배경 이미지의 정렬 위치를 선택하세요. 기본값은 '가운데' 입니다.</description>
+				<description xml:lang="en">Content 영역 배경 이미지의 정렬 위치를 선택하세요. 기본값은 'Center' 입니다.</description>
+				<options value="center">
+					<title xml:lang="ko">가운데</title>
+					<title xml:lang="en">Center</title>
+				</options>
+				<options value="left">
+					<title xml:lang="ko">왼쪽</title>
+					<title xml:lang="en">Left</title>
+				</options>
+				<options value="right">
+					<title xml:lang="ko">오른쪽</title>
+					<title xml:lang="en">Right</title>
+				</options>
+			</var>
+			<var name="content_bg_color" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; c. 배경색</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; c. Background Color</title>
+				<description xml:lang="ko">Content 배경색 설정. Content 영역 배경색의 rgb 색상코드를 입력하세요. Content 영역 배경 이미지 등록과 상관없이 작동합니다. (예. #dedede)</description>
+				<description xml:lang="en">Content Background Color Setting. Content 영역 배경색의 rgb 색상코드를 입력하세요. Content 영역 배경 이미지 등록과 상관없이 작동합니다. (예. #dedede)</description>
+			</var>
+			<var name="footer_con_bg_image" type="image">
+				<title xml:lang="ko">7-8. Footer 컨테이너 배경 이미지</title>
+				<title xml:lang="en">7-8. Footer Container Background Image</title>
+				<description xml:lang="ko">Footer 컨테이너 배경 이미지를 사용하시려면 등록해 주세요. 등록하지 않으면 표시되지 않습니다.</description>
+				<description xml:lang="en">Footer 컨테이너 배경 이미지를 사용하시려면 등록해 주세요. 등록하지 않으면 표시되지 않습니다.</description>
+			</var>
+			<var name="footer_con_bg_repeat" type="select" default="repeat">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. 반복형식</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. 반복형식</title>
+				<description xml:lang="ko">Footer 컨테이너 배경 이미지의 반복형식을 선택하세요. 기본값은 '반복' 입니다.</description>
+				<description xml:lang="en">Footer 컨테이너 배경 이미지의 반복형식을 선택하세요. 기본값은 'Repeat' 입니다.</description>
+				<options value="repeat">
+					<title xml:lang="ko">반복</title>
+					<title xml:lang="en">Repeat</title>
+				</options>
+				<options value="no-repeat">
+					<title xml:lang="ko">반복하지 않음</title>
+					<title xml:lang="en">No Repeat</title>
+				</options>
+				<options value="repeat-x">
+					<title xml:lang="ko">가로반복</title>
+					<title xml:lang="en">Repeat X</title>
+				</options>
+				<options value="repeat-y">
+					<title xml:lang="ko">세로반복</title>
+					<title xml:lang="en">Repeat Y</title>
+				</options>
+			</var>
+			<var name="footer_con_bg_array" type="select" default="center">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; b. 정렬 위치</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; b. 정렬 위치</title>
+				<description xml:lang="ko">Footer 컨테이너 배경 이미지의 정렬 위치를 선택하세요. 기본값은 '가운데' 입니다.</description>
+				<description xml:lang="en">Footer 컨테이너 배경 이미지의 정렬 위치를 선택하세요. 기본값은 '가운데' 입니다.</description>
+				<options value="center">
+					<title xml:lang="ko">가운데</title>
+					<title xml:lang="en">Center</title>
+				</options>
+				<options value="left">
+					<title xml:lang="ko">왼쪽</title>
+					<title xml:lang="en">Left</title>
+				</options>
+				<options value="right">
+					<title xml:lang="ko">오른쪽</title>
+					<title xml:lang="en">Right</title>
+				</options>
+			</var>
+			<var name="footer_con_bg_color" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; c. 배경색</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; c. Background Color</title>
+				<description xml:lang="ko">Footer 컨테이너 배경색 설정. Footer 배경색의 rgb 색상코드를 입력하세요. Footer 배경 이미지 등록과 상관없이 작동합니다. (예. #dedede)</description>
+				<description xml:lang="en">Footer 컨테이너 배경색 설정. Footer 배경색의 rgb 색상코드를 입력하세요. Footer 배경 이미지 등록과 상관없이 작동합니다. (예. #dedede)</description>
+			</var>
+			<var name="footer_bg_image" type="image">
+				<title xml:lang="ko">7-9. Footer 배경 이미지</title>
+				<title xml:lang="en">7-9. Footer Background Image</title>
+				<description xml:lang="ko">Footer 배경 이미지를 사용하시려면 등록해 주세요. 등록하지 않으면 표시되지 않습니다.</description>
+				<description xml:lang="en">Footer 배경 이미지를 사용하시려면 등록해 주세요. 등록하지 않으면 표시되지 않습니다.</description>
+			</var>
+			<var name="footer_bg_repeat" type="select" default="repeat">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; a. 반복형식</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; a. 반복형식</title>
+				<description xml:lang="ko">Footer 배경 이미지의 반복형식을 선택하세요. 기본값은 '반복' 입니다.</description>
+				<description xml:lang="en">Footer 배경 이미지의 반복형식을 선택하세요. 기본값은 'Repeat' 입니다.</description>
+				<options value="repeat">
+					<title xml:lang="ko">반복</title>
+					<title xml:lang="en">Repeat</title>
+				</options>
+				<options value="no-repeat">
+					<title xml:lang="ko">반복하지 않음</title>
+					<title xml:lang="en">No Repeat</title>
+				</options>
+				<options value="repeat-x">
+					<title xml:lang="ko">가로반복</title>
+					<title xml:lang="en">Repeat X</title>
+				</options>
+				<options value="repeat-y">
+					<title xml:lang="ko">세로반복</title>
+					<title xml:lang="en">Repeat Y</title>
+				</options>
+			</var>
+			<var name="footer_bg_array" type="select" default="center">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; b. 정렬 위치</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; b. 정렬 위치</title>
+				<description xml:lang="ko">Footer 배경 이미지의 정렬 위치를 선택하세요. 기본값은 '가운데' 입니다.</description>
+				<description xml:lang="en">Footer 배경 이미지의 정렬 위치를 선택하세요. 기본값은 '가운데' 입니다.</description>
+				<options value="center">
+					<title xml:lang="ko">가운데</title>
+					<title xml:lang="en">Center</title>
+				</options>
+				<options value="left">
+					<title xml:lang="ko">왼쪽</title>
+					<title xml:lang="en">Left</title>
+				</options>
+				<options value="right">
+					<title xml:lang="ko">오른쪽</title>
+					<title xml:lang="en">Right</title>
+				</options>
+			</var>
+			<var name="footer_bg_color" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; c. 배경색</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; c. Background Color</title>
+				<description xml:lang="ko">Footer 배경색 설정. Footer 배경색의 rgb 색상코드를 입력하세요. Footer 배경 이미지 등록과 상관없이 작동합니다. (예. #dedede)</description>
+				<description xml:lang="en">Footer 배경색 설정. Footer 배경색의 rgb 색상코드를 입력하세요. Footer 배경 이미지 등록과 상관없이 작동합니다. (예. #dedede)</description>
+			</var>
+			<var name="footer_margin_lr" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; d. Footer 좌우 여백</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; d. Footer Margin</title>
+				<description xml:lang="ko">Footer 좌우 여백 설정. Footer 부분의 배경이미지 또는 배경색 좌우에 여백을 주고 싶을 때 설정하세요. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">Footer Margin Setting. Footer 부분의 배경이미지 또는 배경색 좌우에 여백을 주고 싶을 때 설정하세요. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="footer_margin_bottom" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; e. Footer 하단 여백</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; e. Footer Bottom Margin</title>
+				<description xml:lang="ko">Footer 하단 여백 설정. Footer 부분의 하단에 여백을 주고 싶을 때 설정하세요. Footer 배경 이미지 등록과 상관없이 작동합니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">Footer 하단 여백 설정. Footer 부분의 하단에 여백을 주고 싶을 때 설정하세요. Footer 배경 이미지 등록과 상관없이 작동합니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+			<var name="footer_height" type="text">
+				<title xml:lang="ko">&#160;&#160;&#160;&#160;&#160; f. Footer 높이</title>
+				<title xml:lang="en">&#160;&#160;&#160;&#160;&#160; f. Footer Height</title>
+				<description xml:lang="ko">Footer 높이 설정. 배경 이미지의 크기에 맞게 높이를 조절할 필요가 있을 때 설정하세요. Footer 배경 이미지 등록과 상관없이 작동합니다. 입력시 숫자만 입력하세요.</description>
+				<description xml:lang="en">Footer Height Setting. 배경 이미지의 크기에 맞게 높이를 조절할 필요가 있을 때 설정하세요. Footer 배경 이미지 등록과 상관없이 작동합니다. 입력시 숫자만 입력하세요.</description>
+			</var>
+		</group>
+    </extra_vars>
+
+    <menus>
+		<menu name="top_menu" maxdepth="1">
+			<title xml:lang="ko">상단 메뉴</title>
+            <title xml:lang="en">Top menu</title>
+		</menu>
+		<menu name="main_menu" maxdepth="4" default="true">
+			<title xml:lang="ko">메인 메뉴</title>
+			<title xml:lang="en">Main menu</title>
+		</menu>
+		<menu name="bottom_menu" maxdepth="1">
+			<title xml:lang="ko">하단 메뉴</title>
+            <title xml:lang="en">Bottom menu</title>
+		</menu>
+		<menu name="sitemap_menu" maxdepth="4">
+			<title xml:lang="ko">사이트맵 메뉴</title>
+			<title xml:lang="en">Sitemap menu</title>
+		</menu>
+		<menu name="family_menu" maxdepth="1">
+			<title xml:lang="ko">패밀리사이트 메뉴</title>
+			<title xml:lang="en">Family Site menu</title>
+		</menu>
+    </menus>
+</layout>

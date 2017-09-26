@@ -1,0 +1,70 @@
+<block cond="$layout_info->side_nav_type=='1' && $menu_1st">
+	<div class="lnb css3pie">
+		<h3 loop="$main_menu->list=>$key,$val" cond="$val['selected']"><a href="{$val['href']}" target="_blank"|cond="$val['open_window']=='Y'"><!--@if($val['text'] == $val['link'])--><span>{$val['text']}</span><!--@else-->{$val['link']}<!--@end--></a></h3>
+		<ul class="sideNav" loop="$main_menu->list=>$key,$val" cond="$val['selected'] && $val['list']">
+			<li loop="$val['list']=>$key2,$val2" class="active on css3pie"|cond="$val2['selected']"><a href="{$val2['href']}" target="_blank"|cond="$val2['open_window']=='Y'" class="css3pie"><!--@if($val2['text'] == $val2['link'])--><span>{$val2['text']}</span><!--@else-->{$val2['link']}<!--@end--></a>
+				<ul cond="$val2['list'] && $val2['selected']">
+					<li loop="$val2['list']=>$key3,$val3" class="active on"|cond="$val3['selected']"><a href="{$val3['href']}" target="_blank"|cond="$val3['open_window']=='Y'"><!--@if($val3['text'] == $val3['link'])--><span>{$val3['text']}</span><!--@else-->{$val3['link']}<!--@end--></a>
+						<ul cond="$val3['list'] && $val3['selected']">
+							<li loop="$val3['list']=>$key4,$val4" class="active on"|cond="$val4['selected']"><a href="{$val4['href']}" target="_blank"|cond="$val4['open_window']=='Y'"><!--@if($val4['text'] == $val4['link'])--><span>{$val4['text']}</span><!--@else-->{$val4['link']}<!--@end--></a>
+								<ul cond="$val4['list'] && $val4['selected']">
+									<li loop="$val4['list']=>$key5,$val5" class="active on"|cond="$val5['selected']"><a href="{$val5['href']}" target="_blank"|cond="$val5['open_window']=='Y'"><!--@if($val5['text'] == $val5['link'])--><span>{$val5['text']}</span><!--@else-->{$val5['link']}<!--@end--></a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</block>
+
+<block cond="$layout_info->side_nav_type=='2' && $menu_1st">
+	<div class="lnb2 css3pie" >
+		<h3 loop="$main_menu->list=>$key,$val" cond="$val['selected']"><a href="{$val['href']}" target="_blank"|cond="$val['open_window']=='Y'"><!--@if($val['text'] == $val['link'])--><span>{$val['text']}</span><!--@else-->{$val['link']}<!--@end--></a></h3>
+		<ul class="sideNav" loop="$main_menu->list=>$key,$val" cond="$val['selected'] && $val['list']">
+			<li loop="$val['list']=>$key2,$val2" class="active on css3pie"|cond="$val2['selected']"><a href="{$val2['href']}" target="_blank"|cond="$val2['open_window']=='Y'" class="css3pie"><!--@if($val2['text'] == $val2['link'])--><span>{$val2['text']}</span><!--@else-->{$val2['link']}<!--@end--></a>
+				<ul cond="$val2['list'] && $val2['selected']">
+					<li loop="$val2['list']=>$key3,$val3" class="active on"|cond="$val3['selected']"><a href="{$val3['href']}" target="_blank"|cond="$val3['open_window']=='Y'"><!--@if($val3['text'] == $val3['link'])--><span>{$val3['text']}</span><!--@else-->{$val3['link']}<!--@end--></a>
+						<ul cond="$val3['list'] && $val3['selected']">
+							<li loop="$val3['list']=>$key4,$val4" class="active on"|cond="$val4['selected']"><a href="{$val4['href']}" target="_blank"|cond="$val4['open_window']=='Y'"><!--@if($val4['text'] == $val4['link'])--><span>{$val4['text']}</span><!--@else-->{$val4['link']}<!--@end--></a>
+								<ul cond="$val4['list'] && $val4['selected']">
+									<li loop="$val4['list']=>$key5,$val5" class="active on"|cond="$val5['selected']"><a href="{$val5['href']}" target="_blank"|cond="$val5['open_window']=='Y'"><!--@if($val5['text'] == $val5['link'])--><span>{$val5['text']}</span><!--@else-->{$val5['link']}<!--@end--></a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</block>
+
+<block cond="$layout_info->side_nav_type=='3' && $menu_1st">
+<load target="js/tree.js" />
+	<div class="treeNav">
+		<ul loop="$main_menu->list=>$key,$val" cond="$val['selected'] && $val['list']">
+			<li loop="$val['list']=>$key2,$val2" class="active"|cond="$val2['selected']"><a href="{$val2['href']}" target="_blank"|cond="$val2['open_window']=='Y'">{$val2['link']}</a>
+				<ul cond="$val2['list'] && $val2['selected']">
+					<li loop="$val2['list']=>$key3,$val3" class="active"|cond="$val3['selected']"><a href="{$val3['href']}" target="_blank"|cond="$val3['open_window']=='Y'">{$val3['link']}</a>
+						<ul cond="$val3['list'] && $val3['selected']">
+							<li loop="$val3['list']=>$key4,$val4" class="active"|cond="$val4['selected']"><a href="{$val4['href']}" target="_blank"|cond="$val4['open_window']=='Y'">{$val4['link']}</a>
+								<ul cond="$val4['list'] && $val4['selected']">
+									<li loop="$val4['list']=>$key5,$val5" class="active"|cond="$val5['selected']"><a href="{$val5['href']}" target="_blank"|cond="$val5['open_window']=='Y'">{$val5['link']}</a>
+										<ul cond="$val5['list'] && $val5['selected']">
+											<li loop="$val5['list']=>$key6,$val6" class="active"|cond="$val6['selected']"><a href="{$val6['href']}" target="_blank"|cond="$val6['open_window']=='Y'">{$val6['link']}</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</block>
+
+<block cond="$layout_info->side_nav_type=='4'">
+	{$layout_info->side_nav_outer}
+</block>

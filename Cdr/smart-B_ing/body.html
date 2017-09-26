@@ -1,0 +1,40 @@
+<block cond="$layout_info->slide_bar"><include target="slide_bar.html" /></block>
+<!--@if($layout_info->banner_position=='1')-->
+	<block cond="$layout_info->slide_banner=='demo'||'custom'"><include target="slide_banner.html" /></block>
+<!--@end-->
+<!--@if($layout_info->body_top)-->
+	<div class="s_body_top">{$layout_info->body_top}</div>
+<!--@end-->
+<!--@if($layout_info->s_layout_type=='1')--><!--@else-->
+	<div class="sideA">
+		<!--@if($layout_info->login_i_top)-->
+			<div>{$layout_info->login_i_top}</div>
+		<!--@end-->
+		<block cond="$layout_info->login_i=='1'||'2'||'outer'"><include target="login_info.html" /></block>
+		<block cond="$layout_info->sideNav_top"><div class="clear">{$layout_info->sideNav_top}</div></block>
+		<div class="clear"><include target="lnb.html" /></div>
+		<block cond="$layout_info->sideNav_bottom"><div class="clear">{$layout_info->sideNav_bottom}</div></block>
+	</div>
+<!--@end-->
+<!--@if($layout_info->s_layout_type=='3')-->
+	<div class="sideB">
+		<!--@if($layout_info->contentSide)-->
+			<div class="clear">{$layout_info->contentSide}</div>
+		<!--@else-->
+			<img src="images/blank.gif" width="100%" alt="" />
+		<!--@end-->
+	</div>
+<!--@end-->
+<div class="s_content">
+	<!--@if($layout_info->banner_position=='2')-->
+		<block cond="$layout_info->slide_banner=='demo'||'custom'"><include target="slide_banner.html" /></block>
+	<!--@end-->
+	<!--@if($layout_info->content_top)-->
+		<div class="s_content_top">{$layout_info->content_top}</div>
+	<!--@end-->
+	<block cond="$layout_info->current_location=='Y'"><include target="location.html" /></block>
+	{$content}
+</div>
+<!--@if($layout_info->body_bottom)-->
+	<div class="s_body_bottom">{$layout_info->body_bottom}</div>
+<!--@end-->

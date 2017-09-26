@@ -1,0 +1,17 @@
+<load target="css/top_admin.css" />
+
+<div id="top_container">
+	<div class="top_layer">
+		<p class="fleft"><a href="http://www.smartxe.com/" target="_blank" onfocus="this.blur()">smartxe.com<a href="{getUrl('','module','admin')}" onclick="window.open(this.href);return false;" onfocus="this.blur()">[{$lang->cmd_management}]</a>
+		<a href="{getUrl('act','dispMemberAdminList','member_srl','')}" onfocus="this.blur()">{$lang->member_manager}</a>
+		<a href="{getUrl('act','dispMenuAdminSiteMap','menu_srl',$menu_info->menu_srl)}" onfocus="this.blur()">{$lang->menu}</a>
+		<a href="{getUrl('act','dispPageAdminContent','module_srl','')}" onfocus="this.blur()">{$lang->page}</a>
+		<a href="{getUrl('act','dispWidgetAdminDownloadedList','module_srl','')}" onfocus="this.blur()">{$lang->widget}</a>
+		<a href="{getUrl('act','dispAutoinstallAdminIndex','module_srl','')}" onfocus="this.blur()">{$lang->autoinstall}</a></p>
+		<p class="fright"><a href="{getUrl('act','dispLayoutAdminModify','layout_srl',$layout_info->layout_srl)}" onfocus="this.blur()">{$lang->cmd_layout_setup}</a>
+		<a href="{getUrl('act','dispDocumentAdminList')}" onfocus="this.blur()">{$lang->document}</a>
+		<a href="{getUrl('act','dispCommentAdminList')}" onfocus="this.blur()">{$lang->comment}</a>
+		<a href="{getUrl('act','dispCommunicationMessages','module_srl','')}" onfocus="this.blur()">{$lang->cmd_view_message_box}</a></p>
+	</div>
+</div>
+<div class="clear"></div>

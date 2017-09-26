@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lang>
+	<item name="logged_message">
+		<value xml:lang="ko"><![CDATA[님]]></value>
+		<value xml:lang="en"><![CDATA[]]></value>
+		<value xml:lang="jp"><![CDATA[]]></value>
+		<value xml:lang="zh-CN"><![CDATA[]]></value>
+		<value xml:lang="zh-TW"><![CDATA[]]></value>
+		<value xml:lang="fr"><![CDATA[]]></value>
+		<value xml:lang="de"><![CDATA[]]></value>
+		<value xml:lang="ru"><![CDATA[]]></value>
+		<value xml:lang="es"><![CDATA[]]></value>
+		<value xml:lang="tr"><![CDATA[]]></value>
+		<value xml:lang="vi"><![CDATA[]]></value>
+		<value xml:lang="mn"><![CDATA[]]></value>
+	</item>
+	<item name="msg_no_keyword">
+		<value xml:lang="ko"><![CDATA[검색어를 입력해주세요.]]></value>
+		<value xml:lang="en"><![CDATA[Please input keyword to search]]></value>
+		<value xml:lang="jp"><![CDATA[検索語を入力して下さい。]]></value>
+		<value xml:lang="zh-CN"><![CDATA[请输入搜索关键词。]]></value>
+		<value xml:lang="zh-TW"><![CDATA[請輸入關鍵字]]></value>
+		<value xml:lang="fr"><![CDATA[Entrez le mot de clé à rechercher, S.V.P.]]></value>
+		<value xml:lang="de"><![CDATA[Please input keyword to search]]></value>
+		<value xml:lang="ru"><![CDATA[Введите ключевое слово для поиска]]></value>
+		<value xml:lang="es"><![CDATA[Ingrese la palabra para la búsqueda]]></value>
+		<value xml:lang="tr"><![CDATA[Lütfen aranacak anahtar kelimeyi giriniz]]></value>
+		<value xml:lang="vi"><![CDATA[Hãy nhập từ khóa để tìm kiếm!]]></value>
+		<value xml:lang="mn"><![CDATA[Please input keyword to search]]></value>
+	</item>
+	<item name="mypage">
+		<value xml:lang="ko"><![CDATA[마이페이지]]></value>
+		<value xml:lang="en"><![CDATA[My Page]]></value>
+		<value xml:lang="jp"><![CDATA[My Page]]></value>
+		<value xml:lang="zh-CN"><![CDATA[My Page]]></value>
+		<value xml:lang="zh-TW"><![CDATA[My Page]]></value>
+		<value xml:lang="fr"><![CDATA[My Page]]></value>
+		<value xml:lang="de"><![CDATA[My Page]]></value>
+		<value xml:lang="ru"><![CDATA[My Page]]></value>
+		<value xml:lang="es"><![CDATA[My Page]]></value>
+		<value xml:lang="tr"><![CDATA[My Page]]></value>
+		<value xml:lang="vi"><![CDATA[My Page]]></value>
+		<value xml:lang="mn"><![CDATA[My Page]]></value>
+	</item>
+	<item name="profile">
+		<value xml:lang="ko"><![CDATA[프로필]]></value>
+		<value xml:lang="en"><![CDATA[Profile]]></value>
+		<value xml:lang="jp"><![CDATA[Profile]]></value>
+		<value xml:lang="zh-CN"><![CDATA[Profile]]></value>
+		<value xml:lang="zh-TW"><![CDATA[Profile]]></value>
+		<value xml:lang="fr"><![CDATA[Profile]]></value>
+		<value xml:lang="de"><![CDATA[Profile]]></value>
+		<value xml:lang="ru"><![CDATA[Profile]]></value>
+		<value xml:lang="es"><![CDATA[Profile]]></value>
+		<value xml:lang="tr"><![CDATA[Profile]]></value>
+		<value xml:lang="vi"><![CDATA[Profile]]></value>
+		<value xml:lang="mn"><![CDATA[Profile]]></value>
+	</item>
+	<item name="autoinstall">
+		<value xml:lang="ko"><![CDATA[쉬운 설치]]></value>
+		<value xml:lang="en"><![CDATA[EasyInstall]]></value>
+		<value xml:lang="jp"><![CDATA[イージーインストール]]></value>
+		<value xml:lang="zh-CN"><![CDATA[安装·更新]]></value>
+		<value xml:lang="zh-TW"><![CDATA[自動安裝]]></value>
+		<value xml:lang="fr"><![CDATA[EasyInstall]]></value>
+		<value xml:lang="de"><![CDATA[EasyInstall]]></value>
+		<value xml:lang="ru"><![CDATA[EasyInstall]]></value>
+		<value xml:lang="es"><![CDATA[EasyInstall]]></value>
+		<value xml:lang="tr"><![CDATA[KolayKurulum]]></value>
+		<value xml:lang="vi"><![CDATA[Cập nhật tự động]]></value>
+		<value xml:lang="mn"><![CDATA[EasyInstall]]></value>
+	</item>
+	<item name="msg_hide_today">
+		<value xml:lang="ko"><![CDATA[오늘 하루 이 창을 띄우지 않음]]></value>
+		<value xml:lang="en"><![CDATA[This window does not pop today]]></value>
+		<value xml:lang="jp"><![CDATA[This window does not pop today]]></value>
+		<value xml:lang="zh-CN"><![CDATA[This window does not pop today]]></value>
+		<value xml:lang="zh-TW"><![CDATA[This window does not pop today]]></value>
+		<value xml:lang="fr"><![CDATA[This window does not pop today]]></value>
+		<value xml:lang="de"><![CDATA[This window does not pop today]]></value>
+		<value xml:lang="ru"><![CDATA[This window does not pop today]]></value>
+		<value xml:lang="es"><![CDATA[This window does not pop today]]></value>
+		<value xml:lang="tr"><![CDATA[This window does not pop today]]></value>
+		<value xml:lang="vi"><![CDATA[This window does not pop today]]></value>
+		<value xml:lang="mn"><![CDATA[This window does not pop today]]></value>
+	</item>
+	<item name="page">
+		<value xml:lang="ko"><![CDATA[페이지]]></value>
+		<value xml:lang="en"><![CDATA[Page]]></value>
+		<value xml:lang="jp"><![CDATA[ページ]]></value>
+		<value xml:lang="zh-CN"><![CDATA[页面]]></value>
+		<value xml:lang="zh-TW"><![CDATA[頁面]]></value>
+		<value xml:lang="fr"><![CDATA[Page]]></value>
+		<value xml:lang="de"><![CDATA[Page]]></value>
+		<value xml:lang="ru"><![CDATA[Страница]]></value>
+		<value xml:lang="es"><![CDATA[Página]]></value>
+		<value xml:lang="tr"><![CDATA[Sayfa]]></value>
+		<value xml:lang="vi"><![CDATA[Trang]]></value>
+		<value xml:lang="mn"><![CDATA[Page]]></value>
+	</item>
+</lang>

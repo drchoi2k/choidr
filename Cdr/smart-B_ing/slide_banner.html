@@ -1,0 +1,96 @@
+<!--@if($layout_info->slide_banner == 'demo' || $layout_info->slide_banner == 'custom')-->
+	<load target="js/slides.min.jquery.js" />
+	<load target="css/s_banner.css" />
+
+<!--@if(!$layout_info->slide_banner)-->
+	{@ $layout_info->slide_banner = 'no';}
+<!--@end-->
+
+<!--@if($layout_info->slide_banner == 'custom')-->
+	{@ $hasImage = 0;}
+	<!--@if($layout_info->banner_image_1 || $layout_info->banner_image_2 || $layout_info->banner_image_3 || $layout_info->banner_image_4 || $layout_info->banner_image_5 || $layout_info->banner_image_6)-->
+		{@ $hasImage = 1;}
+	<!--@end-->
+<!--@end-->
+
+<!--@if($layout_info->slide_banner == 'demo' || ($layout_info->slide_banner == 'custom' && $hasImage == 1) )-->
+	<!--@if($act != 'dispMemberInfo' && $act != 'dispMemberScrappedDocument' && $act != 'dispMemberSavedDocument' && $act != 'dispMemberOwnDocument' && $act != 'dispCommunicationFriend' && $act != 'dispCommunicationMessages' && $act != 'dispMemberSignUpForm' && $act != 'dispMemberFindAccount' && $act != 'dispMemberResendAuthMail' && $act != 'dispAutoinstallAdminIndex' && $act != 'dispAutoinstallAdminInstall' && $act != 'dispWidgetAdminDownloadedList' && $act != 'dispWidgetAdminGenerateCode' && $act != 'dispPageAdminContent' && $act != 'dispPageAdminInfo' && $act != 'dispMenuAdminSiteMap' && $act != 'dispMemberAdminList' && $act != 'dispDocumentAdminList' && $act != 'dispCommentAdminList' && $act != 'dispMenuAdminContent' && $act != 'dispLayoutAdminModify' && $act != 'dispMemberLoginForm')-->
+		<div class="slide_banner" align="center" style="display:none">
+			<div class="slide_widget css3pie">
+				<div class="mask">
+					<div id="slides" class="slides">
+						<div class="slides_container">
+							<!--@if($layout_info->slide_banner == 'demo')-->
+								<!--@for($i=1; $i<=3; $i++)-->
+									{@ $banner_image_src = './themes/xe_solid_enterprise/layouts/xe_solid_enterprise/images/defaultImg'.$i.'.jpg';}
+									<div>
+										<div class="section section">
+											<div>
+												<a href="http://www.smartxe.com"><img src="{$banner_image_src}" width='978px' height='396px' alt="" /></a>
+											</div>
+										</div>
+									</div>
+								<!--@end-->
+							<!--@end-->
+
+							<!--@if($layout_info->slide_banner == 'custom')-->
+								<!--@for($i=1; $i<7; $i++)-->
+									{@
+									   $banner_image_src = null;
+									   $banner_image_url = 'http://www.smartxe.com';
+									}
+									<!--@if($i==1 && $layout_info->banner_image_1)-->
+										{@ $banner_image_src = $layout_info->banner_image_1;
+										   $banner_image_url = $layout_info->url_image_1;}
+									<!--@elseif($i==2 && $layout_info->banner_image_2)-->
+										{@ $banner_image_src = $layout_info->banner_image_2;
+										   $banner_image_url = $layout_info->url_image_2;}
+									<!--@elseif($i==3 && $layout_info->banner_image_3)-->
+										{@ $banner_image_src = $layout_info->banner_image_3;
+										   $banner_image_url = $layout_info->url_image_3;}
+									<!--@elseif($i==4 && $layout_info->banner_image_4)-->
+										{@ $banner_image_src = $layout_info->banner_image_4;
+										   $banner_image_url = $layout_info->url_image_4;}
+									<!--@elseif($i==5 && $layout_info->banner_image_5)-->
+										{@ $banner_image_src = $layout_info->banner_image_5;
+										   $banner_image_url = $layout_info->url_image_5;}
+									<!--@elseif($i==6 && $layout_info->banner_image_6)-->
+										{@ $banner_image_src = $layout_info->banner_image_6;
+										   $banner_image_url = $layout_info->url_image_6;}
+									<!--@end-->
+									<!--@if($banner_image_src)-->
+										<div>
+											<div class="section section iePngFix">
+												<div>
+													<a href="{$banner_image_url}"><img src="{$banner_image_src}" class="iePngFix" alt="" /></a>
+												</div>
+											</div>
+										</div>
+									<!--@end-->
+							<!--@end-->
+						<!--@end-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!--@end-->
+<!--@end-->
+
+<script type="text/javascript">
+	jQuery(function($){
+		$('#slides').slides({
+			preload: true,
+			generateNextPrev: false,
+			play: 10000,                                     // 머무는 시간
+			slideSpeed:100,                                  // 전환시간
+			paginationClass: "s_pagination",            
+			pause:1,
+			hoverPause: true
+		});
+		$(".s_pagination").addClass('s_pagination');
+		$('ul.s_pagination li a').html('&nbsp;&nbsp;');
+		$('div.slide_banner').show();
+	});
+</script>
+<!--@end-->

@@ -1,0 +1,56 @@
+<block cond="$layout_info->top_nav=='Y'">
+<div class="topNav">
+	<div class="tnav">
+		<p>{$layout_info->top_left}</p>
+
+		<ul class="fright css3pie">
+			<!--@if($is_logged)-->
+				<li style="_margin-top:4px<!--@if($layout_info->colorset=='black')-->;color:#999<!--@end-->"><span class="member_{$logged_info->member_srl}">{$logged_info->nick_name}{$lang->logged_message}</span></li>
+				<li cond="$logged_info->is_admin=='Y'"><a href="{getUrl('','module','admin')}" onclick="window.open(this.href);return false;" onfocus="this.blur()"><span>[{$lang->cmd_management}]</span></a></li>
+				<li><a href="{getUrl('act','dispMemberLogout')}"><span>{$lang->cmd_logout}</span></a></li>
+				<!--@if($layout_info->mypage_mid)-->
+					<li><a href="{getUrl('act','dispMemberInfo','mid',$layout_info->mypage_mid)}"><span>{$lang->mypage}</span></a></li>
+				<!--@else-->
+					<li class="my myProfile"><a href="#" onclick="return false"><span>{$lang->profile}</span></a>
+						<ul>
+							<li loop="$logged_info->menu_list=>$key,$val"><a href="<!--@if($layout_info->mypage_mid)-->{getUrl('act',$key,'member_srl','','mid',$layout_info->mypage_mid)}<!--@else-->{getUrl('act',$key,'member_srl','')}<!--@end-->">{Context::getLang($val)}</a></li>
+						</ul>
+					</li>
+				<!--@end-->
+			<!--@else-->
+				<li class=""><a href="<!--@if($layout_info->signup_mid)-->{getUrl('act','dispMemberLoginForm','mid', $layout_info->signup_mid)}<!--@else-->{getUrl('act','dispMemberLoginForm')}<!--@end-->" onfocus="this.blur()"><span>{$lang->cmd_login}</span></a></li>
+				<li><a href="<!--@if($layout_info->signup_mid)-->{getUrl('act','dispMemberSignUpForm','mid', $layout_info->signup_mid)}<!--@else-->{getUrl('act','dispMemberSignUpForm')}<!--@end-->" onfocus="this.blur()"><span>{$lang->cmd_signup}</span></a></li>
+			<!--@end-->
+
+			<block cond="$layout_info->select_lang=='1'">
+			<li class="my myLanguage"><a href="#" onclick="return false" onfocus="this.blur()" title="Select Language"><span>{$lang_supported[$lang_type]}</span></a>
+				<ul>
+					<!--@foreach($lang_supported as $key => $val)-->
+						<!--@if($key== $lang_type)-->
+							<li class="selected"><a href="#">{$lang_supported[$lang_type]}</a></li>
+						<!--@else-->
+							<li><a href="#" onclick="doChangeLangType('{$key}'); return false;">{$lang_supported[$key]}</a></li>
+						<!--@end-->
+					<!--@end-->
+				</ul>
+			</li>
+			</block>
+
+			<li loop="$top_menu->list=>$key,$val"><a href="{$val['href']}" onfocus="this.blur()" target="_blank"|cond="$val['open_window']=='Y'"><!--@if($val['text'] == $val['link'])--><span>{$val['text']}</span><!--@else-->{$val['link']}<!--@end--></a></li>
+
+		</ul>
+	</div>
+</div>
+</block>
+
+<block cond="$layout_info->top_nav=='m'">
+<div class="topNav">
+		<div class="tnav">
+			<p>{$layout_info->top_left}</p>
+
+			<ul class="fright css3pie">
+				<li loop="$top_menu->list=>$key,$val"><a href="{$val['href']}" target="_blank"|cond="$val['open_window']=='Y'"><!--@if($val['text'] == $val['link'])--><span>{$val['text']}</span><!--@else-->{$val['link']}<!--@end--></a></li>
+			</ul>
+		</div>
+</div>
+</block>

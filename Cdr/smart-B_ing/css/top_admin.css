@@ -1,0 +1,40 @@
+@charset "utf-8";
+#top_container {
+	min-width: 980px;
+	border-bottom: 1px solid #dfdfdf;
+	background-color: #fbfbfb
+}
+.top_layer {
+	position: relative;
+	height: 26px;
+	margin: 0;
+	padding: 0 15px
+}
+.top_layer p {
+	display: block;
+	height: 26px;
+	line-height: 26px;
+	white-space: nowrap;
+	font: 11px Dotum;
+	margin: 0
+}
+.top_layer p a {
+	color: #777;
+	line-height: 26px;
+	padding: 0 4px;
+	text-decoration: none
+}
+.top_layer p a:hover, .top_layer p a:active, .top_layer p a:focus {
+	color: #fbfbfb;
+	background: #777;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	padding: 4px
+}
+.fright {
+	float: right
+}
+.fleft {
+	float: left
+}

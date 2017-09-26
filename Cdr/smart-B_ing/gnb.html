@@ -1,0 +1,194 @@
+<!--@if($layout_info->lavaLamp_plugin=='Y')-->
+	<load target="js/jquery.easing.js" />
+	<load target="js/jquery.lavalamp.js" />
+<!--@end-->
+
+<block cond="$layout_info->header_nav_type=='1'">
+	<div id="mainNav" class="css3pie">
+		<block cond="$layout_info->lavaLamp_plugin=='Y'">
+			<script type="text/javascript">
+				(jQuery)(function($) {
+					$('#s_nav').lavaLamp();
+				});
+			</script>
+		</block>
+		<ul id="s_nav" class="s_nav css3pie">
+			<!-- // main_menu 1st -->
+			<!--@foreach($main_menu->list as $key => $val)-->
+			<!--@if($val['link'])--><!--@if($val['selected'])-->{@ $menu_1st = $val }<!--@end-->
+				<li class="active on"|cond="$val['selected']"><a href="{$val['href']}" onfocus="this.blur()" target="_blank"|cond="$val['open_window']=='Y'"><!--@if($val['text'] == $val['link'])--><span>{$val['text']}</span><!--@else-->{$val['link']}<!--@end--></a>
+				</li>
+			<!--@end-->
+			<!--@else--><li></li><!--@end-->
+		</ul>
+		<block cond="$layout_info->header_navSub=='Y'">
+			<ul class="s_navSub">
+				<!-- // main_menu 2nd -->
+				<!--@foreach($menu_1st['list'] as $key => $val)-->
+					<!--@if($val['link'])--><!--@if($menu_1st)-->
+						{@ $idx = 1 }
+						<li class="on"|cond="$val['selected']"><a href="{$val['href']}" target="_blank"|cond="$val['open_window']=='Y'"><!--@if($val['text'] == $val['link'])--><span>{$val['text']}</span><!--@else-->{$val['link']}<!--@end--></a>
+						</li>
+						{@$idx++}
+					<!--@end--><!--@end-->
+				<!--@else-->
+					<li></li>
+				<!--@end-->
+			</ul>
+		</block>
+	</div>
+</block>
+
+<block cond="$layout_info->header_nav_type=='2'">
+	<div id="mainNav" class="css3pie">
+		<block cond="$layout_info->lavaLamp_plugin=='Y'">
+			<script type="text/javascript">
+				(jQuery)(function($) {
+					$('#rollNav').lavaLamp({ 'autoReturn': false });
+				});
+			</script>
+		</block>
+		<ul id="rollNav" class="rollNav css3pie">
+			<!-- main_menu 1st -->
+			{@$gnb_count = 0;}
+			<!--@foreach($main_menu->list as $key => $val)-->
+				<!--@if($val['link'])--><!--@if($val['selected'])-->{@ $menu_1st = $val }<!--@end-->
+					<li id="gnbli{$gnb_count}" class="active on"|cond="$val['selected']" onmouseover="gnbinToggle({$gnb_count}, this)" ><a href="{$val['href']}" onfocus="this.blur()" target="_blank"|cond="$val['open_window']=='Y'"><!--@if($val['text'] == $val['link'])--><span>{$val['text']}</span><!--@else-->{$val['link']}<!--@end--></a></li>
+					{@$gnb_count++;}
+				<!--@end-->
+			<!--@else-->
+				<li></li>
+			<!--@end-->
+		</ul>
+		<script type="text/javascript">
+			var gnb_count = {$gnb_count};
+		</script>
+		<block cond="$layout_info->header_navSub=='Y'">
+			<!-- main_menu 2nd -->
+			{@$gnb_count = 0;}
+			<!--@foreach($main_menu->list as $mkey => $mval)-->
+				<!--@if($mval['text'])-->
+					<!--@if($mval['selected'])-->
+						<ol id="gnb{$gnb_count}" class="rollNavSub" style="display:block;">
+							<!--@if(!$mval['list'])--><li></li><!--@end-->
+							<li loop="$mval['list']=>$key,$val" class="on"|cond="$val['selected']"><a href="{$val['href']}" target="_blank"|cond="$val['open_window']=='Y'"><!--@if($val['text'] == $val['link'])--><span>{$val['text']}</span><!--@else-->{$val['link']}<!--@end--></a>
+							</li>
+						</ol>
+						<script type="text/javascript">
+							var gnb_count_now = {$gnb_count};
+							reset_menu();
+						</script>
+					<!--@else-->
+						<ol id="gnb{$gnb_count}" class="rollNavSub" style="display:none;">
+							<!--@if(!$mval['list'])--><li></li><!--@end-->
+							<li loop="$mval['list']=>$key,$val"><a href="{$val['href']}" target="_blank"|cond="$val['open_window']=='Y'"><!--@if($val['text'] == $val['link'])--><span>{$val['text']}</span><!--@else-->{$val['link']}<!--@end--></a>
+							</li>
+						</ol>
+					<!--@end-->
+				{@$gnb_count++;}
+				<!--@end-->
+			<!--@end-->
+		</block>
+	</div>
+</block>
+
+<block cond="$layout_info->header_nav_type=='3'">
+	<div id="mainNav" class="css3pie">
+		<block cond="$layout_info->lavaLamp_plugin=='Y'">
+			<script type="text/javascript">
+				(jQuery)(function($) {
+					$('#rollNav').lavaLamp({ 'autoReturn': false });
+				});
+			</script>
+		</block>
+		<ul id="rollNav" class="rollNav css3pie">
+			<!-- main_menu 1st -->
+			{@$gnb_count = 0;}
+			<!--@foreach($main_menu->list as $key => $val)-->
+				<!--@if($val['link'])--><!--@if($val['selected'])-->{@ $menu_1st = $val }<!--@end-->
+					<li id="gnbli{$gnb_count}" class="active on"|cond="$val['selected']" onmouseover="gnbinToggle3({$gnb_count}, this)" ><a href="{$val['href']}" onfocus="this.blur()" target="_blank"|cond="$val['open_window']=='Y'"><!--@if($val['text'] == $val['link'])--><span>{$val['text']}</span><!--@else-->{$val['link']}<!--@end--></a></li>
+					{@$gnb_count++;}
+				<!--@end-->
+			<!--@else-->
+				<li></li>
+			<!--@end-->
+		</ul>
+		<script type="text/javascript">
+			var gnb_count = {$gnb_count};
+		</script>
+		<block cond="$layout_info->header_navSub=='Y'">
+			<!-- main_menu 2nd -->
+			{@$gnb_count = 0;}
+			<!--@foreach($main_menu->list as $mkey => $mval)-->
+				<!--@if($mval['text'])-->
+					<!--@if($mval['selected'])-->
+						<ol id="gnb{$gnb_count}" class="rollNavSub" style="display:block;">
+							<!--@if(!$mval['list'])--><li></li><!--@end-->
+							<li loop="$mval['list']=>$key,$val" class="on"|cond="$val['selected']"><a href="{$val['href']}" target="_blank"|cond="$val['open_window']=='Y'"><!--@if($val['text'] == $val['link'])--><span>{$val['text']}</span><!--@else-->{$val['link']}<!--@end--></a>
+							</li>
+						</ol>
+						<script type="text/javascript">
+							var gnb_count_now = {$gnb_count};
+							reset_menu3();
+						</script>
+					<!--@else-->
+						<ol id="gnb{$gnb_count}" class="rollNavSub" style="display:none;">
+							<!--@if(!$mval['list'])--><li></li><!--@end-->
+							<li loop="$mval['list']=>$key,$val"><a href="{$val['href']}" target="_blank"|cond="$val['open_window']=='Y'"><!--@if($val['text'] == $val['link'])--><span>{$val['text']}</span><!--@else-->{$val['link']}<!--@end--></a>
+							</li>
+						</ol>
+					<!--@end-->
+				{@$gnb_count++;}
+				<!--@end-->
+			<!--@end-->
+		</block>
+	</div>
+</block>
+
+<block cond="$layout_info->header_nav_type=='4'">
+	<div id="mainNav" class="css3pie">
+		<block cond="$layout_info->lavaLamp_plugin=='Y'">
+			<script type="text/javascript"> 
+				(jQuery)(function($) { 
+					$('#dropNav').lavaLamp();
+				}); 
+			</script>
+		</block>
+		<div id="dropNav" class="dropNav css3pie">
+			<ul>
+				<!--@foreach($main_menu->list as $key => $val)-->
+					<!--@if($val['link'])--><!--@if($val['selected'])-->{@ $menu_1st = $val }<!--@end-->
+						<li class="active on"|cond="$val['selected']">
+							<a href="{$val['href']}" onfocus="this.blur()" target="_blank"|cond="$val['open_window']=='Y'"><!--@if($val['text'] == $val['link'])--><span>{$val['text']}</span><!--@else-->{$val['link']}<!--@end--></a>
+							<ul cond="$val['list']">
+								<li loop="$val['list']=>$key2,$val2" class="<!--@if($val2['selected'])-->active on<!--@end--><!--@if($val2['list'])--> sub<!--@end-->"><a href="{$val2['href']}" target="_blank"|cond="$val2['open_window']=='Y'"><!--@if($val2['text'] == $val2['link'])--><span>{$val2['text']}</span><!--@else-->{$val2['link']}<!--@end--></a>
+									<ul cond="$val2['list']">
+										<li loop="$val2['list']=>$key3,$val3" class="<!--@if($val3['selected'])-->active on<!--@end--><!--@if($val3['list'])--> sub<!--@end-->"><a href="{$val3['href']}" target="_blank"|cond="$val3['open_window']=='Y'"><!--@if($val3['text'] == $val3['link'])--><span>{$val3['text']}</span><!--@else-->{$val3['link']}<!--@end--></a>
+											<ul cond="$val3['list']">
+												<li loop="$val3['list']=>$key4,$val4" class="<!--@if($val4['selected'])-->active on<!--@end--><!--@if($val4['list'])--> sub<!--@end-->"><a href="{$val4['href']}" target="_blank"|cond="$val4['open_window']=='Y'"><!--@if($val4['text'] == $val4['link'])--><span>{$val4['text']}</span><!--@else-->{$val4['link']}<!--@end--></a>
+													<ul cond="$val4['list']">
+														<li loop="$val4['list']=>$key5,$val5" class="<!--@if($val5['selected'])-->active on<!--@end--><!--@if($val5['list'])--> sub<!--@end-->"><a href="{$val5['href']}" target="_blank"|cond="$val5['open_window']=='Y'"><!--@if($val5['text'] == $val5['link'])--><span>{$val5['text']}</span><!--@else-->{$val5['link']}<!--@end--></a></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					<!--@end-->
+				<!--@else-->
+					<li></li>
+				<!--@end-->
+			</ul>
+		</div>
+	</div>
+</block>
+
+<block cond="$layout_info->header_nav_type=='5'">
+	{$layout_info->header_nav_outer}
+</block>
+
+<block cond="$layout_info->mainNav_r">
+	<div class="mainNav_r">{$layout_info->mainNav_r}</div>
+</block>

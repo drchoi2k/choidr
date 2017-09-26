@@ -1,0 +1,37 @@
+<block cond="$layout_info->is_r=='1'">
+<form action="{getUrl()}" method="post" class="s_iSearch css3pie">
+	<input type="hidden" name="vid" value="{$vid}" cond="$vid" />
+	<input type="hidden" name="mid" value="<!--@if($layout_info->search_mid)-->{$layout_info->search_mid}<!--@else-->{$mid}<!--@end-->" />
+	<input type="hidden" name="act" value="IS" />
+	<input type="hidden" name="search_target" value="title_content" />
+	<input type="text" name="is_keyword" class="isText css3pie" title="{$lang->msg_no_keyword}" />
+	<input type="image" src="images/{$layout_info->colorset}/buttonSearch.gif" onfocus="this.blur()" alt="{$lang->cmd_search}" title="{$lang->cmd_search}" class="submit" />
+</form>
+</block>
+
+<block cond="$layout_info->is_r=='2'">
+<script type="text/javascript">
+	function csearch(){
+		var obj = document.getElementById("cse-search-box");
+		obj.is_keyword.value = obj.q.value;
+		obj.action="{getUrl()}";
+		obj.method="get";
+		obj.submit();
+		return false;
+	}
+</script>
+
+<form action="" id="cse-search-box" class="s_iSearch css3pie" onsubmit="csearch()">
+	<input type="hidden" name="vid" value="{$vid}" cond="$vid" />
+	<input type="hidden" name="mid" value="<!--@if($layout_info->search_mid)-->{$layout_info->search_mid}<!--@else-->{$mid}<!--@end-->" />
+	<input type="hidden" name="act" value="IS" />
+	<input type="hidden" name="search_target" value="title_content" />
+	<input type="hidden" name="is_keyword" value="{$is_keyword}" />
+
+	<input type="hidden" name="cx" value="partner-pub-8278444203493355:bly7cgcmpo4" />
+	<input type="hidden" name="cof" value="FORID:10" />
+	<input type="hidden" name="ie" value="UTF-8" />
+	<input type="text" name="q" size="20" class="isText css3pie" onfocus="this.className='isText css3pie';" onblur="if (!this.value) this.className='isText css3pie'" title="{$lang->msg_no_keyword}" />
+	<input type="image" src="images/{$layout_info->colorset}/buttonSearch.gif" onfocus="this.blur()" alt="{$lang->cmd_search}" title="{$lang->cmd_search}" name="sa" class="submit" />
+</form>
+</block>

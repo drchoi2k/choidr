@@ -1,0 +1,31 @@
+<load target="js/popup_layer.js" />
+
+{@
+$now = date("YmdHi");
+if ($_COOKIE['_hide_popup_today_'] == 'true') return;
+}
+
+<div id="s_popup">
+	<!--@if($layout_info->popup_text && !$layout_info->popup_img)-->
+		<div class="ntext">
+			{$layout_info->popup_text}
+		</div>
+	<!--@elseif($layout_info->popup_img && !$layout_info->popup_text)-->
+		<div class="nimg">
+			<!--@if($layout_info->popup_img_link)-->
+				<a href="{$layout_info->popup_img_link}" onfocus="this.blur()"><img src="{$layout_info->popup_img}" alt="" title="" border="0" class="iePngFix" /></a>
+			<!--@else-->
+				<img src="{$layout_info->popup_img}" alt="" title="" border="0" class="iePngFix" />
+			<!--@end-->
+		</div>
+	<!--@elseif($layout_info->popup_text && $layout_info->popup_img)-->
+		<div class="ntext">
+			{$layout_info->popup_text}
+		</div>
+	<!--@end-->
+		<div class="ncheck">
+			<a href="#" class="close" onclick="this_popup.close();" accesskey="X" title="Close">X</a>
+            <input id="popup_hide_check" type="checkbox" name="hide_check" value="true" /> {$lang->msg_hide_today}
+			<a href="#" class="close" onclick="this_popup.close();" accesskey="X" title="Close">X</a>
+		</div>
+</div>

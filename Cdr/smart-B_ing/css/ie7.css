@@ -1,0 +1,35 @@
+@charset "utf-8";
+.s_body, .tnav, .s_nav ul, .rollNav ul, .dropNav ul, .treeNav, .treeNav li, .point_status {
+	zoom: 1
+}
+.tnav li ul {
+	width: 110px
+}
+.s_language li button {
+	width: 90px
+}
+#mainNav, .mainNav_r {
+	z-index: 9
+}
+.treeNav li.open ul {
+	display: inline-block
+}
+.treeNav .treeNavToggle {
+	text-indent: 0
+}
+#login form ul.help li {
+	background-position: left -111px
+}
+#login form ul.userMenu li {
+	background-position: left -270px
+}
+#openid_login form p.save {
+	margin: -2px 0 0
+}
+#openid_login ul.help li {
+	background-position: left -108px
+}
+#footer .footNav li {
+	font-family: Dotum, Tahoma, Geneva, sans-serif;
+	background-position: left -112px
+}

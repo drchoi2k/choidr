@@ -1,0 +1,41 @@
+<div class="s_location">
+	<ul>
+		<li class="locationBlank"><span><a href="{$layout_info->logo_url}" title="{$lang->homepage}"><img src="images/btnHome.gif" border="0" alt="{$lang->homepage}" /></a></span></li>
+			<!--@foreach($main_menu->list as $key => $val)-->
+			<!--@if($val['link'])--><!--@if($val['selected'])-->
+			<li><span>> <a href="{$val['href']}">{$val['text']}</a></span></li>
+			{@ $menu_1st = $val }
+			<!--@end--><!--@end-->
+			<!--@endforeach-->
+				<!--@if($menu_1st)-->
+				{@ $idx = 1 }
+				<!--@foreach($menu_1st['list'] as $key => $val)-->
+				<!--@if($val['link'])--><!--@if($val['selected'])-->
+				<li><span>> <a href="{$val['href']}">{$val['text']}</a></span></li>
+				{@$idx++}
+					<!--@if($val['list'] && ($val['expand']=='Y'||$val['selected']) )-->
+					<!--@foreach($val['list'] as $key2 => $val2)-->
+					<!--@if($val2['link'])--><!--@if($val2['selected'])-->
+					<li><span>> <a href="{$val2['href']}">{$val2['text']}</a></span></li>
+						<!--@if($val2['list'] && ($val2['expand']=='Y'||$val2['selected']) )-->
+						<!--@foreach($val2['list'] as $key3 => $val3)-->
+						<!--@if($val3['link'])--><!--@if($val3['selected'])-->
+						<li><span>> <a href="{$val3['href']}">{$val3['text']}</a></span></li>
+							<!--@if($val3['list'] && ($val3['expand']=='Y'||$val3['selected']) )-->
+							<!--@foreach($val3['list'] as $key4 => $val4)-->
+							<!--@if($val4['link'])--><!--@if($val4['selected'])-->
+							<li><span>> <a href="{$val4['href']}">{$val4['text']}</a></span></li>
+							<!--@end--><!--@end-->
+							<!--@endforeach-->
+							<!--@end-->
+						<!--@end--><!--@end-->
+						<!--@endforeach-->
+						<!--@end-->
+					<!--@end--><!--@end-->
+					<!--@endforeach-->
+					<!--@end-->
+				<!--@end--><!--@end-->
+				<!--@endforeach-->
+				<!--@end-->
+	</ul>
+</div>

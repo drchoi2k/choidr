@@ -1,0 +1,24 @@
+<div id="footer" class="css3pie">
+	<block cond="$layout_info->bottom_menu">
+	<ul class="footNav">{@$tmp=0}
+		<!--@foreach($bottom_menu->list as $key => $val)-->
+			<li class="snb_{$tmp++}"><a href="{$val['href']}" target="_blank"|cond="$val['open_window']=='Y'">{$val['text']}</a></li>
+			{@$tmp++}
+		<!--@else-->
+			<li></li>
+		<!--@end-->
+	</ul>
+	</block>
+	<p class="top"|cond="!$layout_info->bottom_menu"></p>
+	<p class="copyright"|cond="$layout_info->footer_copyright">{$layout_info->footer_copyright}</p>
+	<address cond="$layout_info->footer_address">
+		<a href="mailto:{$layout_info->footer_address}">E-mail : {$layout_info->footer_address}</a>
+	</address>
+	<select onchange="if(this.value) window.open(this.value);" cond="$layout_info->family_site=='Y'">
+		<option value="">&nbsp;&nbsp;&nbsp;&nbsp;*관련사이트*</option>
+		<option loop="$family_menu->list=>$key,$val" value="{$val['href']}">{$val['text']}</option>
+	</select>
+	<div class="skinby">
+	skin by <a href="http://smartxe.com" target="_blank">smartxe.com</a>
+	</div>
+</div>

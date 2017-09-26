@@ -1,0 +1,77 @@
+@charset "utf-8";
+.s_body, .tnav, .s_nav ul, .rollNav ul, .dropNav ul, .treeNav, .treeNav li, .point_status {
+	zoom: 1
+}
+.tnav li a {
+	background-position: left -108px
+}
+.tnav li ul {
+	width: 110px
+}
+.tnav li.my a {
+	background-position: right 8px
+}
+.tnav li.my.active a {
+	background-position: right -22px
+}
+.s_language .toggle {
+	width: 87px
+}
+.s_language li button {
+	width: 90px
+}
+#login form p.save input {
+	margin: -3px
+}
+#openid_login form p.save {
+	margin: -1px 0 2px;
+	padding: 0
+}
+.sideNav li.active a {
+	font-weight: 700;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px
+}
+.sideNav li.active li a {
+	font-weight: 400!important
+}
+.treeNav .treeNavToggle {
+	text-indent: 0
+}
+#s_popup .ncheck {
+	height: 25px!important;
+	padding-top: 5px
+}
+.slideWrap .slideArea #slideBar {
+	right: -85px
+}
+.s_header_nav, .treeNav li.open ul, #sitemap .menu_location {
+	display: inline-block
+}
+.dropNav li li.active a, .dropNav li li li.active a, .dropNav li li li li.active a, .dropNav li li li li li.active a {
+	font-weight: 700!important
+}
+.dropNav li li.active li a, .dropNav li li li.active li a, .dropNav li li li li.active li a, .dropNav li li li li li.active li a {
+	display: block;
+	font-weight: 400!important
+}
+.sideNav li li.active a, .sideNav li li li.active a, .sideNav li li li li.active a {
+	font-weight: 700!important;
+	background: url(../images/default/iconLayout.gif) no-repeat 9px -185px!important
+}
+.sideNav li li.active li a, .sideNav li li li.active li a, .sideNav li li li li.active li a {
+	font-weight: 400!important;
+	background: none!important
+}
+.treeNav li.active a, .treeNav li li.active a, .treeNav li li li.active a, .treeNav li li li li.active a {
+	font-weight: 700;
+	color: #333
+}
+.treeNav li.active li a, .treeNav li li.active li a, .treeNav li li li.active li a, .treeNav li li li li.active li a {
+	font-weight: 400!important;
+	color: #767676
+}
+ul.s_pagination {
+	left: 460px
+}
