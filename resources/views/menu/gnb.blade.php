@@ -18,17 +18,18 @@ html, body {
 	margin: 0 auto;
 	list-style: none;
 	white-space: nowrap;
-	background: #045da2;
+	background-color: #555;
+	/*background: #045da2;*/
 	/*-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
 	border-radius: 4px;*/
-	background: -webkit-gradient(linear, 0 0, 0 70%, from(#00a0de), to(#045da2));
+	/*background: -webkit-gradient(linear, 0 0, 0 70%, from(#00a0de), to(#045da2));
 	background: -webkit-linear-gradient(#00a0de, #045da2 70%);
 	background: -moz-linear-gradient(#00a0de, #045da2 70%);
 	background: -ms-linear-gradient(#00a0de, #045da2 70%);
 	background: -o-linear-gradient(#00a0de, #045da2 70%);
 	background: linear-gradient(#00a0de, #045da2 70%);
-	-pie-background: linear-gradient(#00a0de, #045da2 70%)
+	-pie-background: linear-gradient(#00a0de, #045da2 70%)*/
 }
 #mainNav ul {
 	margin: 0;
@@ -199,7 +200,7 @@ html, body {
     margin: 0;
     padding: 0;
     overflow: visible;
-    background-color: #333;
+    background-color: #777;
 }*/
 li a, .dropbtn {
     display: inline-block;
@@ -213,6 +214,7 @@ li a, .dropbtn {
 .hwe_name{
 	font-size: 25px;
 	font-weight: bold;
+	text-decoration: none;
 	margin: 0 0 0 50px;
 }
 
@@ -223,7 +225,7 @@ li a, .dropbtn {
 
 <block>
 	<div>
-		<p class="hwe_name">교보테크(주)</p>
+		<a class="hwe_name" href="http://ds.cathms.kr#" title='교보테크' onfocus="this.blur()">교보테크(주)</a>
 	</div>
 	<div id="mainNav">
 		<block>
@@ -240,7 +242,7 @@ li a, .dropbtn {
 					<a href="javascript:void(0)" class="dropbtn">회사소개</a>
 					    <div class="dropdown-content">
 					      <a href="#">회사현황</a>
-					      <a href="#">회사조직</a>
+					      <a href="http://ds.cathms.kr">회사조직</a>
 					      <a href="#">오시는길</a>
 					    </div>
 					  </li>
@@ -252,24 +254,11 @@ li a, .dropbtn {
 					      <a href="#">품질관리</a>
 					    </div>
 					  </li>
-
 					<li class="w3-bar-item"><a href='http://localhost:8000/gnb#' title='JavaScript Tutorial' onfocus="this.blur()">고객센터</a></li>
-
-	
-				
-			
-								
-
-
-
-
 					</ul>
 				</ul>
-
 			</div>
-		
 	</div>
-
 </block>
 
 
