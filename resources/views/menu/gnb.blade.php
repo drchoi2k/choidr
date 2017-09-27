@@ -5,6 +5,12 @@
 	 <!--  <link rel="stylesheet" type="text/css" href="/css/w3.css"> -->
 	<!--   <link rel="stylesheet" type="text/css" href="/css/default.css"> -->
 <style type="text/css">
+html, body {
+	font-family: Verdana, sans-serif;
+	font-size: 15px;
+	line-height: 1.5
+}
+
 #mainNav {
 	position: relative;
 	width: 100%;
@@ -28,86 +34,9 @@
 	margin: 0;
 	padding: 0
 }
-.s_nav {
-	position: absolute;
-	overflow: hidden;
-	left: 15px;
-	white-space: nowrap;
-	z-index: 1
-}
-.s_nav ul {
-	display: block;
-	list-style: none;
-	margin: 0;
-	padding: 0
-}
-.s_nav ul:after {
-	content: "";
-	display: block;
-	clear: both
-}
-.s_nav li {
-	position: relative;
-	float: left;
-	height: 36px;
-	line-height: 36px;
-	left: 150px;
-	font-size: 17px;
-	list-style: none;
-	white-space: nowrap;
-	margin: 0;
-	padding: 0
-}
-.s_nav li a {
-	display: block;
-	float: left;
-	font-weight: normal;
-	color: #e8e8e8;
-	white-space: nowrap;
-	text-decoration: none
-
-}
-.s_nav li a:hover, .s_nav li a:active, .s_nav li a:focus {
-	color: #fff
-}
-.s_nav li.active a {
-	font-weight: bold;
-	color: #fff;
-	background: url(/iconLayout.gif) no-repeat center -67px
-}
-.s_nav li.backLava {
-	position: absolute;
-	height: 36px;
-	margin: 0;
-	background: #66b400;
-	background: -webkit-gradient(linear, 0 0, 0 70%, from(#72c400), to(#4a8f00));
-	background: -webkit-linear-gradient(#72c400, #4a8f00 70%);
-	background: -moz-linear-gradient(#72c400, #4a8f00 70%);
-	background: -ms-linear-gradient(#72c400, #4a8f00 70%);
-	background: -o-linear-gradient(#72c400, #4a8f00 70%);
-	background: linear-gradient(#72c400, #4a8f00 70%);
-	-pie-background: linear-gradient(#72c400, #4a8f00 70%)
-}
-.s_nav li.backLava .leftLava {
-	height: 100%;
-	margin-right: 10px;
-	background: #66b400;
-	background: -webkit-gradient(linear, 0 0, 0 70%, from(#72c400), to(#4a8f00));
-	background: -webkit-linear-gradient(#72c400, #4a8f00 70%);
-	background: -moz-linear-gradient(#72c400, #4a8f00 70%);
-	background: -ms-linear-gradient(#72c400, #4a8f00 70%);
-	background: -o-linear-gradient(#72c400, #4a8f00 70%);
-	background: linear-gradient(#72c400, #4a8f00 70%);
-	-pie-background: linear-gradient(#72c400, #4a8f00 70%)
-}
 
 
 /*W3.CSS*/
-html, body {
-	font-family: Verdana, sans-serif;
-	font-size: 15px;
-	line-height: 1.5
-}
 .w3-bar {
 	width: 100%;
 	overflow: visible
@@ -119,7 +48,6 @@ html, body {
 	border: none;
 	outline: none;
 	display: block;
-	margin:0 0 0 0px;
 }
 .dropNav {
 	position: absolute;
@@ -138,31 +66,6 @@ html, body {
 	display: block;
 	clear: both
 }
-.dropNav ul ul {
-	display: none;
-	position: absolute;
-	left: 0;
-	top: 36px;
-	border: 1px solid #b4b3b3;
-	border-top: 0;
-	background: #fafcde;
-	z-index: 1;
-	-moz-border-radius: 0 0 3px 3px;
-	-webkit-border-radius: 0 0 3px 3px;
-	border-radius: 0 0 3px 3px;
-	-moz-box-shadow: #969696 2px 2px 5px;
-	-webkit-box-shadow: #969696 2px 2px 5px;
-	box-shadow: #969696 2px 2px 5px
-}
-.dropNav ul ul ul {
-	display: none;
-	position: absolute;
-	left: 100px;
-	top: -1px;
-	border: 1px solid #b4b3b3;
-	background: #fafcde;
-	z-index: 1
-}
 .dropNav li {
 	position: relative;
 	float: left;
@@ -174,22 +77,9 @@ html, body {
 	white-space: nowrap;
 	z-index: 1
 }
-.dropNav li.first {
-	padding: 0;
-	background: 0
-}
-.dropNav li a {
-	display: block;
-	color: #e8e8e8;
-	white-space: nowrap;
-	text-decoration: none
-}
-.dropNav li a span {
-	display: block;
-	padding: 0 9px
-}
 .dropNav li a:hover, .dropNav li a:active, .dropNav li a:focus {
-	color: #fff
+	color: #222;
+	font-weight:bold;
 }
 .dropNav li.active a {
 	font-weight: bold;
@@ -268,37 +158,47 @@ html, body {
 	-pie-background: linear-gradient(#72c400, #4a8f00 70%)
 }
 
+
+
 /*Dropdown Button*/
 .dropdown {
     position: relative;
     display: inline-block;
-    z-index: 1;
+    z-index: 100;
 }
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
 }
 .dropdown-content a {
     color: #000;
-    padding: 12px 16px;
+    padding: 0px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
-	z-index: 100;
+	z-index: 10;
 }
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+	color: #000;
+	background-color: #777;
+
+}
+/*.dropdown-content a:active {
+	color: #000;
+}*/
 
 .dropdown:hover .dropdown-content {
     display: block;
+    color: #000;
 }
 /*ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: visible;
     background-color: #333;
 }*/
 li a, .dropbtn {
@@ -309,12 +209,22 @@ li a, .dropbtn {
     text-decoration: none;
 }
 
+/*ETC*/
+.hwe_name{
+	font-size: 25px;
+	font-weight: bold;
+	margin: 0 0 0 50px;
+}
+
 
 </style>
 
 
 
 <block>
+	<div>
+		<p class="hwe_name">교보테크(주)</p>
+	</div>
 	<div id="mainNav">
 		<block>
 			<script type="text/javascript">
@@ -329,13 +239,20 @@ li a, .dropbtn {
 					<li class="dropdown">
 					<a href="javascript:void(0)" class="dropbtn">회사소개</a>
 					    <div class="dropdown-content">
-					      <a href="#">Link 1</a>
-					      <a href="#">Link 2</a>
-					      <a href="#">Link 3</a>
+					      <a href="#">회사현황</a>
+					      <a href="#">회사조직</a>
+					      <a href="#">오시는길</a>
 					    </div>
 					  </li>
 					<li class="w3-bar-item"><a href='http://localhost:8000/gnb#' title='JavaScript Tutorial' onfocus="this.blur()">업무소개</a></li>
-					<li class="w3-bar-item"><a href='http://localhost:8000/gnb#' title='JavaScript Tutorial' onfocus="this.blur()">품질정책</a></li>
+					<li class="dropdown">
+					<a href="javascript:void(0)" class="dropbtn">품질정책</a>
+					    <div class="dropdown-content">
+					      <a href="#">인증현황</a>
+					      <a href="#">품질관리</a>
+					    </div>
+					  </li>
+
 					<li class="w3-bar-item"><a href='http://localhost:8000/gnb#' title='JavaScript Tutorial' onfocus="this.blur()">고객센터</a></li>
 
 	
@@ -352,14 +269,6 @@ li a, .dropbtn {
 			</div>
 		
 	</div>
-<!-- 					<div class="dropdown">
-				  	<button class="dropbtn">드롭다운</button>
-				  	<div class="dropdown dropdown-content">
-				    <a href="#">Link 1</a>
-				    <a href="#">Link 2</a>
-				    <a href="#">Link 3</a>
-				  	</div>
-					</div>	 -->	
 
 </block>
 
