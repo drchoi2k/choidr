@@ -61,6 +61,11 @@ Route::get('/getEditAjax','JqueryController@getEditAjax');
 Route::post('/deleteByAjax','JqueryController@deleteByAjax');
 Route::post('/updateByAjax','JqueryController@updateByAjax');
 
+//gnb
+Route::get('/gnb','GnbController@gnb');
+
+
+
 
 // Route::get('/getuser/{id}','UserController@getuser');
 // 1방법
