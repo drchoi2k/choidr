@@ -62,8 +62,8 @@ Route::post('/deleteByAjax','JqueryController@deleteByAjax');
 Route::post('/updateByAjax','JqueryController@updateByAjax');
 
 //gnb
-Route::get('/gnb','GnbController@gnb');
-
+Route::get('/dropNav','MenuController@dropNav');
+Route::get('/rollNav','MenuController@rollNav');
 
 
 
