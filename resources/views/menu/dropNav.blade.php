@@ -2,7 +2,8 @@
  <meta charset="utf-8">
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script> 
 	<script type="text/javascript" src="js/jquery.lavalamp.js"></script>
-	 <!--  <link rel="stylesheet" type="text/css" href="/css/w3.css"> -->
+	<script type="text/javascript" src="js/w3schools_footer.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/w3.css">
 	<!--   <link rel="stylesheet" type="text/css" href="/css/default.css"> -->
 <style type="text/css">
 html, body {
@@ -11,7 +12,7 @@ html, body {
 	line-height: 1.5
 }
 
-#mainNav {
+.mainNav {
 	position: relative;
 	width: 100%;
 	height: 36px;
@@ -31,7 +32,7 @@ html, body {
 	background: linear-gradient(#00a0de, #045da2 70%);
 	-pie-background: linear-gradient(#00a0de, #045da2 70%)*/
 }
-#mainNav ul {
+.mainNav ul {
 	margin: 0;
 	padding: 0
 }
@@ -218,26 +219,70 @@ li a, .dropbtn {
 	margin: 0 0 0 50px;
 }
 
+.fa {
+		display:inline-block;
+		font:normal normal normal 14px/1 FontAwesome;
+		font-size:inherit;
+		text-rendering:auto;
+		-webkit-font-smoothing:antialiased;
+		-moz-osx-font-smoothing:grayscale;
+		transform:translate(0, 0);
+		}
+		.fa-2x {
+		font-size:2em;
+		}
+		.fa-home:before {content:'\e800';}
+		.fa-menu:before {content: '\f0c9';}
+		.fa-globe:before {content:'\e801';}
+		.fa-search:before {content:'\e802'; }
+		.fa-thumbs-o-up:before {content:'\e803';}
+		.fa-left-open:before {content:'\e804';}
+		.fa-right-open:before {content:'\e805';}
+		.fa-facebook-square:before {content:'\e806';}
+		.fa-google-plus-square:before {content:'\e807';}
+		.fa-twitter-square:before {content:'\e808';}
+		.fa-caret-down:before {content:'\e809';}
+		.fa-caret-up:before {content:'\e80a';}
+
+		a.topnav-icons {
+		width:52px !important;
+		font-size:20px !important;
+		padding-top:11px !important;
+		padding-bottom:13px !important;
+		}
+		a.topnav-icons.fa-home {font-size:22px !important}
+		a.topnav-icons.fa-menu {font-size:22px !important}
+		a.topnav-localicons {
+		font-size:20px !important;
+		padding-top:6px !important;
+		padding-bottom:12px !important;
+		}
 
 </style>
 
 
-
+<!-- 	<script src="js/w3schools_footer.js"></script> -->
 <block>
 	<div>
 		<a class="hwe_name" href="http://ds.cathms.kr#" title='교보테크' onfocus="this.blur()">교보테크(주)</a>
 	</div>
-	<div id="mainNav">
+	
 		<block>
 			<script type="text/javascript">
 				(jQuery)(function($) {
-					$('#dropNav').lavaLamp();
+					$('#overNav').lavaLamp();
 				});
 			</script>
 		</block>
-		<div id="dropNav" class="dropNav w3-bar">
+		<div id="topnav" class="mainNav">
+		<div id="overNav" class="dropNav w3-bar">
 			<ul>
-					<li class="w3-bar-item on" ><a href='http://localhost:8000/dropNav#' title='HTML Tutorial' onfocus="this.blur()">홈</a></li>
+					<!-- <li><a href='javascript:void(0);' class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' onclick='open_menu()' title='Menu'></a></li>
+					<li><a class="topnav-icons fa fa-home w3-left w3-bar-item w3-button" title="Home"></a></li> -->
+
+
+
+					<li class="w3-bar-item on" ><a href='http://localhost:8000/mainHome#' title='HTML Tutorial' onfocus="this.blur()">홈</a></li>
 					<li class="dropdown">
 					<a href="javascript:void(0)" class="dropbtn">회사소개</a>
 					    <div class="dropdown-content">
@@ -256,9 +301,9 @@ li a, .dropbtn {
 					  </li>
 					<li class="w3-bar-item"><a href='http://localhost:8000/dropNav#' title='JavaScript Tutorial' onfocus="this.blur()">고객센터</a></li>
 					</ul>
-				</ul>
 			</div>
-	</div>
+		</div>
+
 </block>
 
 

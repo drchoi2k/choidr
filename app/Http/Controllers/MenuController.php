@@ -13,4 +13,8 @@ class MenuController extends Controller
     public function rollNav() {
        return view('menu.rollNav');
     }
+
+    public function mainHome() {
+       return view('menu.mainHome');
+    }
 }

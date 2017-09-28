@@ -308,20 +308,6 @@ a {
 	white-space: nowrap
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .w3-btn:hover {
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
@@ -500,38 +486,18 @@ a {
 	width: 600px
 }
 
-
+.w3-bar {
+	width: 100%;
+	overflow: hidden
+}
 
 .w3-center .w3-bar {
 	display: inline-block;
 	width: auto
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .w3-bar .w3-bar-item {
-	padding: 0px 16px;
+	padding: 8px 16px;
 	float: left;
 	width: auto;
 	border: none;
