@@ -1,8 +1,9 @@
 
+
+
  <meta charset="utf-8">
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script> 
 	<script type="text/javascript" src="js/jquery.lavalamp.js"></script>
-	<script type="text/javascript" src="js/w3schools_footer.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/w3.css">
 	<!--   <link rel="stylesheet" type="text/css" href="/css/default.css"> -->
 <style type="text/css">
@@ -212,13 +213,6 @@ li a, .dropbtn {
 }
 
 /*ETC*/
-.hwe_name{
-	font-size: 25px;
-	font-weight: bold;
-	text-decoration: none;
-	margin: 0 0 0 50px;
-}
-
 .fa {
 		display:inline-block;
 		font:normal normal normal 14px/1 FontAwesome;
@@ -263,9 +257,7 @@ li a, .dropbtn {
 
 <!-- 	<script src="js/w3schools_footer.js"></script> -->
 <block>
-	<div>
-		<a class="hwe_name" href="http://ds.cathms.kr#" title='교보테크' onfocus="this.blur()">교보테크(주)</a>
-	</div>
+
 	
 		<block>
 			<script type="text/javascript">
