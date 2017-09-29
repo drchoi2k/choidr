@@ -32,10 +32,11 @@ html, body {
 	background: -o-linear-gradient(#00a0de, #045da2 70%);
 	background: linear-gradient(#00a0de, #045da2 70%);
 	-pie-background: linear-gradient(#00a0de, #045da2 70%)*/
+	z-index: 10;
 }
 .mainNav ul {
 	margin: 0;
-	padding: 0
+	padding: 0;
 }
 
 
