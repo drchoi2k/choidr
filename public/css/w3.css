@@ -441,8 +441,8 @@ a {
 	width: 200px;
 	background-color: #fff;
 	position: fixed !important;
-	z-index: 1;
-	overflow: auto
+	z-index: 2000;
+	/*overflow: auto*/
 }
 
 .w3-bar-block .w3-dropdown-hover, .w3-bar-block .w3-dropdown-click {
