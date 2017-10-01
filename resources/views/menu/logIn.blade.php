@@ -21,7 +21,7 @@
 
     <div class="container">
          <!-- Trigger the modal with a button -->
-        <button type="button" class="btn btn-default btn-lg" id="myBtn">로그인</button>
+       <!--  <button type="button" class="btn btn-default btn-lg" id="myBtn">로그인</button> -->
         <!-- Modal -->
         <div class="modal" id="myModal" role="dialog">
             <div class="modal-dialog" style="padding:200px 50px;">

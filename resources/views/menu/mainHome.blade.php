@@ -94,43 +94,15 @@
 		</style>
 		
 	</head>
-<body>
+	<body>
 		<div>
 			<!-- <a class="hwe_name" href="http://ds.cathms.kr#" title='교보테크' onfocus="this.blur()">교보테크(주)</a> -->
 			<h6><span href="http://ds.cathms.kr#" class="hwe_name">교보테크</span>(주)</h6>
+			 <button type="button" class="btn btn-default" id="myBtn" style='margin: 0 0 0 560px;'>로그인</button>
 		</div>
 		@include('menu.dropNav')
-		<div style='margin-left:220px;padding: 5px;'>
-			<div class="slideshow-container" >
-				<div class="mySlides fade">
-					<!-- <div class="numbertext">1 / 3</div> -->
-					<img src="/image/img1.jpg" style="width:100%">
-					<div class="text">Caption Text</div>
-				</div>
-				<div class="mySlides fade">
-					<!-- <div class="numbertext">2 / 3</div> -->
-					<img src="/image/img2.jpg" style="width:100%">
-					<div class="text">Caption Two</div>
-				</div>
-				<div class="mySlides fade">
-					<!-- <div class="numbertext">3 / 3</div> -->
-					<img src="/image/img3.jpg" style="width:100%">
-					<div class="text">Caption Three</div>
-				</div>
-				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-				<a class="next" onclick="plusSlides(1)">&#10095;</a>
-			</div>
-			<div style="text-align:center">
-				<span class="dot"></span>
-				<span class="dot"></span>
-				<span class="dot"></span>
-			</div>
-		</div>
-		<!-- <div style="text-align:center">
-				<span class="dot" onclick="currentSlide(1)"></span>
-				<span class="dot" onclick="currentSlide(2)"></span>
-				<span class="dot" onclick="currentSlide(3)"></span>
-		</div> -->
+		@include('menu.homeSlide')
+		
 		<!-- 본문 -->
 		<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
 			<div class='w3-row w3-white'>
@@ -170,11 +142,10 @@
 		</div>
 		<!-- Side -->
 		<div class='w3-sidebar w3-collapse' id='sidenav'>
-
 			<div id='leftmenuinner'>
 				<div class='w3-light-grey' id='leftmenuinnerinner'>
-@include('menu.logIn')
-<br><br>				
+					@include('menu.logIn')
+					<br><br>
 					<h6>SIDE MENU</h6>
 					<h6>SIDE MENU</h6>
 					<h6>SIDE MENU</h6>
@@ -194,41 +165,12 @@
 					<h6>SIDE MENU</h6>
 					<h6>SIDE MENU</h6>
 					<h6>SIDE MENU</h6>
-
 				</div>
 			</div>
 		</div>
-
-
 		<!-- 풋터 -->
 		
 		<br><br><br><br>
 		@include('menu.foot')
-		<script>
-		var slideIndex = 0;
-		showSlides();
-		function showSlides() {
-		var i;
-		var slides = document.getElementsByClassName("mySlides");
-		var dots = document.getElementsByClassName("dot");
-		for (i = 0; i < slides.length; i++) {
-		slides[i].style.display = "none";
-		}
-		slideIndex++;
-		if (slideIndex > slides.length) {slideIndex = 1}
-		for (i = 0; i < dots.length; i++) {
-		dots[i].className = dots[i].className.replace(" active", "");
-		}
-		slides[slideIndex-1].style.display = "block";
-		dots[slideIndex-1].className += " active";
-		setTimeout(showSlides, 5000); // Change image every 2 seconds
-		}
-		</script>
 	</body>
 </html>
-
-
-
-
-
-
