@@ -129,6 +129,8 @@ function fix_sidemenu() {
       document.getElementById("belowtopnav").style.paddingTop = "44px";    
       document.getElementById("topnav").style.position = "fixed";    
       document.getElementById("topnav").style.top = "0";
+
+
       document.getElementById("googleSearch").style.position = "fixed";
       document.getElementById("googleSearch").style.top = "0";
       document.getElementById("google_translate_element").style.position = "fixed";
@@ -136,6 +138,8 @@ function fix_sidemenu() {
     } else {
       document.getElementById("belowtopnav").style.paddingTop = "0";
       document.getElementById("topnav").style.position = "relative";
+
+
       document.getElementById("googleSearch").style.position = "absolute";
       document.getElementById("googleSearch").style.top = "";
       document.getElementById("google_translate_element").style.position = "absolute";
@@ -144,25 +148,29 @@ function fix_sidemenu() {
     document.getElementById("leftmenuinner").style.paddingTop = "0"; //SCROLLNYTT
   } else {
     if (top == 0) {
-      document.getElementById("sidenav").style.top = "112px";      
+      document.getElementById("sidenav").style.top = "118px";      
     }
     if (top > 0 && top < 66) {
-      document.getElementById("sidenav").style.top = (112 - top) + "px";      
+      document.getElementById("sidenav").style.top = (118 - top) + "px";      
     }
     if (top > 66) {
-      document.getElementById("sidenav").style.top = "44px";
-      if (w > 992) {document.getElementById("leftmenuinner").style.paddingTop = "44px";} //SCROLLNYTT
+      document.getElementById("sidenav").style.top = "24px";  // sidenav상부 위치
+      if (w > 992) {document.getElementById("leftmenuinner").style.paddingTop = "24px";} //SCROLLNYTT 
       document.getElementById("belowtopnav").style.paddingTop = "44px";    
       document.getElementById("topnav").style.position = "fixed";
       document.getElementById("topnav").style.top = "0";
+
+
       document.getElementById("googleSearch").style.position = "fixed";
       document.getElementById("googleSearch").style.top = "0";
       document.getElementById("google_translate_element").style.position = "fixed";
       document.getElementById("google_translate_element").style.top = "0";
     } else {
-      if (w > 992) { document.getElementById("leftmenuinner").style.paddingTop = (112 - top) + "px";} //SCROLLNYTT
+      if (w > 992) { document.getElementById("leftmenuinner").style.paddingTop = (118 - top) + "px";} //SCROLLNYTT
       document.getElementById("belowtopnav").style.paddingTop = "0";
       document.getElementById("topnav").style.position = "relative";
+
+
       document.getElementById("googleSearch").style.position = "absolute";
       document.getElementById("googleSearch").style.top = "";
       document.getElementById("google_translate_element").style.position = "absolute";

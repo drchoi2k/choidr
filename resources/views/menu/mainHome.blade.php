@@ -99,13 +99,17 @@
 			<!-- <a class="hwe_name" href="http://ds.cathms.kr#" title='교보테크' onfocus="this.blur()">교보테크(주)</a> -->
 			<h6><span href="http://ds.cathms.kr#" class="hwe_name">교보테크</span>(주)</h6>
 			 <button type="button" class="btn btn-default" id="myBtn" style='margin: 0 0 0 560px;'>로그인</button>
+
 		</div>
+
 		@include('menu.dropNav')
 		@include('menu.homeSlide')
-		
+		@include('menu.logIn')		
 		<!-- 본문 -->
 		<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+			
 			<div class='w3-row w3-white'>
+
 				<div class='w3-col l10 m12' id='main'>
 					<!-- 	<div id='mainLeaderboard' style='overflow:hidden;'>
 							
@@ -113,6 +117,8 @@
 							<script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422003450156-2'); });</script>
 						</div>
 					</div> -->
+
+
 					<h6>Documents</h6>
 					<h6>Documents</h6>
 					<h6>Documents</h6>
@@ -143,8 +149,9 @@
 		<!-- Side -->
 		<div class='w3-sidebar w3-collapse' id='sidenav'>
 			<div id='leftmenuinner'>
-				<div class='w3-light-grey' id='leftmenuinnerinner'>
-					@include('menu.logIn')
+
+				<div class='w3-light-grey'>
+					
 					<br><br>
 					<h6>SIDE MENU</h6>
 					<h6>SIDE MENU</h6>

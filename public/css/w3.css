@@ -437,9 +437,10 @@ a {
 }
 
 .w3-sidebar {
+							margin: 10px;
 	height: 100%;
 	width: 200px;
-	background-color: #fff;
+	background-color: #000;
 	position: fixed !important;
 	z-index: 2000;
 	/*overflow: auto*/
