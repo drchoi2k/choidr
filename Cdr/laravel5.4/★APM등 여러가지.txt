@@ -1,22 +1,4 @@
-<?php
-// ================우분투 setup
-// 기존 하드디스크에 우분투 추가설치 : 윈도우 제어판-> 관리도구-> 컴퓨터관리-> 디스크관리 
-// C드라이버의 볼륨축소로 9000Mb정도로 할당한다.
-
-// 우분투 디스크를 넣고 설치 진행중 설치유형을 '기타'를 선택한다
-// 나머지공간 9Gb파티션을 더블클릭하면 파티션 만들기에서
-// 파티션종류: 논리파티션,
-// 크기: 500Mb, 
-// 파티션위치:시작하는 지점, 
-// 용도: 스왑영역
-// OK
-// 나머지공간을 더블클릭, 파티션 만들기에서
-// 파티션종류: 주파티션,
-// 크기: (나머지 모두ls a-l)Mb, 
-// 파티션위치:시작하는 지점, 
-// 용도: EXT4 저링 파일시스템
-// 마운트 위치: /
-// OK
+﻿여러가지 참고사항
 
 // [Doctrine\DBAL\Driver\PDOException] could not find driver 
 // [PDOException] could not find driver
@@ -42,94 +24,66 @@
 // 52.78.168.67
 
 
-// ubuntu PHP install 
-// ============================================================④⑤
-// ==============apache install
-//① sudo apt-get install apache2
-//② sudo apt-get update --fix-missing
-// localhost 로확인 :    Apache2 Ubuntu Default Page 확인
-//         ==>ifconfig 를 쳐서 ip를 알아낸 후 인터넷 창에 적어서 아파치 페이지가 나오는지 확인한다
-//③ sudo systemctl restart apache2
-//         ==> 아파치를 재시작
-//④ sudo systemctl status apache2
-//        ==> 작동이 정상인지 확인; 녹색글씨로 active(running)이 있을 것이다. 빠져 나오기: ctrl+c
 
-//===============php
-//⑤ sudo apt-get install php7.0 libapache2-mod-php7.0
-//⑥ sudo apt-get update
-//⑦ php -v
-//  php -m
-//⑧ sudo apt-get install php-mbstring    :Xampp에서도 인스톨 
-//⑨ sudo apt-get install php-xml         :Xampp에서도 인스톨
+================== ubuntu PHP install==========================================================
+바탕화면->오른쪽 마우스 메뉴에서 터미널 열기->메뉴의 편집->프로파일기본설정->최초터미널크기: 125열50행 
+==============Apache install
+① xxx@xxx-System:~$ sudo apt-get install apache2  ->암호->y
+② xxx@xxx-System:~$ sudo apt-get update --fix-missing
+③Firefox웹브라우즈 주소란에 localhost 로 입력하여  'Apache2 Ubuntu Default Page' 나오는지 확인
+    또는 터미널에 ifconfig 를 쳐서 ip를 알아낸 후 위와 같이 입력후 내용을 확인한다.
+    xxx@xxx-System:~$ sudo systemctl restart apache2     (아파치를 재시작)
+④xxx@xxx-System:~$ sudo systemctl status apache2  
+                    (작동이 정상인지 확인; 녹색글씨로 active(running)을 확인. 빠나오기: ctrl+c)
 
 
-//===============composer install
-//⑩ sudo php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-//⑪ sudo php -r "if (hash_file('SHA384', 'composer-setup.php') === '669656bab3166a7aff8a7506b8cb2d1c292f042046c5a994c43155c0be6190fa0355160742ab2e1c88d40d5be660b410') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-//             =>Installer verified 확인 
-//⑫ sudo php composer-setup.php
-//⑬ sudo php -r "unlink('composer-setup.php');"
-//⑭ php composer.phar
-//              ==>실행 내용확인 
+===============Php install
+⑤ sudo apt-get install php7.0 libapache2-mod-php7.0      
+⑥ sudo apt-get update
+⑦ php -v       (Php버젼확인 현재 Install버젼은 'PHP 7.0.22-0ubuntu0.16.04.1 (cli) ( NTS )' )
+  php -m       (현재 Php의 모듈 리스트가 나타남, 각 프로그램마다 요구되는 모듈을 다음과 같이 인스톨)
+⑧ sudo apt-get install php-mbstring    (mbstring는 라라벨에서 요구되는 모듈)
+⑨ sudo apt-get install php-xml         (xml는 라라벨에서 요구되는 모듈)
 
-//=======================mysql install
-//ⓐ sudo apt-get install mysql-server
-//              ==>반드시 6자리이상 암호설정 
-//ⓑ sudo apt-get install mysql-client
-//ⓒ sudo apt-get install php7.0 libapache2-mod-php7.0 php-mcrypt php-mysql php-mbstring php7.0-mbstring php-gettext
-//ⓓ sudo nano /etc/apache2/mods-enabled/dir.conf
-//              ==>index.php를 가장 앞으로 오게 한다.     
-//                 기본 페이지를 index.php로 설정하는 것, 테스트 용
-//ⓔ sudo nano /var/www/html/info.php
+
+=======================mysql install
+ⓐ sudo apt-get install mysql-server
+		입력화면에 root유저의 암호입력: xxxxxx, 암호 확인:xxxxxx
+             
+ⓑ sudo apt-get install mysql-client
+ⓒ sudo apt-get install php7.0 libapache2-mod-php7.0 php-mcrypt php-mysql php-mbstring php7.0-mbstring php-gettext
+ⓓ sudo nano /etc/apache2/mods-enabled/dir.conf
+              ==>index.php를 가장 앞으로 오게 한다. 기본 페이지를 index.php로 설정하는 것, 테스트 용
+ⓔ sudo nano /var/www/html/info.php    (편집회면이 열리면 밑에 내용을 복사하여 붙이기->저장)
 <?php
 phpinfo();
 ?>
-==========================
 
-<?php
-//            입력후 저장한다
-//            인터넷 페이지에서 http://서버아이피/info.php 를 쳐서 php 페이지가 나오는지 확인한다.
+Firefox웹브라우즈 주소란에 http://localhost/info.php 로 입력하여 php 페이지가 나오는지 확인한다.
 
 
-//phpmyadmin설치
-//ⓕ sudo apt-get install phpmyadmin
-               ==> 반드시 6자리이상 암호설정 230700
-//ⓖ sudo nano /etc/apache2/apache2.conf
-//ⓗ sudo chmod -R 777 /etc/apache2/apache2.conf
+=====phpmyadmin설치
+apach2를 스페이스키로 선택 tab키로 확인으로 이동 enter		
+dbconfig-common설정  <예> enter
+ⓕ sudo apt-get install phpmyadmin
+		암호 입력 화면에 암호입력: xxxxxx, 암호 확인:xxxxxx
+                 ==> 6자리이상 암호설정
+ⓖsudo chmod -R 777 /etc/apache2/apache2.conf
+ⓗ sudo nano /etc/apache2/apache2.conf
+ⓗ
 # Sets the default security model of the Apache2 HTTPD server. It does라는 라인 밑에 다음을 추가
 
 # Include phpMyAdmin
 Include /etc/phpmyadmin/apache.conf
   
-//ⓘ service apache2 restart
-//  sudo systemctl status apache2
-//                ==> active(running)이 있을 것, 빠져 나오기: ctrl+c 
-//ⓙ 인터넷 페이지에서 http://localhost/phpmyadmin 으로 들어가서 ID: root 와 아까 입력한 Password로 들어간다. phpmyadmin화면
+ⓘ service apache2 restart
+  sudo systemctl status apache2
+                ==> active(running)이 있을 것, 빠져 나오기: ctrl+c 
+ⓙ 인터넷 페이지에서 http://localhost/phpmyadmin 으로 들어가서 
+     언어: 한국어, ID: root 와 아까 입력한 Password로 들어간다. phpmyadmin화면이 뜬다
+===================================================================================================
 
-//참고
-//++++++++++++++++++XAMPP     우분투에 설치
- 
-//$ https://www.apachefriends.org/download.html
-//$ wget https://www.apachefriends.org/xampp-files/7.0.21/xampp-linux-x64-7.0.21-0-installer.run
-//$ sudo chmod +x xampp-linux-x64-7.0.21-0-installer.run
-//$ sudo ./xampp-linux-x64-7.0.21-0-installer.run
-//$ sudo /opt/lampp/lampp status
-//$ sudo /opt/lampp/lampp start
-//$ sudo /opt/lampp/lampp stop
-//$ sudo /opt/lampp/lampp restart
 
-//$ sudo apt install php7.0-cli
-//$ sudo apt install hhvm
-//$ sudo apt-get install php-mbstring         :laravel필수 
-//$ sudo apt-get install php-xml              :laravel필수
-//$ sudo apt-get install php7.0 libapache2-mod-php7.0 php-mcrypt php-mysql php-mbstring php7.0-mbstring php-gettext
-//⑩ sudo php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-//⑪ sudo php -r "if (hash_file('SHA384', 'composer-setup.php') === '669656bab3166a7aff8a7506b8cb2d1c292f042046c5a994c43155c0be6190fa0355160742ab2e1c88d40d5be660b410') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-//              =>Installer verified 확인 
-//⑫ sudo php composer-setup.php
-//⑬ sudo php -r "unlink('composer-setup.php');"
-//⑭ php composer.phar
-//             ==>실행 내용확인 
 
 
 //테스트
@@ -177,16 +131,6 @@ DocumentRoot "C:\Sites\lara\public"
 //$ sudo php composer.phar create-project --prefer-dist laravel/laravel /var/www/html/myfolder
 
 
-
-//@@@@@@@@@@@@@@@@@@@@@@@@@ github 내용다운
-//$ git clone https://github.com/laravel/laravel.git /var/www/html/choi 
-//$ git clone https://github.com/laravel/laravel.git myfolder
-//$ cp .env.example .env
-//$ sudo composer install
-//$ php artisan key:generate 
-
-
-
 //또는
 //$ composer create-project --prefer-dist laravel/laravel myfolder
 //또는 
@@ -221,9 +165,6 @@ DocumentRoot "C:\Sites\lara\public"
 // php7.0-mysql있는지 확인
 //$ apt-cache search php7.0               
  
-
-
-
 
 //<<<<<<<<<<<<프로그렘설치>>>>>>>>>>>>>>>
 //yobi.io

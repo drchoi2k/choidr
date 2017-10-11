@@ -1,0 +1,98 @@
+﻿
+ ===============================우분투(Rinux) setup======================================
+ 기존 하드디스크에 우분투 추가설치 : 윈도우 제어판-> 관리도구-> 컴퓨터관리-> 디스크관리 
+ C드라이버의 볼륨축소로 10,000Mb(10Gbyte)정도로 할당한다.
+
+ 우분투 디스크를 넣고 설치 진행중 설치유형을 '○ 기타'를 선택한다
+ ★나머지공간 10Gb파티션을 더블클릭하면 파티션 만들기에서
+ 파티션종류: 논리파티션,
+ 크기: 500Mb, 
+ 파티션위치:시작하는 지점, 
+ 용도: 스왑영역
+ OK
+
+ ★나머지공간을 더블클릭, 파티션 만들기에서
+ 파티션종류: 주파티션,
+ 크기: (화면에 나타나는 나머지 모두)Mb, 
+ 파티션위치:시작하는 지점, 
+ 용도: EXT4 저링 파일시스템
+ 마운트 위치: /
+ OK
+ 위치: seoul선택
+ 키보드배치: 한국어 선택
+사용자등록
+	이름: xxx
+	컴이름: xxx-system (되도록 짧게)
+	암호, 암호
+	○ 자동으로 로그인 선택
+
+
+**********************프로그램 설치**************************
+
+=============== XAMPP설치
+ 
+ https://www.apachefriends.org/download.html
+                  (Firefox웹브라우저 실행, Linux PHP7.1.9선택다운, Save)
+(다음은 터미널안 ~$ 에 실행)
+~$ wget https://www.apachefriends.org/xampp-files/7.0.21/xampp-linux-x64-7.0.21-0-installer.run
+~$ sudo chmod +x xampp-linux-x64-7.0.21-0-installer.run
+~$ sudo ./xampp-linux-x64-7.0.21-0-installer.run (인스톨화면에서 all Next)
+
+~$ sudo /opt/lampp/lampp status
+~$ sudo /opt/lampp/lampp start
+~$ sudo /opt/lampp/lampp stop
+~$ sudo /opt/lampp/lampp restart
+
+
+~$ sudo apt-get install php-mbstring         :laravel에서는 필수 
+~$ sudo apt-get install php-xml              :laravel에서는 필수
+
+
+
+===============composer install
+~$ sudo apt install php7.0-cli
+~$ sudo apt install hhvm
+
+~$ php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+~$ php -r "if (hash_file('SHA384', 'composer-setup.php') === '544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"                    (결과치 Installer verified 확인)
+~$ php composer-setup.php          
+           (Unable to write keys.dev.pub to: /home/cdr/.composer 발생시 chmode)
+~$ php -r "unlink('composer-setup.php');"
+~$ php composer.phar           (==>실행 내용확인)
+             
+
+=============== github에서 laravel 다운 
+~$ sudo apt install git
+~$ sudo chmod -R 777 /var/www/html/
+~$ sudo apt install composer
+~$ git clone https://github.com/laravel/laravel.git /var/www/html/myfolder  
+또는 ~$ git clone https://github.com/laravel/laravel.git myfolder
+~$ cd /var/www/html/myfolder
+~$:/var/www/html/myfolder  sudo cp .env.example .env
+~$:/var/www/html/myfolder  sudo composer install
+~$: sudo chmod -R 777 .env              
+~$:/var/www/html/myfolder  php artisan key:generate 
+~$: sudo chmod -R 644 .env
+~$:/var/www/html/myfolder  php artisan serve
+
+http://locahhost:8000  (Laravel화면 확인)
+
+
+
+참고 내용 ===============================================
+
+============우분투에서 라라벨의 public/index.html로 연결 
+//$ cd /etc/apache2/sites-available
+//$ sudo chmod -R 777 /etc/apache2/sites-available/000-default.conf 
+//$ nano /etc/apache2/sites-available/000-default.conf
+//     edit안에서 DocumentRoot /var/www/html/myapp/public 으로 수정
+//$ sudo systemctl restart apache2
+//$ sudo chmod -R 777 storage bootstrap/cache public/files
+
+
+~$ sudo apt-get install php7.0 libapache2-mod-php7.0 php-mcrypt php-mysql php-mbstring php7.0-mbstring php-gettext
+
+
+
+
+
